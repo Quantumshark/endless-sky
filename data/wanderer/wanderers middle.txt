@@ -3519,4 +3519,8 @@ mission "Wanderers: Relocation 1"
 	on offer
 		conversation
 			`The Wanderers and Efreti have settled this planet together, and you are greeted by a small crowd of both as you come in to land. The Wanderer influences on the architecture here are obvious - despite the harsh conditions, the buildings are all topped with beds of the local hardy shrubs and grasses - but the shape of the buildings takes clear influences from the buildings you have seen on the Efreti worlds. As you step out of your ship, you are greeted by Rek, her short stature having made her difficult to spot amongst the crowd.`
-			`Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been happy to work with us here."`
+			`	Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been more cooperative here than we anticipated. Working side by side with us to restore this planet has done more to convince them of our intentions than our words ever could, I feel. My main concern is that we have yet to introduce them to our Mereti friends, and hence we do not yet know how the Efreti will react to them.`
+			choice
+				`	"Are you sure that is a good idea?"`
+			`	As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out sooner or later, and it is better that we don't appear to be trying to hide it.`
+			`	Our elders are also concerned that our movement into this region of space has been too slow, and that we must hurry up now that this space is free from the automaton threat."`
