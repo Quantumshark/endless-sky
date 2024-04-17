@@ -3508,3 +3508,15 @@ event "wanderers taking jobs from kor efreti"
 		add fleet "Wanderer Kor Efret Traders" 1500
 	system "Solifar"
 		add fleet "Wanderer Kor Efret Traders" 1500
+
+mission "Wanderers: Relocation 1"
+	landing
+	name ""
+	description ``
+	source "Sabira Esekrai"
+	to offer
+		has "event: wanderers: sestor eliminated"
+	on offer
+		conversation
+			`The Wanderers and Efreti have settled this planet together, and you are greeted by a small crowd of both as you come in to land. The Wanderer influences on the architecture here are obvious - despite the harsh conditions, the buildings are all topped with beds of the local hardy shrubs and grasses - but the shape of the buildings takes clear influences from the buildings you have seen on the Efreti worlds. As you step out of your ship, you are greeted by Rek, her short stature having made her difficult to spot amongst the crowd.`
+			`Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been happy to work with us here."`
