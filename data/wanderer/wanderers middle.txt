@@ -3535,20 +3535,20 @@ mission "Wanderers: Relocation 1"
 		conversation
 			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that this region of space is free from the threat posed by the automata. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations. We are relatively few, even compared to the population this one world must have held when the Korath lived there, and hence we can settle there while causing only miminal further disruption."`
 
-event "seleptra nak colony formed"
+event "wanderers: seleptra nak colony formed"
 	system Seketra
 		government Wanderer
 
-event "seleptra nak colony growing"
+event "wanderers: seleptra nak colony growing"
 	planet "Seleptra Nak"
 		outfitter "Wanderer Basics"
 
-event "seleptra nak shipyard established"
+event "wanderers: seleptra nak shipyard established"
 	planet "Seleptra Nak"
 		outfitter "Wanderer Advanced"
 		shipyard "Wanderer Basics"
 
-event "seleptra nak shipyard complete"
+event "wanderers: seleptra nak shipyard complete"
 	planet "Seleptra Nak"
 		shipyard "Wanderer Advanced"
 
