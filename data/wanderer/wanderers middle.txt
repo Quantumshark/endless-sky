@@ -3509,11 +3509,13 @@ event "wanderers taking jobs from kor efreti"
 	system "Solifar"
 		add fleet "Wanderer Kor Efret Traders" 1500
 
-mission "Wanderers: Relocation 1"
+mission "Wanderers: Efreti And Mereti 1"
 	landing
-	name ""
-	description ``
+	name "A formal introduction"
+	description `Brink Rek to Mereti Station, and persuade the Mereti to send a visit to the Efreti on <origin>.`
 	source "Sabira Esekrai"
+	destination "Mereti Station"
+	passengers 1
 	to offer
 		has "event: wanderers: sestor eliminated"
 	on offer
@@ -3526,18 +3528,32 @@ mission "Wanderers: Relocation 1"
 					goto do
 			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it."`
 			label do
-			`	"Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that this region of space is free from the threat posed by the automata. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations. We are relatively few, even compared to the population this one world must have held when the Korath lived there, and hence we can settle there while causing only miminal further disruption."`
-			choice
-				`	""`
+			`	""`
+
+mission "Wanderers: Relocation 1"
+	on offer
+		conversation
+			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that this region of space is free from the threat posed by the automata. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations. We are relatively few, even compared to the population this one world must have held when the Korath lived there, and hence we can settle there while causing only miminal further disruption."`
 
 event "seleptra nak colony formed"
 	system Seketra
 		government Wanderer
 
 event "seleptra nak colony growing"
+	planet "Seleptra Nak"
+		outfitter "Wanderer Basics"
 
 event "seleptra nak shipyard established"
+	planet "Seleptra Nak"
+		outfitter "Wanderer Advanced"
+		shipyard "Wanderer Basics"
 
 event "seleptra nak shipyard complete"
+	planet "Seleptra Nak"
+		shipyard "Wanderer Advanced"
 
 mission "Wanderers: Station Repairs 1"
+	name ""
+	description ""
+	source "Sabira Esekrai"
+	
