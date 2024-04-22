@@ -3553,7 +3553,54 @@ event "wanderers: seleptra nak shipyard complete"
 		shipyard "Wanderer Advanced"
 
 mission "Wanderers: Station Repairs 1"
-	name ""
-	description ""
+	name "Assess <planet>"
+	description "Bring Rek and four Efreti workers to <destination> to assess the state it is in."
 	source "Sabira Esekrai"
-	
+	destination "Esperaktu Station"
+	passengers 5
+	on offer
+		conversation
+			``
+
+mission "Wanderers: Station Repairs 2"
+	landing
+	name "Supplies from <planet>"
+	description "Bring Rek and the Efreti workers to <destination>, to secure workers and supplies with which to recomission <origin>."
+	source "Esperaktu Station"
+	destination "Laki Nemparu"
+	passengers 5
+	to offer
+		has "Wanderers: Station Repairs 1: done"
+	on offer
+		conversation
+			``
+	on complete
+		dialog `Your passengers have been talking almost non-stop throughout your journey back, and quickly exit your ship. Rek asks you to meet her in the spaceport, then follows after them.`
+
+mission "Wanderers: Station Repairs 3"
+	name "Supplies to <planet>"
+	description "Escort these Efreti ships carrying workers and supplies to <destination>, so they can begin the necessary repairs."
+	source "Laki Nemparu"
+	destination "Esperaktu Station"
+	passengers 1
+	to offer
+		has "Wanderers: Station Repairs 2: done"
+	on offer
+		conversation
+			``
+	on complete
+		conversation
+			``
+	npc accompany save
+		government "Kor Efret"
+		personality timid escort
+		fleet
+			names "korath"
+			variant
+				"Arch-Carrack" 2
+				"Charm-Shallop" 2
+
+event "esperaktu station reactivated"
+	system Feroteri
+		government "Kor Efret"
+	fleet "Kor Efret Home" 3000
