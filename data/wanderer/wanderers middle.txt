@@ -3588,6 +3588,8 @@ mission "Wanderers: Station Repairs 3"
 	on offer
 		conversation
 			``
+	on complete
+		event "esperaktu station reactivated" 50
 	npc accompany save
 		government "Kor Efret"
 		personality timid escort
@@ -3597,6 +3599,8 @@ mission "Wanderers: Station Repairs 3"
 				"Arch-Carrack" 2
 				"Charm-Shallop" 2
 
+# maybe another mission here sending you to pick up some specific component that they need, probably from either the Hai or the Syndicate?
+
 mission "Wanderers: Station Repairs 4"
 	landing
 	name "Return to <planet>"
@@ -3604,6 +3608,8 @@ mission "Wanderers: Station Repairs 4"
 	source "Esperaktu Station"
 	destination "Sabira Esekrai"
 	passengers 1
+	to offer
+		has "Wanderers: Station Repairs 3: done"
 	on offer
 		conversation
 			``
@@ -3615,8 +3621,20 @@ event "esperaktu station reactivated"
 	system Feroteri
 		government "Kor Efret"
 		add fleet "Kor Efret Home" 3000
+	system Farbutero
+		add fleet "Kor Efret Home" 4000
+	system Meftarkata
+		add fleet "Kor Efret Home" 4000
 	planet "Esperaktu Station"
 		music ambient/machinery
 		description `This small space station has plenty of blast marks on its outer hull, but they have all been patched and the interior still holds atmosphere. The Efreti have now reclaimed the station and restored operations.`
 		description `	For food, the Korath set up vats of photosynthetic yeast and bacteria in some rooms on the outer shell of the station. In their absence, the bacterial soup worked its way through the ventilation system into the rest of the station and formed a thin layer of slime on almost every sun-facing wall, which the Efreti are having some difficulty fully cleaning up. Nonetheless, despite the difficulties, the station is now providing significant supplies of food to the Efreti.`
 		spaceport `The hangar had been left exposed to the vacuum of space while the station was abandoned, so it has thankfully avoided being taken over by the bacterial slime that covered the rest of the station. The new residents move around busily, loading up ship after ship with the nutritious soupy substance.`
+
+event "cool breeze available"
+	shipyard "Wanderer Advanced"
+		"Cool Breeze"
+
+event "cool breeze widespread"
+	shipyard "Wanderer Basics"
+		"Cool Breeze"
