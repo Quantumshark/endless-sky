@@ -3528,7 +3528,7 @@ mission "Wanderers: Efreti And Mereti 1"
 					goto do
 			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it."`
 			label do
-			`	""`
+			`	"Bring me to <destination>. We can ask the Mereti to send a small number of ships here to meet with the Efreti."`
 
 mission "Wanderers: Relocation 1"
 	on offer
