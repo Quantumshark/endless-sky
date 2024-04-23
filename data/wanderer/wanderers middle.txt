@@ -3538,6 +3538,10 @@ mission "Wanderers: Relocation 1"
 event "wanderers: seleptra nak colony formed"
 	system Seketra
 		government Wanderer
+	planet "Seleptra Nak"
+		description `The most disturbing thing about the empty Korath cities on this planet is how pristine they are: no sign of bombing or of weapons fire. Either everyone who lived here chose to leave, or they were killed by a weapon that did no damage to the buildings they live in.`
+		description `	Outside the cities, plant and animal life has begun to flourish, and some of the smaller villages have already been swallowed up by the growing forests. The climate is temperate, and rainfall is plentiful; aside from the reduction in biodiversity, it will not take this planet long to forget its former owners.`
+		description `In the forests, the Wanderers have set up their own cities, leaving the former constructions of the Korath to be naturally recovered by the local flora and fauna.`
 
 event "wanderers: seleptra nak colony growing"
 	planet "Seleptra Nak"
