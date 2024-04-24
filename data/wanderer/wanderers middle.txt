@@ -3541,7 +3541,12 @@ mission "Wanderers: Efreti and Mereti 2"
 		has "Wanderers: Efreti and Mereti 1: done"
 	on offer
 		conversation
-			``
+			`Naturally, there is no part of this station with atmosphere or any other facilities for living creatures, so you remain on your ship after docking. Fortunately, a small Mereti drone docks nearby and hails you before you spend too long trying to work out what to do.`
+			`	" "`
+			choice
+				`	`
+				`	`
+			`	The drone pauses for a moment, then speaks somewhat hesitantly. "The... Efreti? Yes, the Efreti..." It remains silent, as if deep in thought, for a few seconds, before suddenly responding. ""`
 	on visit
 		dialog `You have reached <planet>, but the Mereti ships still haven't arrived. You should take off and wait for them.`
 	on complete
