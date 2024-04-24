@@ -3542,10 +3542,19 @@ mission "Wanderers: Efreti and Mereti 2"
 	on offer
 		conversation
 			``
+	on visit
+		dialog `You have reached <planet>, but the Mereti ships still haven't arrived. You should take off and wait for them.`
 	on complete
 		conversation
 			``
-			
+	npc accompany save
+		government "Kor Mereti"
+		personality timid
+		fleet
+			names "Kor Mereti"
+			variant
+				"Model 16"
+				"Model 8" 2
 
 mission "Wanderers: Relocation 1"
 	name ""
