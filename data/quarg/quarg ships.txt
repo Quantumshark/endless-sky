@@ -29,8 +29,6 @@ ship "Quarg Skylark"
 		"outfit space" 600
 		"weapon capacity" 200
 		"engine capacity" 120
-		"hull repair rate" 5
-		"hull energy" 5
 		"ramscoop" 10
 		weapon
 			"blast radius" 250
@@ -43,7 +41,8 @@ ship "Quarg Skylark"
 		
 		"Antimatter Core"
 		"Nanotech Battery"
-		"Quantum Shield Generator"
+		"Fluxion Shield Generator"
+		"Peripheral Repair Hub"
 		"Intrusion Countermeasures" 120
 		
 		"Medium Graviton Thruster"
@@ -83,8 +82,6 @@ ship "Quarg Wardragon"
 		"outfit space" 600
 		"weapon capacity" 200
 		"engine capacity" 120
-		"hull repair rate" 5
-		"hull energy" 5
 		"ramscoop" 10
 		weapon
 			"blast radius" 250
@@ -97,7 +94,8 @@ ship "Quarg Wardragon"
 		
 		"Antimatter Core"
 		"Nanotech Battery"
-		"Quantum Shield Generator"
+		"Fluxion Shield Generator"
+		"Peripheral Repair Hub"
 		"Intrusion Countermeasures" 160
 		
 		"Medium Graviton Thruster"
