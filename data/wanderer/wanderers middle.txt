@@ -3544,9 +3544,10 @@ mission "Wanderers: Efreti and Mereti 2"
 			`Naturally, there is no part of this station with atmosphere or any other facilities for living creatures, so you remain on your ship after docking. Fortunately, a small Mereti drone docks nearby and hails you before you spend too long trying to work out what to do.`
 			`	" "`
 			choice
+				`	"We'd like to bring you to meet with the Efreti."`
 				`	`
-				`	`
-			`	The drone pauses for a moment, then speaks somewhat hesitantly. "The... Efreti? Yes, the Efreti..." It remains silent, as if deep in thought, for a few seconds, before suddenly responding. ""`
+			`	The drone pauses for a moment, then speaks somewhat hesitantly. "The... Efreti? Yes, the Efreti..." It remains silent, as if deep in thought, for a few seconds, before suddenly responding. "Do the Efreti [need, require] our help?"`
+			`	"Not immediately, no." Rek responds quickly. `
 	on visit
 		dialog `You have reached <planet>, but the Mereti ships still haven't arrived. You should take off and wait for them.`
 	on complete
@@ -3569,7 +3570,7 @@ mission "Wanderers: Relocation 1"
 		has "Wanderers: Efreti and Mereti 2: done"
 	on offer
 		conversation
-			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that this region of space is free from the threat posed by the automata. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations. We are relatively few, even compared to the population this one world must have held when the Korath lived there, and hence we can settle there while causing only miminal further disruption."`
+			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that the threat posed by the automata is over. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations. We are relatively few, even compared to the population this one world must have held when the Korath lived there, and hence we can settle there while causing only miminal further disruption."`
 
 event "wanderers: seleptra nak colony formed"
 	system Seketra
