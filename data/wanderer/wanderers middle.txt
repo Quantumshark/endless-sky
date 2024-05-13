@@ -3528,7 +3528,7 @@ mission "Wanderers: Efreti and Mereti 1"
 				`	"Are you sure that is a good idea?"`
 				`	"What should we do?"`
 					goto do
-			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it."`
+			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it. I had hoped to do this much earlier, but the trouble with the Sestor made that impossible."`
 			label do
 			`	"Bring me to <destination>. We can ask the Mereti to send a small number of ships here to meet with the Efreti."`
 
@@ -3572,7 +3572,9 @@ mission "Wanderers: Relocation 1"
 		has "Wanderers: Efreti and Mereti 2: done"
 	on offer
 		conversation
-			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that the threat posed by the automata is over. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations. We are relatively few, even compared to the population this one world must have held when the Korath lived there, and hence we can settle there while causing only miminal further disruption."`
+			`In the spaceport, you meet up with Rek once more. This time, she is with Tele'ek, who is resting on a chair beside her. His former brown and white plumage is now almost entirely gone, but while Rek seemed thin and fragile without feathers, Tele'ek's body is large and bulky, with distinctly scaly skin from which a few oily green feathers seem to have grown.`
+			`	`
+			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that the threat posed by the automata is over. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations.`
 
 event "wanderers: seleptra nak colony formed"
 	system Seketra
@@ -3580,7 +3582,7 @@ event "wanderers: seleptra nak colony formed"
 	planet "Seleptra Nak"
 		description `The most disturbing thing about the empty Korath cities on this planet is how pristine they are: no sign of bombing or of weapons fire. Either everyone who lived here chose to leave, or they were killed by a weapon that did no damage to the buildings they live in.`
 		description `	Outside the cities, plant and animal life has begun to flourish, and some of the smaller villages have already been swallowed up by the growing forests. The climate is temperate, and rainfall is plentiful; aside from the reduction in biodiversity, it will not take this planet long to forget its former owners.`
-		description `In the forests, the Wanderers have set up their own cities, leaving the former constructions of the Korath to be naturally recovered by the local flora and fauna.`
+		description `Deeper in the forests, the Wanderers have set up their own cities, leaving the former constructions of the Korath to be naturally recovered by the local flora and fauna.`
 		spaceport `The spaceport is bustling with activity, with ships constantly arriving with the cargo and workers required to rapidly settle this world. Both the spaceport and the shipyard are situated in natural clearings in the forest, surrounded on all sides by the arboreal dwellings favoured by the Wanderers.`
 
 event "wanderers: seleptra nak colony growing"
