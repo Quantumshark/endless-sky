@@ -1405,6 +1405,38 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"
 	turret
 
 
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Exile Outfits)"
+	outfits
+		"Blaze-Pike Turret" 6
+		"Warder Anti-Missile" 2
+		"Firelight Missile Bank" 2
+		"Firelight Missile" 40
+
+		"Fuel Processor" 3
+		"Triple Plasma Core"
+		"Plasma Core"
+		"Large Heat Shunt" 4
+		"Systems Core (Large)"
+		"Control Transceiver"
+
+		"Afterburner (Planetary Class)"
+		"Steering (Stellar Class)"
+		"Jump Drive"
+	
+	gun "Firelight Missile Bank"
+	gun "Firelight Missile Bank"
+	gun
+	gun
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+		
+
 
 ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
 	outfits
