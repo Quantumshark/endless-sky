@@ -1533,4 +1533,30 @@ ship "Met Par Tek 53" "Met Par Tek 53 (Sniper)"
 	turret
 	turret
 	turret
+
+ship "Met Par Tek 53" "Met Par Tek 53 (Exile Outfits)"
+	outfits
+		"Fire-Lance" 3
+		"Blaze-Pike Turret" 2
+		
+		"Double Plasma Core"
+		"Plasma Core"
+		"Systems Core (Small)"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 2
+		"Small Heat Shunt"
+		"Control Transceiver"
+		"Fuel Processor" 3
+
+		"Afterburner (Lunar Class)"
+		"Steering (Planetary Class)"
+		"Jump Drive"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret
+	turret
+	turret
 	turret
