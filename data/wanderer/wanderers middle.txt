@@ -3659,11 +3659,8 @@ mission "Wanderers: Station Repairs 4"
 	on offer
 		conversation
 			``
-	on complete
-		conversation
-			``
 
-event "esperaktu station reactivated"
+event "wanderers: esperaktu station reactivated"
 	system Feroteri
 		government "Kor Efret"
 		add fleet "Kor Efret Home" 3000
@@ -3677,10 +3674,65 @@ event "esperaktu station reactivated"
 		description `	For food, the Korath set up vats of photosynthetic yeast and bacteria in some rooms on the outer shell of the station. In their absence, the bacterial soup worked its way through the ventilation system into the rest of the station and formed a thin layer of slime on almost every sun-facing wall, which the Efreti are having some difficulty fully cleaning up. Nonetheless, despite the difficulties, the station is now providing significant supplies of food to the Efreti.`
 		spaceport `The hangar had been left exposed to the vacuum of space while the station was abandoned, so it has thankfully avoided being taken over by the bacterial slime that covered the rest of the station. The new residents move around busily, loading up ship after ship with the nutritious soupy substance.`
 
-event "cool breeze available"
+mission "Wanderers: Exiles Attack Spera Anatrusk"
+	landing
+	name ""
+	description ""
+	source "Sabira Esekrai"
+	destination "Spera Anatrusk"
+	passengers 1
+	to offer
+		has "Wanderers: Station Repairs 4: done"
+	on offer
+		event "wanderers: "
+		conversation
+			``
+	on complete
+		conversation
+			``
+	npc kill
+		government Korath
+		system Kaliptari
+		personality heroic staying
+		fleet
+			names "korath"
+			variant
+				"Kar Ik Vot 349 (Exile Outfits)" 2
+	npc
+		government Wanderer
+		system Kaliptari
+		personality heroic staying derelict
+		fleet
+			names "wanderer"
+			variant
+				"Hurricane"
+				"Derecho" 2
+				"Tempest"
+				"Tempest (Moonbeam)" 2
+				"Strong Wind"
+				"Autumn Leaf" 3
+	npc
+		govermnent Korath
+		system Kaliptari
+		personality heroic staying derelict
+		fleet
+			names "korath"
+			variant
+				"Kar Ik Vot 349 (Exile Outfits)"
+	npc
+		government Wanderer
+		personality escort heroic
+		fleet
+			names "wanderer"
+			variant
+				"Derecho (Moonbeam)"
+				"Tempest (Moonbeam)"
+				"Strong Wind" 2
+
+event "wanderers: cool breeze available"
 	shipyard "Wanderer Advanced"
 		"Cool Breeze"
 
-event "cool breeze widespread"
+event "wanderers: cool breeze widespread"
 	shipyard "Wanderer Basics"
 		"Cool Breeze"
