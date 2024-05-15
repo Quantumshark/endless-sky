@@ -1437,6 +1437,23 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Exile Outfits)"
 	turret "Warder Anti-Missile"
 		
 
+ship "Tek Far 109" "Tek Far 109 (Exile Outfits)"
+	outfits
+		"Banisher Grav-Turret" 2
+		"Firelight Missile Bank" 3
+		"Firelight Missile" 3
+
+		"Fuel Processor"
+		"Double Plasma Core"
+		"Large Heat Shunt"
+		"Systems Core (Medium)"
+		"Systems Core (Tiny)"
+		"Control Transceiver"
+
+		"Afterburner (Asteroid Class)"
+		"Thruster (Lunar Class)"
+		"Steering (Planetary Class"
+
 
 ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
 	outfits
