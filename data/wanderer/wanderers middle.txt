@@ -3697,7 +3697,10 @@ mission "Wanderers: Exiles Attack Spera Anatrusk"
 		fleet
 			names "korath"
 			variant
-				"Kar Ik Vot 349 (Exile Outfits)" 2
+				"Kar Ik Vot 349 (Exile Outfits)"
+				"Tek Far 109 (Exile Outfits)" 2
+				"Far Lek 14" 16
+				"Far Osk 27" 9
 	npc
 		government Wanderer
 		system Kaliptari
@@ -3718,7 +3721,11 @@ mission "Wanderers: Exiles Attack Spera Anatrusk"
 		fleet
 			names "korath"
 			variant
-				"Kar Ik Vot 349 (Exile Outfits)"
+				"Kar Ik Vot 349 (Exile Outfits)" 2
+				"Tek Far 109 (Exile Outfits)" 3
+				"Far Lek 14" 21
+				"Far Osk 27" 14
+				
 	npc
 		government Wanderer
 		personality escort heroic
@@ -3727,7 +3734,7 @@ mission "Wanderers: Exiles Attack Spera Anatrusk"
 			variant
 				"Derecho (Moonbeam)"
 				"Tempest (Moonbeam)"
-				"Strong Wind" 2
+				"Strong Wind"
 
 event "wanderers: cool breeze available"
 	shipyard "Wanderer Advanced"
