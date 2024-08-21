@@ -3523,12 +3523,12 @@ mission "Wanderers: Efreti and Mereti 1"
 	on offer
 		conversation
 			`The Wanderers and Efreti have settled this planet together, and you are greeted by a small crowd of both as you come in to land. The Wanderer influences on the architecture here are obvious - despite the harsh conditions, the buildings are all topped with beds of the local hardy shrubs and grasses - but the shape of the buildings takes clear influences from the buildings you have seen on the Efreti worlds. As you step out of your ship, you are greeted by Rek, her short stature having made her difficult to spot amongst the crowd.`
-			`	Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been more cooperative here than we anticipated. Working side by side with us to restore this planet has done more to convince them of our intentions than our words ever could, I feel. My main concern is that we have yet to introduce them to our Mereti friends, and hence we do not yet know how the Efreti will react to them."`
+			`	Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been more cooperative here than we anticipated. Working side by side with us to restore this planet has done more to convince them of our intentions than our words ever could, I feel. However, some of them - particularly their leaders - have expressed concerns regarding the Mereti. Specifically, they want to understand what it was that we did that changed them."`
 			choice
 				`	"Are you sure that is a good idea?"`
 				`	"What should we do?"`
 					goto do
-			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it. I had hoped to do this much earlier, but the trouble with the Sestor made that impossible."`
+			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it. I would have liked to do this much earlier, but the situation with the Sestor made that impossible."`
 			label do
 			`	"Bring me to <destination>. We can ask the Mereti to send a small number of ships here to meet with the Efreti."`
 
