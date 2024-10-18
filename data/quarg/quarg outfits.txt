@@ -27,9 +27,8 @@ outfit "Antimatter Core"
 	thumbnail "outfit/quarg antimatter core"
 	"mass" 80
 	"outfit space" -80
-	"energy generation" 80
-	"heat generation" 20
-	"unplunderable" 1
+	"energy generation" 20
+	"heat generation" 10
 	description "Although humanity is now capable of producing antimatter in relatively significant quantities when compared to a thousand years ago, it is still nothing compared to the Quarg. The Quarg can produce enough antimatter to outfit every ship with an extremely efficient Antimatter Core, producing extreme amounts of energy with surprisingly little waste heat."
 	
 
@@ -50,14 +49,14 @@ outfit "Quarg Skylance"
 		sound "skylance"
 		"hit effect" "skylance impact"
 		"inaccuracy" .4
-		"turret turn" 4.
+		"turret turn" 4
 		"velocity" 500
 		"lifetime" 1
 		"reload" 1
-		"firing energy" 30
-		"firing heat" 10
-		"shield damage" 50
-		"hull damage" 40
+		"firing energy" 15
+		"firing heat" 5
+		"shield damage" 25
+		"hull damage" 20
 		"ion damage" .1
 		"scrambling damage" .1
 	description "These immensely powerful beam weapons are used by Quarg warships to strike fear into the hearts of all who dare oppose them."
@@ -87,7 +86,7 @@ outfit "Quarg Anti-Missile"
 		"velocity" 500
 		"lifetime" 1
 		"reload" 10
-		"firing energy" 50
+		"firing energy" 25
 	description "Quarg anti-missile defenses can target projectiles from considerable range compared to human technology, ensuring that only the most powerful missiles are capable of even getting near a Quarg ship."
 
 effect "quarg anti-missile"
@@ -107,6 +106,20 @@ outfit "Intrusion Countermeasures"
 	"unplunderable" 1
 	description "Quarg ships are outfitted with special systems for repelling boarders. Because no one wants to be caught by the Quarg with stolen technology, these systems are pretty much worthless on the open market."
 
+outfit "Small Graviton Thruster"
+	category "Engines"
+	"cost" 12000000
+	thumbnail "outfit/small quarg thruster"
+	"mass" 50
+	"outfit space" -50
+	"engine capacity" -50
+	"thrust" 80
+	"thrusting energy" 7
+	"thrusting heat" 1.5
+	"force protection" 0.1
+	"inertia reduction" 0.1
+	"flare sprite" "effect/medium graviton flare"
+
 outfit "Medium Graviton Thruster"
 	category "Engines"
 	"cost" 20000000
@@ -115,13 +128,40 @@ outfit "Medium Graviton Thruster"
 	"outfit space" -70
 	"engine capacity" -70
 	"thrust" 120
-	"thrusting energy" 20
+	"thrusting energy" 10
 	"thrusting heat" 2
 	"force protection" 0.15
 	"inertia reduction" 0.15
 	"flare sprite" "effect/medium graviton flare"
 	description "Quarg thrusters are quite powerful for their size and produce very little heat, but at the cost of consuming immense amounts of energy."
 	description "	They also have strange capabilities which seem to violate the laws of physics as humanity understands them. Ships with these engines accelerate faster under their own power than one would expect given the thrust of their engines, while also taking less impact from external forces."
+
+outfit "Large Graviton Thruster"
+	category "Engines"
+	"cost" 32000000
+	thumbnail "outfit/large quarg thruster"
+	"mass" 100
+	"outfit space" -100
+	"engine capacity" -100
+	"thrust" 185
+	"thrusting energy" 15
+	"thrusting heat" 3
+	"force protection" 0.2
+	"inertia reduction" 0.2
+
+outfit "Small Graviton Steering"
+	category "Engines"
+	"cost" 9000000
+	thumbnail "outfit/small quarg steering"
+	"mass" 30
+	"outfit space" -30
+	"engine capacity" -30
+	"turn" 1200
+	"turning energy" 3
+	"turning heat" .75
+	"force protection" 0.1
+	"inertia reduction" 0.1
+	"steering flare sprite" "effect/medium graviton flare"
 
 outfit "Medium Graviton Steering"
 	category "Engines"
@@ -131,7 +171,7 @@ outfit "Medium Graviton Steering"
 	"outfit space" -50
 	"engine capacity" -50
 	"turn" 2400
-	"turning energy" 10
+	"turning energy" 5
 	"turning heat" 1
 	"force protection" 0.15
 	"inertia reduction" 0.15
@@ -139,12 +179,50 @@ outfit "Medium Graviton Steering"
 	description "Quarg steering engines are as similarly impressive as their thrusters in how much energy they consume. The Quarg don't seem to be bothered by this cost though, given the unmatched strength of their reactors."
 	description "	They also have strange capabilities which seem to violate the laws of physics as humanity understands them. Ships with these engines accelerate faster under their own power than one would expect given the thrust of their engines, while also taking less impact from external forces."
 
+outfit "Large Graviton Steering"
+	category "Engines"
+	"cost" 25000000
+	thumbnail "outfit/large quarg steering"
+	"mass" 70
+	"outfit space" -70
+	"engine capacity" -70
+	"turn" 3600
+	"turning energy" 7.5
+	"turning heat" 1.5
+	"force protection" 0.2
+	"inertia reduction" 0.2
+	"steering flare sprite" "effect/large graviton flare"
+
+outfit "Fluxion Shield Generator"
+	category "Systems"
+	cost 20000000
+	thumbnail "outfit/quarg fluxion shield generator"
+	"mass" 50
+	"outfit space" -50
+	"shield generation" 5.5
+	"shield energy" 2.75
+	"disruption protection" .4
+	"piercing protection" .2
+
+outfit "Infimum Shield Generator"
+	category "Systems"
+	cost 20000000
+	thumbnail "outfit/quarg infimum shield generator"
+	"mass" 70
+	"outfit space" -70
+	"shield generation" 8
+	"shield energy" 4
+	"disruption protection" .6
+	"piercing protection" .3
+
 outfit "Quantum Shield Generator"
 	category "Systems"
 	cost 30000000
 	thumbnail "outfit/quarg quantum shield generator"
-	"mass" 120
-	"outfit space" -120
-	"shield generation" 10
-	"shield energy" 10
+	"mass" 100
+	"outfit space" -100
+	"shield generation" 12
+	"shield energy" 6
+	"disruption protection" 1
+	"piercing protection" .5
 	description "The first humans who met the Quarg thought that their technology worked on magic, and many even think so to this day. The mechanism by which this Quarg shield generator works is completely unknown to humanity, and the Quarg aren't interested in giving up their secrets."
