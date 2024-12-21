@@ -3519,89 +3519,133 @@ event "wanderers taking jobs from kor efreti"
 mission "Wanderers: Efreti and Mereti 1"
 	landing
 	name "A formal introduction"
-	description `Brink Rek to <planet>, and persuade the Mereti to send a visit to the Efreti on <origin>.`
+	description `Brink Rek to <planet> and pick up an Efreti delegation heading to Mereti space.`
 	source "Sabira Esekrai"
-	destination "Mereti Station"
+	destination "Korati Efreti"
 	passengers 1
 	to offer
 		has "event: wanderers: sestor eliminated"
 	on offer
 		conversation
-			`The Wanderers and Efreti have settled this planet together, and you are greeted by a small crowd of both as you come in to land. The Wanderer influences on the architecture here are obvious - despite the harsh conditions, the buildings are all topped with beds of the local hardy shrubs and grasses - but the shape of the buildings takes clear influences from the buildings you have seen on the Efreti worlds. As you step out of your ship, you are greeted by Rek, her short stature having made her difficult to spot amongst the crowd.`
-			`	Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been more cooperative here than we anticipated. Working side by side with us to restore this planet has done more to convince them of our intentions than our words ever could, I feel. However, some of them - particularly their leaders - have expressed concerns regarding the Mereti. Specifically, they want to understand what it was that we did that changed them."`
+			`The Wanderers and the Efreti have settled this planet together, and you are greeted by a small crowd of both as you come in to land. The Wanderer influences on the architecture here are obvious - despite the harsh conditions, the buildings are all topped with beds of the local hardy shrubs and grasses - but their overall shape is much more similar to the buildings you have seen on the Efreti worlds. As you step out of your ship, you are greeted by Rek, her short stature having made her difficult to spot amongst the crowd.`
+			`	Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been more cooperative here than we anticipated. Working side by side with us to restore this planet has done more to convince them of our intentions than our words ever could have, I feel. However, some of them - particularly their leaders - have expressed concerns regarding what happened the Mereti. Specifically, they want to understand what it was that we did that changed them."`
 			choice
 				`	"Are you sure that is a good idea?"`
 				`	"What should we do?"`
 					goto do
-			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it. I would have liked to do this much earlier, but the situation with the Sestor made that impossible."`
+			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it. I would have liked to do this much earlier, but the situation with the Sestor was too dangerous for that to be possible."`
 			label do
-			`	"Bring me to <destination>. We can ask the Mereti to send a small number of ships here to meet with the Efreti."`
+			`	"Bring me to <destination>, to speak with the leaders of the Efreti. We can organise a direct meeting between them and the Mereti."`
+	on complete
+		conversation
+			``
 
 mission "Wanderers: Efreti and Mereti 2"
-	landing
 	name "A formal introduction"
-	description `Accompany this small group of Mereti ships to <destination>, where they will meet with the Efreti`
-	source "Mereti Station"
-	destination "Sabira Esekrai"
+	description `Accompany this Efreti ship to <destination>, where they will meet with the Mereti`
+	source "Korati Efreti"
+	destination "Mereti Station"
 	passengers 1
 	to offer
 		has "Wanderers: Efreti and Mereti 1: done"
 	on offer
 		conversation
-			`Naturally, there is no part of this station with atmosphere or any other facilities for living creatures, so you remain on your ship after docking. Fortunately, a small Mereti drone docks nearby and hails you before you spend too long trying to work out what to do.`
-			`	" "`
-			choice
-				`	"We'd like to bring you to meet with the Efreti."`
-				`	`
-			`	The drone pauses for a moment, then speaks somewhat hesitantly. "The... Efreti? Yes, the Efreti..." It remains silent, as if deep in thought, for a few seconds, before suddenly responding. "Do the Efreti [need, require] our help?"`
-			`	"Not immediately, no." Rek responds quickly. `
+			`	`
 	on visit
-		dialog `You have reached <planet>, but the Mereti ships still haven't arrived. You should take off and wait for them.`
+		dialog `You have reached <planet>, but the Efreti ship you are escorting still hasn't arrived. You should take off and wait for it.`
 	on complete
 		conversation
-			``
+			`Naturally, there is no part of this station with atmosphere or any other facilities for living creatures, so you and the crew of the <npc> remain on your ships after docking. Fortunately, a small Mereti drone docks nearby and hails you before you spend too long trying to work out what to do.`
+			`	" "`
+			`	For a while, you and Rek sit together in silence, watching the console and waiting for a message. Then, finally, a message comes from the <npc>. "They're ready to go." Rek translates for you.`
 	npc accompany save
-		government "Kor Mereti"
+		government "Kor Efret"
 		personality timid
-		fleet
-			names "Kor Mereti"
-			variant
-				"Model 16"
-				"Model 8" 2
+		ship "Charm-Shallop" "Entetwaru"
 
-mission "Wanderers: Relocation 1"
-	name ""
-	description ``
-	source "Sabira Esekrai"
+mission "Wanderers: Efreti and Mereti 3"
+	landing
+	name "A formal introduction"
+	description `Return to <destination> with the <npc>.`
+	source "Mereti Station"
+	destination "Korati Efreti"
+	passengers 1
 	to offer
 		has "Wanderers: Efreti and Mereti 2: done"
-	on offer
+	on visit
+		dialog `You have reached <planet>, but the Efreti ship you are escorting still hasn't arrived. You should take off and wait for it.`
+	on complete
 		conversation
-			`In the spaceport, you meet up with Rek once more. This time, she is with Tele'ek, who is resting on a chair beside her. His former brown and white plumage is now almost entirely gone, but while Rek seemed thin and fragile without feathers, Tele'ek's body is large and bulky, with distinctly scaly skin from which a few oily green feathers seem to have grown.`
-			`	`
-			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that the threat posed by the automata is over. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations.`
+			`The Korath on the <npc> have a distinct fervor as they head out into the halls of the station and talk to the locals. Rek listens quietly, then turns to you and explains.`
+			`	""`
+			`	"I will remain here for a while," Rek says, "but you should head back to our base on Spera Anatrusk. I believe our leaders have a new project for you to help with." Rek waves goodbye, then follows the Korath deeper into the station.`
+	npc accompany save
+		government "Kor Efret"
+		personality timid
+		ship "Charm-Shallop" "Entetwaru"
 
-event "wanderers: seleptra nak colony formed"
-	system Seketra
-		government Wanderer
-	planet "Seleptra Nak"
-		description `The most disturbing thing about the empty Korath cities on this planet is how pristine they are: no sign of bombing or of weapons fire. Either everyone who lived here chose to leave, or they were killed by a weapon that did no damage to the buildings they live in.`
-		description `	Outside the cities, plant and animal life has begun to flourish, and some of the smaller villages have already been swallowed up by the growing forests. The climate is temperate, and rainfall is plentiful; aside from the reduction in biodiversity, it will not take this planet long to forget its former owners.`
-		description `Deeper in the forests, the Wanderers have set up their own cities, leaving the former constructions of the Korath to be naturally recovered by the local flora and fauna.`
-		spaceport `The spaceport is bustling with activity, with ships constantly arriving with the cargo and workers required to rapidly settle this world. Both the spaceport and the shipyard are situated in natural clearings in the forest, surrounded on all sides by the arboreal dwellings favoured by the Wanderers.`
+mission "Wanderers: Outfitter Expansion 1"
+	landing
+	name ""
+	description ``
+	source "Korati Efreti"
+	destination "Spera Anatrusk"
+	to offer
+		has "Wanderers: Efreti and Mereti 3: done"
+	on complete
+		conversation
+			`Upon landing on <planet>, you are greeted by Tele'ek. His former brown and white plumage is now almost entirely gone, but while Rek seemed thin and fragile without feathers, Tele'ek's body is large and bulky, with distinctly scaly skin from which a few oily green feathers seem to have grown.`
+			`	"I [think, believe] that the time will soon come for me to undergo the Molt." he says slowly. "If this [peace, safety] holds, I should take the opportunity while we are not in need of [martial expertise?]."`
 
-event "wanderers: seleptra nak colony growing"
-	planet "Seleptra Nak"
-		outfitter "Wanderer Basics"
+mission "Wanderers: Outfitter Expansion 2"
+	landing
+	name ""
+	description ``
+	source "Spera Anatrusk"
+	destination "Var' Kayi"
+	to offer
+		has "Wanderers: Outfitter Expansion 1: done"
 
-event "wanderers: seleptra nak shipyard established"
-	planet "Seleptra Nak"
+mission "Wanderers: Outfitter Expansion 3"
+	landing
+	name ""
+	description ``
+	source "Var' Kayi"
+	destination "Spera Anatrusk"
+	to offer
+		has "Wanderers: Outfitter Expansion 2: done"
+	on complete
+		event "wanderers: spera anatrusk outfitter expanded" 5
+
+event "wanderers: spera anatrusk outfitter expanded"
+	planet "Spera Anatrusk"
 		outfitter "Wanderer Advanced"
-		shipyard "Wanderer Basics"
 
-event "wanderers: seleptra nak shipyard complete"
-	planet "Seleptra Nak"
-		shipyard "Wanderer Advanced"
+mission "Wanderers: Tele'ek Molt 1"
+	name "Bring Tele'ek to <planet>"
+	description `Bring Tele'ek to `
+	source "Spera Anatrusk"
+	destination "Tik Klai"
+	to offer
+		has "Wanderers: Outfitter Expansion 3: done"
+	on complete
+		conversation
+			`As you come in to land, you see that a large crowd has gathered around in the spaceport. They move aside as your ship lands, and then, as you step out, the crowd parts, leaving a corridoor open from your ship to the facility's entrance.`
+			`	The crowd goes silent as the airlock opens and you step outside. Then, after nearly a full minute of this silence,`
+			choice
+				`	"Are they all your family?"`
+				`	"Are these all your friends?"`
+				`	"Who are they?"`
+			`	"They are our warriors, our pilots and crews. They must be here to [honour, mourn] their [leader, commander]." Tele'ek explains. In the pauses before your translation device responds, you can hear him struggling to form each word as it leaves his mouth.`
+			`	Inside the facility is a much smaller gathering, as two Wanderers are discussing something with the staff.`
+
+mission "Wanderers: Tele'ek Molt 2"
+	name "Return to <planet>"
+	description `Return to <destination> to meet up with Rek.`
+	source "Tik Klai"
+	destination "Sabira Esekrai"
+	to offer
+		has "Wanderers: Tele'ek Molt 1: done"
 
 mission "Wanderers: Station Repairs 1"
 	name "Assess <planet>"
@@ -3609,9 +3653,13 @@ mission "Wanderers: Station Repairs 1"
 	source "Sabira Esekrai"
 	destination "Esperaktu Station"
 	passengers 5
+	to offer
+		has "Wanderers: Tele'ek Molt 2: done"
 	on offer
 		conversation
 			``
+
+#todo: would be nice to let the player 'explore' the station a little, in a kind of mini text-based adventure type thing similar to the Heliarch investigations or some of the Patir missions.
 
 mission "Wanderers: Station Repairs 2"
 	landing
@@ -3639,8 +3687,6 @@ mission "Wanderers: Station Repairs 3"
 	on offer
 		conversation
 			``
-	on complete
-		event "esperaktu station reactivated" 50
 	npc accompany save
 		government "Kor Efret"
 		personality timid escort
@@ -3650,9 +3696,41 @@ mission "Wanderers: Station Repairs 3"
 				"Arch-Carrack" 2
 				"Charm-Shallop" 2
 
+mission "Wanderers: Station Repairs 4"
+	name "Supplies from <planet>"
+	source "Esperaktu Station"
+	destination "Var' Kayi"
+	to offer
+		has "Wanderers: Station Repairs 3: done"
+	npc
+		government Korath
+		system Farbutero
+		personality
+		fleet
+			names korath
+			variant
+				Palavret
+				'olofez 2
+
+mission "Wanderers: Station Repairs 5"
+	name "Supplies to <planet>"
+	source "Var' Kayi"
+	destination "Esperaktu Station"
+	to offer
+		has "Wanderers: Station Repairs 4: done"
+	on complete
+		event "esperaktu station reactivated" 50
+	npc accompany save
+		government Wanderer
+		personality timid escort
+		fleet
+			names wanderer
+			variant
+				"Deep River" 2
+
 # maybe another mission here sending you to pick up some specific component that they need, probably from either the Hai or the Syndicate?
 
-mission "Wanderers: Station Repairs 4"
+mission "Wanderers: Station Repairs 6"
 	landing
 	name "Return to <planet>"
 	description "Return to <destination> with Rek."
@@ -3660,7 +3738,7 @@ mission "Wanderers: Station Repairs 4"
 	destination "Sabira Esekrai"
 	passengers 1
 	to offer
-		has "Wanderers: Station Repairs 3: done"
+		has "Wanderers: Station Repairs 5: done"
 	on offer
 		conversation
 			``
@@ -3679,20 +3757,208 @@ event "wanderers: esperaktu station reactivated"
 		description `	For food, the Korath set up vats of photosynthetic yeast and bacteria in some rooms on the outer shell of the station. In their absence, the bacterial soup worked its way through the ventilation system into the rest of the station and formed a thin layer of slime on almost every sun-facing wall, which the Efreti are having some difficulty fully cleaning up. Nonetheless, despite the difficulties, the station is now providing significant supplies of food to the Efreti.`
 		spaceport `The hangar had been left exposed to the vacuum of space while the station was abandoned, so it has thankfully avoided being taken over by the bacterial slime that covered the rest of the station. The new residents move around busily, loading up ship after ship with the nutritious soupy substance.`
 
-mission "Wanderers: Exiles Attack Spera Anatrusk"
+mission "Wanderers: Exile Scout Patrol"
+	name "Korath patrol"
+	description `Patrol <waypoints> for any Korath activity.`
+	source "Sabira Esekrai"
+	destination "Sabira Esekrai"
+	waypoints Feroteri Hesselpost Chornifath Korsmanath Farbutero Meftarkata
+	to offer
+		has "Wanderers: Station Repairs 6: done"
+	npc
+		government Korath
+		system Farbutero
+		personality
+		fleet
+			names korath
+			variant
+				Palavret
+				'olofez 2
+	npc
+		government Korath
+		system Chornifath
+		personality
+		fleet
+			names korath
+			variant
+				Palavret
+				'olofez 2
+
+mission "Wanderers: Experts to Efreti 1"
+	name ""
+	description ``
+	source "Sabira Esekrai"
+	destination "Vara K'chrai"
+	to offer
+		has "Wanderers: Exile Scout Patrol: done"
+
+mission "Wanderers: Experts to Efreti 2"
+	name ""
+	description `Escort the <npc>, carrying Wanderer planetary scientists, to <destination>.`
+	source "Vara K'chrai"
+	destination "Laki Nemparu"
+	to offer
+		has "Wanderers: Experts to Efreti 1: done"
+	npc accompany save
+		government Wanderer
+		personality timid escort
+		ship "Riptide" "Kri'rek"
+
+mission "Wanderers: Experts to Efreti 3"
+	name ""
+	description `Escort the <npc>, carrying Wanderer planetary scientists, to <destination>.`
+	source "Laki Nemparu"
+	destination "Karek Fornati"
+	to offer
+		has "Wanderers: Experts to Efreti 2: done"
+	npc accompany save
+		government Wanderer
+		personality timid escort
+		ship "Riptide" "Kri'rek"
+
+mission "Wanderers: Experts to Efreti 4"
+	name ""
+	description `Escort the <npc>, carrying Wanderer planetary scientists, to <destination>.`
+	source "Karek Fornati"
+	destination "Setar Fort"
+	to offer
+		has "Wanderers: Experts to Efreti 3: done"
+	npc accompany save
+		government Wanderer
+		personality timid escort
+		ship "Riptide" "Kri'rek"
+
+mission "Wanderers: Experts to Efreti 5"
+	name ""
+	description `Escort the <npc> back to the Wanderers on <destination>.`
+	source "Setar Fort"
+	destination "Sabira Esekrai"
+	to offer
+		has "Wanderers: Experts to Efreti 4: done"
+	npc accompany save
+		government Wanderer
+		personality timid escort
+		ship "Riptide" "Kri'rek"
+
+mission "Wanderers: Relocation 1"
+	name ""
+	description ``
+	source "Sabira Esekrai"
+	destination "Vara K'chrai"
+	to offer
+		has "Wanderers: Efreti and Mereti 2: done"
+	on offer
+		conversation
+			`In the spaceport, you meet up with Rek once more.`
+			`	`
+			`	"There is another issue, however. Our elders are also concerned that our movement into this region of space has been too slow, and that we must accelerate our efforts now that the threat posed by the automata is over. To that end, we have identified the world of Seleptra Nak as a prime location for a major settlement. While it has suffered some ecological damage that we will need to repair, it has not been damaged so heavily as many of their other worlds, and hence it can still support large populations.`
+
+mission "Wanderers: Relocation 2"
+	name ""
+	description ``
+	source "Vara K'chrai"
+	destination "Seleptra Nak"
+	to offer
+		has "Wanderers: Relocation 1: done"
+	npc
+		government Wanderer
+		personality timid escort
+		fleet
+			names "wanderer"
+			variant
+				"Deep River" 6
+				"Riptide" 5
+				"Strong Wind"
+
+event "wanderers: seleptra nak colony formed"
+	system Seketra
+		government Wanderer
+	planet "Seleptra Nak"
+		description `The most disturbing thing about the empty Korath cities on this planet is how pristine they are: no sign of bombing or of weapons fire. Either everyone who lived here chose to leave, or they were killed by a weapon that did no damage to the buildings they live in.`
+		description `	Outside the cities, plant and animal life has begun to flourish, and some of the smaller villages have already been swallowed up by the growing forests. The climate is temperate, and rainfall is plentiful; aside from the reduction in biodiversity, it will not take this planet long to forget its former owners.`
+		description `Deeper in the forests, the Wanderers have set up their own cities, leaving the former constructions of the Korath to be naturally recovered by the local flora and fauna.`
+		spaceport `The spaceport is bustling with activity, with ships constantly arriving with the cargo and workers required to rapidly settle this world. Both the spaceport and the shipyard are situated in natural clearings in the forest, surrounded on all sides by the arboreal dwellings favoured by the Wanderers.`
+
+event "wanderers: seleptra nak colony growing"
+	planet "Seleptra Nak"
+		outfitter "Wanderer Basics"
+
+mission "Wanderers: Relocation 3"
+	name ""
+	description ``
+	source "Seleptra Nak"
+	destination "Vara K'chrai"
+	to offer
+		has "Wanderers: Relocation 2: done"
+	on offer
+		conversation
+			`This time, it is Tema'a Iriket who is waiting for you when you arrive in the spaceport.`
+			`	"Our [attention, interest] is also drawn to another planet, Aresepru Nat. The [local, native] species are recovering quite effectively from the [damage, devastation] that the Korath have [inflicted, caused]. It would be [useful, wise] to observe closely, both to ensure that the [regrowth, recovery] is [successful, stable] and to learn from those species that are thriving."`
+
+mission "Wanderers: Relocation 4"
+	name ""
+	description ``
+	source "Vara K'chrai"
+	destination "Aresepru Nat"
+	to offer
+		has "Wanderers: Relocation 3: done"
+	npc
+		government Wanderer
+		personality timid escort
+		fleet
+			names "wanderer"
+			variant
+				"Deep River" 2
+				"Riptide" 2
+				"Strong Wind"
+
+event "wanderers: aresepru nat colony formed"
+	planet "Aresepru Nat"
+	description `Now that the Korath are gone, the oceans on this planet have begun to teem with fish and other living creatures once again, and the levels of dissolved oxygen and carbon dioxide are slowly swinging back into balance. Species of algae and bacteria that are able to metabolize the plastics and chemicals that the Korath left behind have spread throughout the oceans.`
+	description `The Wanderers have established small settlements on some islands, monitoring and supervising the planet's natural recovery.`
+	spaceport `The Wanderers' main spaceport here seems to be on the site of an old Korath manufacturing plant.`
+
+mission "Wanderers: Climate Report"
 	landing
 	name ""
-	description ""
+	description ``
+	source "Aresepru Nat"
+	destination "Setar Fort"
+	to offer
+		has "Wanderers: Relocation 4: done"
+	on offer
+		conversation
+			``
+
+mission "Wanderers: Exiles Attack Spera Anatrusk 1"
+	landing
+	name ""
+	description ``
+	source "Setar Fort"
+	destination "Sabira Esekrai"
+	to offer
+		has "Wanderers: Climate Report: done"
+	on offer
+		event "wanderers: spera anatrusk attack"
+		conversation
+			``
+
+event "wanderers: spera anatrusk attack"
+
+mission "Wanderers: Exiles Attack Spera Anatrusk 2"
+	landing
+	name ""
+	description ``
 	source "Sabira Esekrai"
 	destination "Spera Anatrusk"
-	passengers 1
 	to offer
-		has "Wanderers: Station Repairs 4: done"
+		has "Wanderers: Exiles Attack Spera Anatrusk 1: done"
 	on offer
-		event "wanderers: "
 		conversation
 			``
 	on complete
+		event "wanderers: spera anatrusk repairs"
+		event "wanderers: spera anatrusk restored" 60
 		conversation
 			``
 	npc kill
@@ -3707,19 +3973,6 @@ mission "Wanderers: Exiles Attack Spera Anatrusk"
 				"Far Lek 14" 16
 				"Far Osk 27" 9
 	npc
-		government Wanderer
-		system Kaliptari
-		personality heroic staying derelict
-		fleet
-			names "wanderer"
-			variant
-				"Hurricane"
-				"Derecho" 2
-				"Tempest"
-				"Tempest (Moonbeam)" 2
-				"Strong Wind"
-				"Autumn Leaf" 3
-	npc
 		govermnent Korath
 		system Kaliptari
 		personality heroic staying derelict
@@ -3733,6 +3986,19 @@ mission "Wanderers: Exiles Attack Spera Anatrusk"
 				"Met Par Tek 53 (Exile Outfits)" 4
 	npc
 		government Wanderer
+		system Kaliptari
+		personality heroic staying derelict
+		fleet
+			names "wanderer"
+			variant
+				"Hurricane"
+				"Derecho" 2
+				"Tempest"
+				"Tempest (Moonbeam)" 2
+				"Strong Wind"
+				"Autumn Leaf" 3
+	npc
+		government Wanderer
 		personality escort heroic
 		fleet
 			names "wanderer"
@@ -3740,6 +4006,23 @@ mission "Wanderers: Exiles Attack Spera Anatrusk"
 				"Derecho (Moonbeam)"
 				"Tempest (Moonbeam)"
 				"Strong Wind"
+
+
+event "wanderers: spera anatrusk repairs"
+
+event "wanderers: spera anatrusk restored"
+
+mission "Wanderers: Regroup After Attack 1"
+	name ""
+	description ``
+	to offer
+		has "Wanderers: Exiles Attack Spera Anatrusk 2: done"
+
+mission "Wanderers: Regroup After Attack 2"
+	name ""
+	description ``
+	to offer
+		has "Wanderers: Regroup After Attack 1: done"
 
 event "wanderers: cool breeze available"
 	shipyard "Wanderer Advanced"
