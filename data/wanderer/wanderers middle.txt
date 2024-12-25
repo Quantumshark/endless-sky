@@ -3577,7 +3577,7 @@ mission "Wanderers: Efreti and Mereti 3"
 	on complete
 		conversation
 			`The Korath on the <npc> have a distinct fervor as they head out into the halls of the station and talk to the locals. Rek listens quietly, then turns to you and explains.`
-			`	""`
+			`	"They described it... using a word I am unsure how to translate." Rek says. "The way that we showed the Mereti everything about who we are... it mirrors something deeply significant in Korath culture - at least, that's the impression I get."`
 			`	"I will remain here for a while," Rek says, "but you should head back to our base on Spera Anatrusk. I believe our leaders have a new project for you to help with." Rek waves goodbye, then follows the Korath deeper into the station.`
 	npc accompany save
 		government "Kor Efret"
