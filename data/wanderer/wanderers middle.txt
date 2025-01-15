@@ -3637,7 +3637,7 @@ mission "Wanderers: Tele'ek Molt 1"
 				`	"Are these all your friends?"`
 				`	"Who are they?"`
 			`	"They are our warriors, our pilots and crews. They must be here to [honour, mourn] their [leader, commander]." Tele'ek explains. In the pauses before your translation device responds, you can hear him struggling to form each word as it leaves his mouth.`
-			`	As you enter the facility and the doors close behind you, Tele'ek speaks again, more quietly this time. "I am [concerned, afraid]. I am sure it has not escaped your [sight, thoughts] that Rek and I are undergoing very different changes. I worry that this may be an []"`
+			`	As you enter the facility and the doors close behind you, Tele'ek speaks again, more quietly this time. "I am [concerned, afraid], <first>. I am sure it has not escaped your [sight, thoughts] that Rek and I are undergoing very different changes. I worry that this may be a [failed, non-viable] molt, one which I have brought upon myself by [partaking, engaging] in war beyond our [purpose, role]."`
 			`	Inside the facility is a much smaller gathering, as two Wanderers are discussing something with the staff.`
 
 mission "Wanderers: Tele'ek Molt 2"
