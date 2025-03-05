@@ -3661,8 +3661,6 @@ mission "Wanderers: Station Repairs 1"
 		conversation
 			``
 
-#todo: would be nice to let the player 'explore' the station a little, in a kind of mini text-based adventure type thing similar to the Heliarch investigations or some of the Patir missions.
-
 mission "Wanderers: Station Repairs 2"
 	landing
 	name "Supplies from <planet>"
@@ -3686,20 +3684,43 @@ mission "Wanderers: Station Repairs 2"
 			label lowercorridorcheck
 			branch lowercorridorreturn
 				has "esperaktu station: visited lower corridor"
-			`	As you descend down the ladder, you come to an airlock. As soon as the inner door opens, a wave of bacterial slime half a meter high washes forwards from the corridor beyond, knocking you flat. It takes you some time to extricate yourself from the sticky substance, but once you do you find yourself looking across a sea of slime that rises up past your knees.`
+			`	As you descend down the ladder, you come to an airlock. As soon as the inner door opens, a wave of bacterial slime half a meter high washes forth from the corridor beyond, knocking you flat. It takes you some time to extricate yourself from the sticky substance, but once you do you find yourself looking across a sea of slime that rises up past your knees. The walls and ceiling are coated in a thinner layer of the substance, obscuring most of the finer details and the signs.`
 			label lowercorridorreturn
 			`	The corridor cuts asymmetrically across this level of the station, with two small rooms to your left, and one large one to your right.`
 			choice
 				`	(Take the ladder back to the hangar.)`
 					goto hangarreturn
 				`	(Check the first room on the left.)`
-				`	(Check the first room on the left.)`
-				
+					goto kitchencheck
+				`	(Check the second room on the left.)`
+					goto diningcheck
+				`	(Check the room on the right.)`
+					goto vatscheck
+			label kitchencheck
+			branch kitchenreturn
+				has "esperaktu station: visited kitchen"
+			`	`
+			label kitchenreturn
+			`	The kitchen is connected to the corridor, or to the adjacent room.`
+			label diningcheck
+			branch diningreturn
+				has "esperaktu station: visited dining area"
+			`	`
+			label diningreturn
+			`	`
+			label vatscheck
+			branch vatsreturn
+				has "esperaktu station: visited vats"
+			`	This room is even more densely filled with the slime than the rest of the station, and it rises almost to your chest as you wade through. You can see the outlines of the overflowing vats responsible for the station's condition, and in the middle of the room what looks like a heavy goods lift rising up to the hangar. Anything else that might be present is completely submerged under the ooze.`
+			label vatsreturn
+			`	Unless you want to crawl through the slime-filled ventilation system and elevator shafts that allowed the bacteria here to proliferate throughout the station, the only way to leave the vats is through the door back into the corridor.`
+			choice
+				` (Go back to the corridor.)`
 			label uppercorridorcheck
 			branch uppercorridorreturn
 				has "esperaktu station: visited upper corridor"
 			`	The ladder to the hangar is open to vacuum, which has prevented the growth of the bacterial slime that covers the rest of the station.`
-			`	The hallway at the other side of the airlock at the top, however, is another story. The slime rises past the ankles of your suit, and wading through the viscous substance takes a considerable amount of effort.`
+			`	The hallway at the other side of the airlock at the top, however, is another story. The slime rises past the ankles of your suit, and wading through the viscous substance takes a considerable amount of effort. The walls are covered by a layer of slime too, sticking to your suit's gloves every time you reach out to steady yourself.`
 			label uppercorridorreturn
 			`	The corridor runs in a circle around this level of the station. There is a single large room in the centre, and several smaller rooms around the outside edge.`
 			choice
@@ -3712,7 +3733,7 @@ mission "Wanderers: Station Repairs 2"
 			label bunkscheck
 			branch bunksreturn
 				has "esperaktu station: visited bunk rooms"
-			`	The rooms around the edge seem to be simple crew quarters - you can see the upper sections of lockers and bunkbeds projecting up above the slime.`
+			`	The rooms around the edge seem to be simple crew quarters - you can see the upper sections of lockers and bunkbeds projecting out of the slime.`
 			`	You find in a sealed locker a small, well-used box. Opening it, you find an elaborately decorated tablet, tiny statues of Korath in various types of clothing along with some other creatures you can't identify, and several small, colourful polyhedrons.`
 			label bunksreturn
 			`	From the crew quarters, the only place you can go is back to the corridor that wraps around this level.`
@@ -3720,8 +3741,8 @@ mission "Wanderers: Station Repairs 2"
 				`	(Go back to the corridor.)`
 					goto upppercorridorreturn
 			label powercore
-			`	As soon as you enter the room, you notice the difference in temperature. It isn't difficult to imagine that without your protective suit, the smell of the burnt slime piled up against the large object in the centre of the room would be overwhelming. It seems somehow after all these years the station's power core is still operating.`
-			`	`
+			`	As soon as you enter the room, you notice the difference in temperature. It isn't difficult to imagine that without your suit, the smell of the dried slime piled up against the large object in the centre of the room would be overwhelming. As the Korath suspected, somehow after all these years the station's power core is still operating.`
+			`	Finding your way back to the hangar deck is reasonably straightforward, and the slime clinging to your suit quickly hardens and crumbles as soon as it is exposed to vacuum.`
 			accept
 	on complete
 		dialog `Your passengers have been talking almost non-stop throughout your journey back, and quickly exit your ship. Rek quickly asks you to meet her in the spaceport later, then follows after them.`
