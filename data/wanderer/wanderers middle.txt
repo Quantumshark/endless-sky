@@ -3623,7 +3623,7 @@ event "wanderers: spera anatrusk outfitter expanded"
 
 mission "Wanderers: Tele'ek Molt 1"
 	name "Bring Tele'ek to <planet>"
-	description `Bring Tele'ek to `
+	description `Bring Tele'ek to the medical facility on <destination>.`
 	source "Spera Anatrusk"
 	destination "Tik Klai"
 	to offer
@@ -3632,7 +3632,7 @@ mission "Wanderers: Tele'ek Molt 1"
 		conversation
 			`As you come in to land, you see that a large crowd has gathered around in the spaceport. They move aside as your ship lands, and then, as you step out, the crowd parts, leaving a corridoor open from your ship to the facility's entrance.`
 			`	The crowd goes silent as the airlock opens and you step outside. Then, after nearly a full minute of this silence, a cry comes up from the crowd: "Tele'ek!"`
-			`	Within a few moments, the whole crowd have joined, chanting Tele'ek's name.`
+			`	Within a few moments, the whole crowd have joined them, chanting Tele'ek's name.`
 			choice
 				`	"Are they all your family?"`
 				`	"Are these all your friends?"`
@@ -3642,6 +3642,7 @@ mission "Wanderers: Tele'ek Molt 1"
 			`	Inside the facility is a much smaller gathering, as two Wanderers are discussing something with the staff.`
 
 mission "Wanderers: Tele'ek Molt 2"
+	landing
 	name "Return to <planet>"
 	description `Return to <destination> to meet up with Rek.`
 	source "Tik Klai"
