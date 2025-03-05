@@ -3631,7 +3631,8 @@ mission "Wanderers: Tele'ek Molt 1"
 	on complete
 		conversation
 			`As you come in to land, you see that a large crowd has gathered around in the spaceport. They move aside as your ship lands, and then, as you step out, the crowd parts, leaving a corridoor open from your ship to the facility's entrance.`
-			`	The crowd goes silent as the airlock opens and you step outside. Then, after nearly a full minute of this silence,`
+			`	The crowd goes silent as the airlock opens and you step outside. Then, after nearly a full minute of this silence, a cry comes up from the crowd: "Tele'ek!"`
+			`	Within a few moments, the whole crowd have joined, chanting Tele'ek's name.`
 			choice
 				`	"Are they all your family?"`
 				`	"Are these all your friends?"`
@@ -3674,10 +3675,10 @@ mission "Wanderers: Station Repairs 2"
 	on offer
 		conversation
 			`The hangar has been left open to space, so you are able to enter it and land without too much trouble. `
-			`	As you don't have any space suits fitted for Rek or for the Korath, they agree to wait for you inside your ship. "Remember, you're looking for" Rek reminds you.`
-			`	Stepping outside, you find yourself in the hangar bay. While some of the markings that are in direct sunlight have faded, the area seems mostly to be in fairly good condition.`
+			`	As you don't have any space suits fitted for Rek or for the Korath, they agree to wait for you inside your ship. "Remember, you're looking for the station's power core." Rek reminds you.`
+			`	Stepping outside, you find yourself in the hangar bay. While some of the markings that are in direct sunlight have faded, the area seems mostly to be in fairly good condition, and the station's artificial gravity is still active, albeit in a reduced capacity.`
 			label hangarreturn
-			`	The hangar covers the whole of this level, as far as you can tell. The elevators aren't working, but you can ascend and descend via a set of maintenance ladders at one side.`
+			`	The hangar covers the whole of this level, as far as you can tell. The elevators seem not to be operable, but you can ascend and descend via a set of maintenance ladders at one side.`
 			choice
 				`	(Take the ladder up.)`
 					goto uppercorridorcheck
@@ -3685,22 +3686,43 @@ mission "Wanderers: Station Repairs 2"
 			label lowercorridorcheck
 			branch lowercorridorreturn
 				has "esperaktu station: visited lower corridor"
-			`	`
+			`	As you descend down the ladder, you come to an airlock. As soon as the inner door opens, a wave of bacterial slime half a meter high washes forwards from the corridor beyond, knocking you flat. It takes you some time to extricate yourself from the sticky substance, but once you do you find yourself looking across a sea of slime that rises up past your knees.`
 			label lowercorridorreturn
-			`	`
+			`	The corridor cuts asymmetrically across this level of the station, with two small rooms to your left, and one large one to your right.`
 			choice
-				`	(Take the ladder back to the hangar)`
+				`	(Take the ladder back to the hangar.)`
 					goto hangarreturn
+				`	(Check the first room on the left.)`
+				`	(Check the first room on the left.)`
+				
 			label uppercorridorcheck
 			branch uppercorridorreturn
 				has "esperaktu station: visited upper corridor"
-			`	The ladder is open to vacuum, which has prevented the growth of the bacterial slime that covers the rest of the station.`
+			`	The ladder to the hangar is open to vacuum, which has prevented the growth of the bacterial slime that covers the rest of the station.`
 			`	The hallway at the other side of the airlock at the top, however, is another story. The slime rises past the ankles of your suit, and wading through the viscous substance takes a considerable amount of effort.`
 			label uppercorridorreturn
 			`	The corridor runs in a circle around this level of the station. There is a single large room in the centre, and several smaller rooms around the outside edge.`
 			choice
-				`	(Take the ladder back to the hangar)`
+				`	(Take the ladder back to the hangar.)`
 					goto hangarreturn
+				`	(Check the small rooms around the outside edge.)`
+					goto bunkscheck
+				`	(Check the large room in the centre.)`
+					goto powercore
+			label bunkscheck
+			branch bunksreturn
+				has "esperaktu station: visited bunk rooms"
+			`	The rooms around the edge seem to be simple crew quarters - you can see the upper sections of lockers and bunkbeds projecting up above the slime.`
+			`	You find in a sealed locker a small, well-used box. Opening it, you find an elaborately decorated tablet, tiny statues of Korath in various types of clothing along with some other creatures you can't identify, and several small, colourful polyhedrons.`
+			label bunksreturn
+			`	From the crew quarters, the only place you can go is back to the corridor that wraps around this level.`
+			choice
+				`	(Go back to the corridor.)`
+					goto upppercorridorreturn
+			label powercore
+			`	As soon as you enter the room, you notice the difference in temperature. It isn't difficult to imagine that without your protective suit, the smell of the burnt slime piled up against the large object in the centre of the room would be overwhelming. It seems somehow after all these years the station's power core is still operating.`
+			`	`
+			accept
 	on complete
 		dialog `Your passengers have been talking almost non-stop throughout your journey back, and quickly exit your ship. Rek quickly asks you to meet her in the spaceport later, then follows after them.`
 
