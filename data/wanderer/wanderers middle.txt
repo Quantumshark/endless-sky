@@ -3594,10 +3594,6 @@ mission "Wanderers: Outfitter Expansion 1"
 	destination "Spera Anatrusk"
 	to offer
 		has "Wanderers: Efreti and Mereti 3: done"
-	on complete
-		conversation
-			`Upon landing on <planet>, you are greeted by Tele'ek. His former brown and white plumage is now almost entirely gone, but while Rek seemed thin and fragile without feathers, Tele'ek's body is large and bulky, with distinctly scaly skin from which a few oily green feathers seem to have grown.`
-			`	"I [think, believe] that the time will soon come for me to undergo the Molt." he says slowly. "If this [peace, safety] holds, I should take the opportunity while we are not in need of [martial expertise?]."`
 
 mission "Wanderers: Outfitter Expansion 2"
 	landing
@@ -3607,6 +3603,19 @@ mission "Wanderers: Outfitter Expansion 2"
 	destination "Var' Kayi"
 	to offer
 		has "Wanderers: Outfitter Expansion 1: done"
+	on offer
+		conversation
+			`Upon landing on <planet>, you are greeted by Tele'ek. His former brown and white plumage is now almost entirely gone, but while Rek seemed thin and fragile without feathers, Tele'ek's body is large and bulky, with distinctly scaly skin from which a few oily green feathers seem to have grown.`
+			`	"I [think, believe] that the time will soon come for me to undergo the Molt." he says slowly. "If this [peace, safety] holds, I should take the opportunity while we are not in need of [martial expertise?]. But, I am still concerned about the [threat, danger] posed by the Exiles. I shall [wait, remain] here for a little longer, I think, until the time comes." He takes a seat beside you before continuing.`
+			`	"For now, we must take advantage of this [peace, safety] for as long as it lasts, and speed up our movement into this space. We have been far too [lethargic?] in our movement so far, and I worry that the Keepers may grow [concerned, restless] at our lack of progress. Our elders are calling for us to [expand, develop] our base here, so that we can shift more of our [forces, operations] through to this side of the Eye."`
+			choice
+				`	"Alright, what do you need me to do?"`
+					goto need
+				`	"Is that a good idea? What if you're attacked while you're moving through?"`
+			`	"We are no better [prepared, defended] if we delay. We have limited facilities to refuel and repair our [ships, vessels] here, so the vast majority of our [forces, strength] is still on the other side of the Eye. We need to set up the facilities to [support, operate] a larger fleet here as soon as possible." he explains, pausing a few times as he does so.`
+			label need
+			`	"You must travel to <destination>. There will be a fleet of freighters there. You will need to bring them back here."`
+				accept
 
 mission "Wanderers: Outfitter Expansion 3"
 	landing
