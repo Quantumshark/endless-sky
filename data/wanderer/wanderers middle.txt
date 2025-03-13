@@ -3778,6 +3778,13 @@ mission "Wanderers: Station Repairs 2"
 				`	(Go back to the corridor.)`
 					goto upppercorridorreturn
 			label powercore
+			action
+				clear "esperaktu station: visited lower corridor"
+				clear "esperaktu station: visited kitchen"
+				clear "esperaktu station: visited dining area"
+				clear "esperaktu station: visited vats"
+				clear "esperaktu station: visited upper corridor"
+				clear "esperaktu station: visited bunk rooms"
 			`	As soon as you enter the room, you notice the difference in temperature from the rest of the station. It isn't difficult to imagine that without your suit, the smell of the dried slime piled up against the large object in the centre of the room would be horrendous. As the Korath suspected, somehow after all these years the station's power core is still operating.`
 			`	You move around the room carefully, taking photos of each of the consoles, clearing away some of the slime so that the labels and status lights are visible.`
 			`	Finding your way back to the hangar deck is reasonably straightforward, and the slime clinging to your suit begins to harden and crumble away as soon as it is exposed to vacuum.`
