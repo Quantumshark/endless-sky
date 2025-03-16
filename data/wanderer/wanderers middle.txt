@@ -3627,14 +3627,21 @@ mission "Wanderers: Outfitter Expansion 2"
 
 mission "Wanderers: Outfitter Expansion 3"
 	landing
-	name ""
-	description ``
+	name "Materials to <planet>"
+	description `Escort this Wanderer fleet carrying workers and materials to expand the base on <destination>.`
 	source "Var' Kayi"
 	destination "Spera Anatrusk"
 	to offer
 		has "Wanderers: Outfitter Expansion 2: done"
 	on complete
 		event "wanderers: spera anatrusk outfitter expanded" 5
+	npc accompany save
+		fleet
+			names wanderer
+			variant
+				"Riptide"
+				"Deep River" 3
+			
 
 event "wanderers: spera anatrusk outfitter expanded"
 	planet "Spera Anatrusk"
