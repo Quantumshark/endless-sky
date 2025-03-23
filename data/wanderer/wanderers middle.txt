@@ -3667,8 +3667,27 @@ mission "Wanderers: Tele'ek Molt 1"
 				`	"Are these all your friends?"`
 				`	"Who are they?"`
 			`	"They are our warriors, our pilots and crews. They must be here to [honour, mourn] their [leader, commander]." Tele'ek explains. In the pauses before your translation device responds, you can hear him struggling to form each word as it leaves his mouth.`
-			`	As you enter the facility and the doors close behind you, Tele'ek speaks again, more quietly this time. "I am [concerned, afraid], <first>. I am sure it has not escaped your [sight, thoughts] that Rek and I are undergoing very different changes. I worry that this may be a [failed, non-viable] molt, one which I have brought upon myself by [partaking, engaging] in war beyond our [purpose, role]."`
-			`	Inside the facility is a much smaller gathering, as two Wanderers are discussing something with the staff.`
+			`	As you enter the facility and the doors close behind you, Tele'ek speaks to you again, more quietly this time. "I am [concerned, afraid], <first>. I am sure it has not escaped your [sight, thoughts] that Rek and I are undergoing very different changes. I worry that this may be a [failed, non-viable] molt, one which I have brought upon myself by [partaking, engaging] in war beyond the [purpose, role] of the Wanderers."`
+			choice
+				`	"I hope not."`
+					goto reassurance
+				`	"Is there anything that can be done, if you are right?"`
+					goto anything
+				`	"Rek found that her mind changed before her molt, not just her body. If the same is happening to you, there may be hope."`
+					goto speculation
+				`	(Stay silent.)`
+			`	Tele'ek looks at you for a moment before looking down. "You are worried too, aren't you? "`
+			goto "inside facility"
+			label reassurance
+			`	Tele'ek pauses before responding. "Thank you, <first>. Whatever happens, do not [lose, abandon] your hope. There is hope for the Wanderers, and for the Korath, with or without my [involvement, presence]."`
+			goto "inside facility"
+			label anything
+			`	Tele'ek looks down at the ground. "Perhaps. Perhaps not. But, if that [fate?] were to be [altered, prevented], I [suspect, imagine] I would never be able to undergo the true Molt. So, I can only hope that my [fears, suspicions] are wrong."`
+			goto "inside facility"
+			label speculation
+			`	Tele'ek seems surprised by this revelation. For a brief moment, his expression changes, and he thinks silently to himself for a moment. Then, he looks back up at you. "I... I hope that your [theory, observation] is correct, <first>. I will [seek, attempt] to hold onto that hope as I approach my [fate?]."`
+			label "inside facility"
+			`	Inside the facility is a much smaller gathering, as two Wanderers are discussing something with the staff. All of them turn to you as you and Tele'ek approach.`
 
 mission "Wanderers: Tele'ek Molt 2"
 	landing
@@ -3762,7 +3781,7 @@ mission "Wanderers: Station Repairs 2"
 			branch uppercorridorreturn
 				has "esperaktu station: visited upper corridor"
 			`	The ladder to the hangar is open to vacuum, which has prevented the growth of the bacterial slime that covers the rest of the station.`
-			`	The hallway at the other side of the airlock at the top, however, is another story. The slime rises past the ankles of your suit, and wading through the viscous substance takes a considerable amount of effort. The walls are covered by a layer of slime too, sticking to your suit's gloves every time you reach out to steady yourself.`
+			`	The hallway at the other side of the airlock at the top, however, is another story. The slime rises almost to the ankles of your suit, and wading through the viscous and sticky substance takes a considerable amount of effort. The walls are covered by a layer of slime too, sticking to your suit's gloves every time you reach out to steady yourself.`
 			label uppercorridorreturn
 			`	The corridor runs in a circle around this level of the station. There is a single large room in the centre, and several smaller rooms around the outside edge.`
 			choice
@@ -3830,7 +3849,7 @@ mission "Wanderers: Station Repairs 4"
 	npc
 		government Korath
 		system Farbutero
-		personality
+		personality 
 		fleet
 			names korath
 			variant
