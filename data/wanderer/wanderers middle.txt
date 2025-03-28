@@ -3846,6 +3846,9 @@ mission "Wanderers: Station Repairs 4"
 	destination "Var' Kayi"
 	to offer
 		has "Wanderers: Station Repairs 3: done"
+	on offer
+		conversation
+			``
 	npc
 		government Korath
 		system Farbutero
@@ -3930,31 +3933,41 @@ mission "Wanderers: Exile Scout Patrol"
 
 mission "Wanderers: Experts to Efreti 1"
 	name ""
-	description ``
+	description `Travel to <destination> to meet up with a team of Wanderer planetary scientists, who will travel to Efreti space to monitor their planets.`
 	source "Sabira Esekrai"
 	destination "Vara K'chrai"
 	to offer
 		has "Wanderers: Exile Scout Patrol: done"
+	on offer
+		conversation
+			``
 
 mission "Wanderers: Experts to Efreti 2"
-	name ""
+	name "Scientists to <planet>"
 	description `Escort the <npc>, carrying Wanderer planetary scientists, to <destination>.`
 	source "Vara K'chrai"
 	destination "Laki Nemparu"
 	to offer
 		has "Wanderers: Experts to Efreti 1: done"
+	on offer
+		conversation
+			``
+	on complete
+		dialog ``
 	npc accompany save
 		government Wanderer
 		personality timid escort
 		ship "Riptide" "Kri'rek"
 
 mission "Wanderers: Experts to Efreti 3"
-	name ""
+	name "Scientists to <planet>"
 	description `Escort the <npc>, carrying Wanderer planetary scientists, to <destination>.`
 	source "Laki Nemparu"
 	destination "Karek Fornati"
 	to offer
 		has "Wanderers: Experts to Efreti 2: done"
+	on complete
+		dialog ``
 	npc accompany save
 		government Wanderer
 		personality timid escort
@@ -3967,6 +3980,8 @@ mission "Wanderers: Experts to Efreti 4"
 	destination "Setar Fort"
 	to offer
 		has "Wanderers: Experts to Efreti 3: done"
+	on complete
+		dialog ``
 	npc accompany save
 		government Wanderer
 		personality timid escort
@@ -3979,6 +3994,9 @@ mission "Wanderers: Experts to Efreti 5"
 	destination "Sabira Esekrai"
 	to offer
 		has "Wanderers: Experts to Efreti 4: done"
+	on complete
+		conversation
+			``
 	npc accompany save
 		government Wanderer
 		personality timid escort
@@ -4060,7 +4078,7 @@ event "wanderers: aresepru nat colony formed"
 	planet "Aresepru Nat"
 	description `Now that the Korath are gone, the oceans on this planet have begun to teem with fish and other living creatures once again, and the levels of dissolved oxygen and carbon dioxide are slowly swinging back into balance. Species of algae and bacteria that are able to metabolize the plastics and chemicals that the Korath left behind have spread throughout the oceans.`
 	description `The Wanderers have established small settlements on some islands, monitoring and supervising the planet's natural recovery.`
-	spaceport `The Wanderers' main spaceport here seems to be on the site of an old Korath manufacturing plant.`
+	spaceport `The Wanderers' main spaceport here seems to be near the site of an old Korath manufacturing plant.`
 
 mission "Wanderers: Climate Report"
 	landing
