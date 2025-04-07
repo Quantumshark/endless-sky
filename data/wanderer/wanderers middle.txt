@@ -3605,8 +3605,8 @@ mission "Wanderers: Outfitter Expansion 1"
 
 mission "Wanderers: Outfitter Expansion 2"
 	landing
-	name ""
-	description ``
+	name "Freighters from <planet>"
+	description `Pick up a fleet of Wanderer freighters from <destination>, to be brought back here in order to aid in expanding the Wanderers' local military facilities.`
 	source "Spera Anatrusk"
 	destination "Var' Kayi"
 	to offer
@@ -3619,11 +3619,13 @@ mission "Wanderers: Outfitter Expansion 2"
 			choice
 				`	"Alright, what do you need me to do?"`
 					goto need
-				`	"Is that a good idea? What if you're attacked while you're moving through?"`
+				`	"Is that a good idea? What if the wanderers are attacked while they're moving through?"`
 			`	"We are no better [prepared, defended] if we delay. We have limited facilities to refuel and repair our [ships, vessels] here, so the vast majority of our [forces, strength] is still on the other side of the Eye. We need to set up the facilities to [support, operate] a larger fleet here as soon as possible." he explains, pausing a few times as he does so.`
 			label need
 			`	"You must travel to <destination>. There will be a fleet of freighters there. You will need to bring them back here."`
 				accept
+	on complete
+		dialog `You meet up with the captains of the Wanderer fleet, who are ready to head out to Spera Anatrusk immediately.`
 
 mission "Wanderers: Outfitter Expansion 3"
 	landing
@@ -3634,13 +3636,14 @@ mission "Wanderers: Outfitter Expansion 3"
 	to offer
 		has "Wanderers: Outfitter Expansion 2: done"
 	on complete
-		event "wanderers: spera anatrusk outfitter expanded" 5
+		dialog `The ships you were escorting land quickly, and the dock workers immediately start unloading the Deep Rivers' cargo. A crew of workers emerges from the Riptide, eager to start work. As you watch this scene, a message from Tele'ek appears on your computer, asking you to meet him in the spaceport.`
+		event "wanderers: spera anatrusk outfitter expanded" 15
 	npc accompany save
 		fleet
 			names wanderer
 			variant
 				"Riptide"
-				"Deep River" 3
+				"Deep River" 4
 			
 
 event "wanderers: spera anatrusk outfitter expanded"
@@ -3676,7 +3679,7 @@ mission "Wanderers: Tele'ek Molt 1"
 				`	"Rek found that her mind changed before her molt, not just her body. If the same is happening to you, there may be hope."`
 					goto speculation
 				`	(Stay silent.)`
-			`	Tele'ek looks at you for a moment before looking down. "You are worried too, aren't you? "`
+			`	Tele'ek looks at you for a moment before looking down. "You are worried too, aren't you? Do not worry too much about what [happens, occurs] to me. It is clear that you have the [skill, experience] to lead our forces in my absence, so do not fear for the fate of the Wanderers."`
 			goto "inside facility"
 			label reassurance
 			`	Tele'ek pauses before responding. "Thank you, <first>. Whatever happens, do not [lose, abandon] your hope. There is hope for the Wanderers, and for the Korath, with or without my [involvement, presence]."`
