@@ -3963,6 +3963,7 @@ mission "Wanderers: Experts to Efreti 2"
 		ship "Riptide" "Kri'rek"
 
 mission "Wanderers: Experts to Efreti 3"
+	landing
 	name "Scientists to <planet>"
 	description `Escort the <npc>, carrying Wanderer planetary scientists, to <destination>.`
 	source "Laki Nemparu"
@@ -3977,6 +3978,7 @@ mission "Wanderers: Experts to Efreti 3"
 		ship "Riptide" "Kri'rek"
 
 mission "Wanderers: Experts to Efreti 4"
+	landing
 	name ""
 	description `Escort the <npc>, carrying Wanderer planetary scientists, to <destination>.`
 	source "Karek Fornati"
@@ -3991,6 +3993,7 @@ mission "Wanderers: Experts to Efreti 4"
 		ship "Riptide" "Kri'rek"
 
 mission "Wanderers: Experts to Efreti 5"
+	landing
 	name ""
 	description `Escort the <npc> back to the Wanderers on <destination>.`
 	source "Setar Fort"
