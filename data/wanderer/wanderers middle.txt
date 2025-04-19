@@ -3540,8 +3540,7 @@ mission "Wanderers: Efreti and Mereti 1"
 			`	"Bring me to <destination>, to speak with the leaders of the Efreti. We can organise a direct meeting between them and the Mereti."`
 				accept
 	on complete
-		conversation
-			``
+		dialog `Rek exits your ship shortly after you arrive, and asks you to meet her in the spaceport in a few hours' time.`
 
 mission "Wanderers: Efreti and Mereti 2"
 	name "A formal introduction"
@@ -3558,15 +3557,15 @@ mission "Wanderers: Efreti and Mereti 2"
 		dialog `You have reached <planet>, but the Efreti ship you are escorting still hasn't arrived. You should take off and wait for it.`
 	on complete
 		conversation
-			`Naturally, there is no part of this station with atmosphere or any other facilities for living creatures, so you and the crew of the <npc> remain on your ships after docking. Fortunately, a small Mereti drone docks nearby and hails you before you spend too long trying to work out what to do.`
-			`	" "`
+			`Naturally, there is no part of this Mereti station with atmosphere or any other facilities for living creatures, so you and the crew of the <npc> remain on your ships after docking. Fortunately, a small Mereti drone docks nearby and hails you before you spend too long trying to work out what to do.`
+			`	"You are welcome here, our friend. What is the [purpose, reason] behind your [visit, arrival]? Do you require our [assistance, cooperation]? Or have you come to bring us more [advice, teaching]?"`
 			choice
 				`	"The Efreti want to hear from you about what happened when you made contact with the Wanderer Mind."`
 					goto response
 				`	(Let Rek explain.)`
-			``
+			`	"We - the Wanderers - have been sharing one of the former Korath worlds, Sabira Eseskrai, with the Efreti as we work to heal the damage its previous inhabitants did." Rek says. "The Efreti have been happy to work with us, but they want you to help them understand what happened when you made contact with the Mind."`
 			label response
-			``
+			`	The drone doesn't respond immediately, its lights blinking slowly in silence for a few seconds. Then, it responds. "Of course. We are [content, prepared] to assist you in this." The drone goes silent for a while, and it takes you a moment to realise that it has hailed the <npc> beside you.`
 			`	For a while, you and Rek sit together in silence, watching the console and waiting for a message. Then, finally, a message comes from the <npc>. "They're ready to go." Rek translates for you.`
 	npc accompany save
 		government "Kor Efret"
@@ -3587,7 +3586,7 @@ mission "Wanderers: Efreti and Mereti 3"
 	on complete
 		conversation
 			`The Korath on the <npc> have a distinct fervor as they head out into the halls of the station and talk to the locals. Rek listens quietly, then turns to you and explains.`
-			`	"They described it... using a word I am unsure how to translate." Rek says. "The way that we showed the Mereti everything about who we are... it mirrors something deeply significant in Korath culture - at least, that's the impression I get."`
+			`	"They described it... using a word I am unsure how to translate." Rek says. "The way that we showed the Mereti everything about who we are... it mirrors something deeply significant and established in Korath culture, which neither the Wanderers, nor the Hai, nor the Humans have an equivalent to - at least, that's the impression I get."`
 			`	"I will remain here for a while," Rek says, "but you should head back to our base on Spera Anatrusk. I believe our leaders have a new project for you to help with." Rek waves goodbye, then follows the Korath deeper into the station.`
 	npc accompany save
 		government "Kor Efret"
