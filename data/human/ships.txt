@@ -1421,8 +1421,8 @@ ship "Dagger"
 	attributes
 		category "Fighter"
 		"cost" 129000
-		"shields" 1000
-		"hull" 300
+		"shields" 1100
+		"hull" 200
 		"required crew" 1
 		"bunks" 1
 		"mass" 20
@@ -1699,8 +1699,8 @@ ship "Finch"
 	attributes
 		category "Fighter"
 		"cost" 126000
-		"shields" 1100
-		"hull" 200
+		"shields" 1050
+		"hull" 250
 		"required crew" 1
 		"bunks" 1
 		"mass" 50
