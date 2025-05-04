@@ -4182,14 +4182,34 @@ event "wanderers: spera anatrusk restored"
 mission "Wanderers: Regroup After Attack 1"
 	name ""
 	description ``
+	source "Spera Anatrusk"
+	destination "Vara K'chrai"
 	to offer
 		has "Wanderers: Exiles Attack Spera Anatrusk 2: done"
 
 mission "Wanderers: Regroup After Attack 2"
 	name ""
 	description ``
+	source "Vara K'chrai"
+	destination "Spera Anatrusk"
 	to offer
 		has "Wanderers: Regroup After Attack 1: done"
+
+mission "Wanderers: Regroup After Attack 3"
+	name ""
+	description ``
+	source "Spera Anatrusk"
+	destination "Kuwaru Efreti"
+	to offer
+		has "Wanderers: Regroup After Attack 2: done"
+
+mission "Wanderers: Regroup After Attack 4"
+	name ""
+	description ``
+	source "Kuwaru Efreti"
+	destination "Sabira Eseskrai"
+	to offer
+		has "Wanderers: Regroup After Attack 3: done"
 
 event "wanderers: cool breeze available"
 	shipyard "Wanderer Advanced"
