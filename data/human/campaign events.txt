@@ -40,10 +40,10 @@ event "war begins"
 	date 4 7 3014
 	system "Gamma Corvi"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 1400
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 1300
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 2800
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 2600
 	system "Spica"
 		government "Free Worlds"
 	system "Minkar"
@@ -99,35 +99,35 @@ event "war begins"
 	system "Kappa Centauri"
 		government "Free Worlds"
 	system "Castor"
-		fleet "Small Northern Merchants" 800
-		fleet "Large Northern Merchants" 1100
-		fleet "Small Republic" 800
-		fleet "Large Republic" 400
-		fleet "Republic Logistics" 1000
+		fleet "Small Northern Merchants" 1600
+		fleet "Large Northern Merchants" 2200
+		fleet "Small Republic" 1600
+		fleet "Large Republic" 800
+		fleet "Republic Logistics" 2000
 	system "Pollux"
-		fleet "Small Northern Merchants" 700
-		fleet "Large Northern Merchants" 1100
-		fleet "Small Republic" 700
-		fleet "Large Republic" 900
-		fleet "Republic Logistics" 1200
+		fleet "Small Northern Merchants" 1400
+		fleet "Large Northern Merchants" 2200
+		fleet "Small Republic" 1400
+		fleet "Large Republic" 1800
+		fleet "Republic Logistics" 2400
 	system "Vega"
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 4000
-		fleet "Small Republic" 900
-		fleet "Large Republic" 1000
-		fleet "Republic Logistics" 6000
+		fleet "Small Northern Merchants" 2000
+		fleet "Large Northern Merchants" 8000
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 2000
+		fleet "Republic Logistics" 12000
 	system "Denebola"
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Republic" 700
-		fleet "Large Republic" 900
-		fleet "Republic Logistics" 2500
+		fleet "Small Northern Merchants" 2000
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Republic" 1400
+		fleet "Large Republic" 1800
+		fleet "Republic Logistics" 5000
 	system "Merak"
-		fleet "Small Northern Merchants" 1500
-		fleet "Large Northern Merchants" 4000
-		fleet "Small Republic" 1100
-		fleet "Large Republic" 1300
-		fleet "Republic Logistics" 3000
+		fleet "Small Northern Merchants" 3000
+		fleet "Large Northern Merchants" 8000
+		fleet "Small Republic" 2200
+		fleet "Large Republic" 2600
+		fleet "Republic Logistics" 6000
 	planet "Geminus"
 		description `Until recently, Geminus was home to the Republic Navy Yard, the largest shipyard in human space. Now, there is nothing left of the shipyard but a gaping crater in the ground, from the recent terrorist bombing.`
 		spaceport `Fortunately, the spaceport and residential areas survived the bombing, which was focused only on the Navy Yard and happened early in the morning, when very few people were at work.`
@@ -244,111 +244,111 @@ mission "event: war begins"
 event "initial deployment 1"
 	date 24 7 3014
 	system "Spica"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 1700
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1500
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 3400
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 3000
 	system "Minkar"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1500
-		fleet "Small Free Worlds" 700
-		fleet "Large Free Worlds" 1200
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 3000
+		fleet "Small Free Worlds" 1400
+		fleet "Large Free Worlds" 2400
 	system "Mimosa"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2300
-		fleet "Small Free Worlds" 1200
-		fleet "Large Free Worlds" 1900
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 4600
+		fleet "Small Free Worlds" 2400
+		fleet "Large Free Worlds" 3800
 	system "Kraz"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 1600
-		fleet "Small Free Worlds" 700
-		fleet "Large Free Worlds" 900
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 3200
+		fleet "Small Free Worlds" 1400
+		fleet "Large Free Worlds" 1800
 	system "Acrux"
-		fleet "Small Southern Merchants" 500
-		fleet "Large Southern Merchants" 800
-		fleet "Small Free Worlds" 700
-		fleet "Large Free Worlds" 1100
-		fleet "Human Miners" 5000
+		fleet "Small Southern Merchants" 1000
+		fleet "Large Southern Merchants" 1600
+		fleet "Small Free Worlds" 1400
+		fleet "Large Free Worlds" 2200
+		fleet "Human Miners" 10000
 	
 	system "Tania Australis"
-		fleet "Small Northern Merchants" 1400
-		fleet "Large Northern Merchants" 2900
-		fleet "Small Republic" 600
-		fleet "Large Republic" 400
-		fleet "Navy Surveillance" 2000
-		fleet "Republic Logistics" 4000
+		fleet "Small Northern Merchants" 2800
+		fleet "Large Northern Merchants" 5800
+		fleet "Small Republic" 1200
+		fleet "Large Republic" 800
+		fleet "Navy Surveillance" 4000
+		fleet "Republic Logistics" 8000
 	planet "Ingot"
 		description `Ingot is a volcanic moon, totally unsuitable for life but rich in metal. The miners who work here must spend all their time inside pressurized buildings.`
 		description `Because Ingot has almost no atmosphere to slow them down, meteorites are a constant danger to the colonists. The shells of the buildings have multiple layers, designed to be self-sealing in any but the largest of impacts. Most of the mining is done remotely by robotic vehicles, but someone still needs to be present to control them and to make repairs when something goes wrong.`
 		description `Ingot is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
 	system "Fala"
-		fleet "Small Northern Merchants" 1900
-		fleet "Large Northern Merchants" 3500
-		fleet "Small Republic" 600
-		fleet "Large Republic" 400
-		fleet "Small Northern Pirates" 4000
-		fleet "Large Northern Pirates" 8000
-		fleet "Derelict Northern" 30000
-		fleet "Navy Surveillance" 2000
+		fleet "Small Northern Merchants" 3800
+		fleet "Large Northern Merchants" 7000
+		fleet "Small Republic" 1200
+		fleet "Large Republic" 800
+		fleet "Small Northern Pirates" 8000
+		fleet "Large Northern Pirates" 16000
+		fleet "Derelict Northern" 60000
+		fleet "Navy Surveillance" 4000
 	system "Phecda"
-		fleet "Small Northern Merchants" 900
-		fleet "Small Southern Merchants" 1100
-		fleet "Small Republic" 900
-		fleet "Large Republic" 1100
-		fleet "Navy Surveillance" 2000
-		fleet "Republic Logistics" 3500
+		fleet "Small Northern Merchants" 1800
+		fleet "Small Southern Merchants" 2200
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 2200
+		fleet "Navy Surveillance" 4000
+		fleet "Republic Logistics" 7000
 	system "Algorel"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1200
-		fleet "Small Republic" 700
-		fleet "Large Republic" 500
-		fleet "Small Southern Pirates" 2500
-		fleet "Large Southern Pirates" 8000
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 2400
+		fleet "Small Republic" 1400
+		fleet "Large Republic" 1000
+		fleet "Small Southern Pirates" 5000
+		fleet "Large Southern Pirates" 16000
 		fleet "Navy Surveillance" 2000
-		fleet "Republic Logistics" 4000
+		fleet "Republic Logistics" 8000
 	planet "New Wales"
 		description `New Wales is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals.`
 		description `Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
 		description `The Republic Navy has planted a base on New Wales. So far, it's just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the mining colonies.`
 	system "Porrima"
-		fleet "Small Southern Merchants" 1400
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Republic" 1200
-		fleet "Large Republic" 1800
-		fleet "Small Southern Pirates" 9000
-		fleet "Navy Surveillance" 2000
-	system "Ipsing"
 		fleet "Small Southern Merchants" 2800
-		fleet "Large Southern Merchants" 7000
-		fleet "Small Republic" 2500
-		fleet "Large Republic" 4000
-		fleet "Small Southern Pirates" 5000
-		fleet "Derelict Northern" 10000
-		fleet "Navy Surveillance" 2000
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Republic" 2400
+		fleet "Large Republic" 3600
+		fleet "Small Southern Pirates" 18000
+		fleet "Navy Surveillance" 4000
+	system "Ipsing"
+		fleet "Small Southern Merchants" 5600
+		fleet "Large Southern Merchants" 14000
+		fleet "Small Republic" 5000
+		fleet "Large Republic" 8000
+		fleet "Small Southern Pirates" 10000
+		fleet "Derelict Northern" 20000
+		fleet "Navy Surveillance" 4000
 	system "Mizar"
-		fleet "Small Southern Merchants" 1400
-		fleet "Large Southern Merchants" 4500
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 1400
-		fleet "Small Southern Pirates" 9000
-		fleet "Derelict Northern" 30000
-		fleet "Navy Surveillance" 2000
+		fleet "Small Southern Merchants" 4800
+		fleet "Large Southern Merchants" 9000
+		fleet "Small Republic" 2000
+		fleet "Large Republic" 2800
+		fleet "Small Southern Pirates" 16000
+		fleet "Derelict Northern" 60000
+		fleet "Navy Surveillance" 4000
 	system "Muphrid"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 4800
-		fleet "Small Republic" 1100
-		fleet "Large Republic" 1900
-		fleet "Small Southern Pirates" 9000
-		fleet "Derelict Northern" 30000
-		fleet "Navy Surveillance" 2000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 9600
+		fleet "Small Republic" 2200
+		fleet "Large Republic" 3800
+		fleet "Small Southern Pirates" 18000
+		fleet "Derelict Northern" 60000
+		fleet "Navy Surveillance" 4000
 	system "Menkent"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1900
-		fleet "Small Republic" 500
-		fleet "Large Republic" 600
-		fleet "Navy Surveillance" 2000
-		fleet "Republic Logistics" 10000
-		fleet "Human Miners" 2000
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 3800
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1200
+		fleet "Navy Surveillance" 4000
+		fleet "Republic Logistics" 20000
+		fleet "Human Miners" 4000
 	planet "New Austria"
 		description `New Austria is a rugged mountain world, full of snow-capped peaks and valleys so deep and so steep that they rarely see sunlight.`
 		description `	The few settlements that have been built here were developed for mining sapphires and rubies. The sapphires range from blue to yellow to black to clear in color and are used for industrial abrasives and jewelry.`
@@ -360,172 +360,172 @@ event "initial deployment 2"
 	planet "Martini"
 		"required reputation" 10
 	system "Izar"
-		fleet "Small Southern Merchants" 500
-		fleet "Large Southern Merchants" 1500
-		fleet "Small Free Worlds" 700
-		fleet "Large Free Worlds" 1000
-	system "Zeta Centauri"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1700
-		fleet "Small Free Worlds" 1200
-		fleet "Large Free Worlds" 2000
-		fleet "Small Southern Pirates" 6000
-		fleet "Large Southern Pirates" 9000
-	system "Hadar"
-		fleet "Small Southern Merchants" 400
-		fleet "Large Southern Merchants" 600
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 1100
-	system "Alkaid"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Free Worlds" 6000
-		fleet "Large Free Worlds" 10000
-		fleet "Small Southern Pirates" 4000
-		fleet "Large Southern Pirates" 8000
-	system "Zubeneschamali"
-		fleet "Small Southern Merchants" 500
-		fleet "Large Southern Merchants" 1000
+		fleet "Small Southern Merchants" 1000
+		fleet "Large Southern Merchants" 3000
 		fleet "Small Free Worlds" 1400
-		fleet "Large Free Worlds" 2400
-		fleet "Small Southern Pirates" 4000
-		fleet "Large Southern Pirates" 5000
+		fleet "Large Free Worlds" 2000
+	system "Zeta Centauri"
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 3400
+		fleet "Small Free Worlds" 2400
+		fleet "Large Free Worlds" 4000
+		fleet "Small Southern Pirates" 12000
+		fleet "Large Southern Pirates" 18000
+	system "Hadar"
+		fleet "Small Southern Merchants" 800
+		fleet "Large Southern Merchants" 1200
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 2200
+	system "Alkaid"
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Free Worlds" 12000
+		fleet "Large Free Worlds" 20000
+		fleet "Small Southern Pirates" 8000
+		fleet "Large Southern Pirates" 16000
+	system "Zubeneschamali"
+		fleet "Small Southern Merchants" 1000
+		fleet "Large Southern Merchants" 2000
+		fleet "Small Free Worlds" 2800
+		fleet "Large Free Worlds" 4800
+		fleet "Small Southern Pirates" 8000
+		fleet "Large Southern Pirates" 10000
 	system "Kochab"
-		fleet "Small Southern Merchants" 1800
-		fleet "Large Southern Merchants" 5000
-		fleet "Small Southern Pirates" 6000
-		fleet "Small Free Worlds" 5000
+		fleet "Small Southern Merchants" 3600
+		fleet "Large Southern Merchants" 10000
+		fleet "Small Southern Pirates" 12000
+		fleet "Small Free Worlds" 10000
 	system "Ildaria"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 1800
-		fleet "Small Free Worlds" 2200
-		fleet "Large Free Worlds" 3600
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 3600
+		fleet "Small Free Worlds" 4400
+		fleet "Large Free Worlds" 7200
 		fleet "Derelict Southern" 25000
 	
 	system "Mora"
-		fleet "Small Southern Merchants" 2800
-		fleet "Large Southern Merchants" 5000
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 4000
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 2000
+		fleet "Small Southern Merchants" 5600
+		fleet "Large Southern Merchants" 10000
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 8000
+		fleet "Small Republic" 2000
+		fleet "Large Republic" 4000
 		fleet "Derelict Northern" 30000
-		fleet "Navy Surveillance" 1600
+		fleet "Navy Surveillance" 3200
 	system "Delta Velorum"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 5000
-		fleet "Small Republic" 1600
-		fleet "Large Republic" 2400
-		fleet "Navy Surveillance" 1600
-	system "Turais"
 		fleet "Small Southern Merchants" 2000
 		fleet "Large Southern Merchants" 6000
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 1800
-		fleet "Navy Surveillance" 1600
-	system "Gacrux"
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Southern Merchants" 5000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 4000
-		fleet "Small Republic" 2000
-		fleet "Large Republic" 3000
-		fleet "Derelict Northern" 30000
-		fleet "Navy Surveillance" 1600
-	system "Cor Caroli"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1300
-		fleet "Small Southern Pirates" 2000
-		fleet "Small Republic" 1200
-		fleet "Large Republic" 1800
-		fleet "Navy Surveillance" 1600
-	system "Muhlifain"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3500
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 10000
+		fleet "Small Republic" 3200
+		fleet "Large Republic" 4800
+		fleet "Navy Surveillance" 3200
+	system "Turais"
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Southern Merchants" 12000
 		fleet "Small Southern Pirates" 6000
-		fleet "Small Republic" 3000
-		fleet "Large Republic" 4000
-		fleet "Navy Surveillance" 1600
-	system "Vindemiatrix"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 4000
+		fleet "Large Southern Pirates" 14000
 		fleet "Small Republic" 2000
-		fleet "Large Republic" 3000
-		fleet "Navy Surveillance" 1600
-	system "Sarin"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 6000
-		fleet "Small Republic" 8000
-		fleet "Large Republic" 15000
-		fleet "Navy Surveillance" 1600
-	system "Alioth"
-		fleet "Small Southern Merchants" 400
-		fleet "Large Northern Merchants" 600
-		fleet "Small Southern Pirates" 1200
-		fleet "Large Southern Pirates" 2400
-		fleet "Small Republic" 3000
-		fleet "Large Republic" 4000
-		fleet "Navy Surveillance" 1600
-	system "Holeb"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 5000
-		fleet "Small Republic" 2000
-		fleet "Large Republic" 3000
-		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 1600
-	system "Arcturus"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 4000
-		fleet "Small Republic" 2000
-		fleet "Large Republic" 3000
-		fleet "Navy Surveillance" 1600
-	system "Rutilicus"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Southern Pirates" 8000
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 2000
-		fleet "Navy Surveillance" 1600
-	system "Alphecca"
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Northern Merchants" 3500
-		fleet "Small Southern Pirates" 3000
-		fleet "Small Republic" 3000
-		fleet "Large Republic" 4000
-		fleet "Navy Surveillance" 1600
-	system "Boral"
-		fleet "Small Southern Merchants" 3000
-		fleet "Large Northern Merchants" 8000
-		fleet "Small Southern Pirates" 1500
-		fleet "Small Republic" 7000
-		fleet "Large Republic" 12000
-		fleet "Derelict Southern" 10000
-		fleet "Navy Surveillance" 1600
-	system "Cebalrai"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Southern Pirates" 4000
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 2000
-		fleet "Navy Surveillance" 1600
-	system "Rasalhague"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
+		fleet "Large Republic" 3600
+		fleet "Navy Surveillance" 3600
+	system "Gacrux"
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Southern Merchants" 10000
 		fleet "Small Southern Pirates" 4000
 		fleet "Large Southern Pirates" 8000
-		fleet "Small Republic" 3000
+		fleet "Small Republic" 4000
+		fleet "Large Republic" 6000
+		fleet "Derelict Northern" 30000
+		fleet "Navy Surveillance" 3200
+	system "Cor Caroli"
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 2600
+		fleet "Small Southern Pirates" 4000
+		fleet "Small Republic" 2400
+		fleet "Large Republic" 3600
+		fleet "Navy Surveillance" 3200
+	system "Muhlifain"
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 7000
+		fleet "Small Southern Pirates" 12000
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 8000
+		fleet "Navy Surveillance" 3200
+	system "Vindemiatrix"
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 8000
+		fleet "Small Republic" 4000
+		fleet "Large Republic" 6000
+		fleet "Navy Surveillance" 3200
+	system "Sarin"
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 12000
+		fleet "Small Republic" 16000
+		fleet "Large Republic" 30000
+		fleet "Navy Surveillance" 3200
+	system "Alioth"
+		fleet "Small Southern Merchants" 800
+		fleet "Large Northern Merchants" 1200
+		fleet "Small Southern Pirates" 2400
+		fleet "Large Southern Pirates" 4800
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 8000
+		fleet "Navy Surveillance" 3200
+	system "Holeb"
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Pirates" 10000
+		fleet "Small Republic" 4000
+		fleet "Large Republic" 6000
+		fleet "Derelict Southern" 30000
+		fleet "Navy Surveillance" 3200
+	system "Arcturus"
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Pirates" 8000
+		fleet "Small Republic" 4000
+		fleet "Large Republic" 6000
+		fleet "Navy Surveillance" 3200
+	system "Rutilicus"
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Pirates" 16000
+		fleet "Small Republic" 2000
 		fleet "Large Republic" 4000
-		fleet "Navy Surveillance" 1600
+		fleet "Navy Surveillance" 3200
+	system "Alphecca"
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Northern Merchants" 7000
+		fleet "Small Southern Pirates" 6000
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 8000
+		fleet "Navy Surveillance" 3200
+	system "Boral"
+		fleet "Small Southern Merchants" 6000
+		fleet "Large Northern Merchants" 16000
+		fleet "Small Southern Pirates" 3000
+		fleet "Small Republic" 14000
+		fleet "Large Republic" 24000
+		fleet "Derelict Southern" 10000
+		fleet "Navy Surveillance" 3200
+	system "Cebalrai"
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Pirates" 8000
+		fleet "Small Republic" 2000
+		fleet "Large Republic" 4000
+		fleet "Navy Surveillance" 3200
+	system "Rasalhague"
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Pirates" 8000
+		fleet "Large Southern Pirates" 16000
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 8000
+		fleet "Navy Surveillance" 3200
 
 # Compatibility patch event in case the pirates were added by the second deployment, pre-0.10.7
 event "remove pirates from Ildaria"
@@ -545,86 +545,86 @@ mission "Ildaria Pirates Compatibility"
 event "initial deployment 3"
 	date 29 8 3014
 	system "Zubenelgenubi"
-		fleet "Small Southern Merchants" 500
-		fleet "Large Southern Merchants" 900
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1000
-		fleet "Small Southern Pirates" 5000
-		fleet "Large Southern Pirates" 8000
+		fleet "Small Southern Merchants" 1000
+		fleet "Large Southern Merchants" 1800
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 2000
+		fleet "Small Southern Pirates" 10000
+		fleet "Large Southern Pirates" 16000
 		fleet "Derelict Southern" 30000
 	system "Unukalhai"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 3000
-		fleet "Small Free Worlds" 3000
-		fleet "Large Free Worlds" 6000
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Pirates" 6000
+		fleet "Small Free Worlds" 6000
+		fleet "Large Free Worlds" 12000
 	system "Sabik"
-		fleet "Small Southern Merchants" 400
-		fleet "Large Southern Merchants" 600
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1600
+		fleet "Small Southern Merchants" 800
+		fleet "Large Southern Merchants" 1200
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 3200
 	system "Aldhibain"
-		fleet "Small Southern Merchants" 400
-		fleet "Large Southern Merchants" 500
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 700
-		fleet "Small Southern Pirates" 1400
-		fleet "Large Southern Pirates" 3000
+		fleet "Small Southern Merchants" 800
+		fleet "Large Southern Merchants" 1000
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1400
+		fleet "Small Southern Pirates" 2800
+		fleet "Large Southern Pirates" 6000
 	system "Kornephoros"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 700
-		fleet "Small Southern Pirates" 5000
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 2000
-		fleet "Human Miners" 3000
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 1400
+		fleet "Small Southern Pirates" 10000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 4000
+		fleet "Human Miners" 6000
 	
 	system "Wei"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 2500
-		fleet "Small Southern Pirates" 6000
-		fleet "Small Republic" 800
-		fleet "Large Republic" 700
-		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 1200
-	system "Seginus"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2700
-		fleet "Small Southern Pirates" 8000
-		fleet "Small Republic" 1200
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Southern Pirates" 12000
+		fleet "Small Republic" 1600
 		fleet "Large Republic" 1400
-		fleet "Navy Surveillance" 1200
+		fleet "Derelict Southern" 30000
+		fleet "Navy Surveillance" 2400
+	system "Seginus"
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 5400
+		fleet "Small Southern Pirates" 16000
+		fleet "Small Republic" 2400
+		fleet "Large Republic" 2800
+		fleet "Navy Surveillance" 2400
 	system "Alnasl"
-		fleet "Small Southern Merchants" 1300
-		fleet "Large Southern Merchants" 2500
-		fleet "Small Southern Pirates" 6000
-		fleet "Small Republic" 900
-		fleet "Large Republic" 1100
+		fleet "Small Southern Merchants" 2600
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Southern Pirates" 12000
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 2200
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 1200
+		fleet "Navy Surveillance" 2400
 	system "Eber"
-		fleet "Small Southern Merchants" 1900
-		fleet "Large Southern Merchants" 2900
-		fleet "Small Southern Pirates" 3000
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 1500
-		fleet "Derelict Southern" 10000
-		fleet "Navy Surveillance" 1200
-	system "Alpha Arae"
-		fleet "Small Southern Merchants" 2100
-		fleet "Large Southern Merchants" 8000
+		fleet "Small Southern Merchants" 3800
+		fleet "Large Southern Merchants" 5800
 		fleet "Small Southern Pirates" 6000
-		fleet "Large Southern Pirates" 13000
-		fleet "Small Republic" 900
-		fleet "Large Republic" 800
+		fleet "Small Republic" 2000
+		fleet "Large Republic" 3000
+		fleet "Derelict Southern" 10000
+		fleet "Navy Surveillance" 2400
+	system "Alpha Arae"
+		fleet "Small Southern Merchants" 4200
+		fleet "Large Southern Merchants" 16000
+		fleet "Small Southern Pirates" 12000
+		fleet "Large Southern Pirates" 26000
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 1600
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 1200
+		fleet "Navy Surveillance" 2400
 	system "Kaus Borealis"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Southern Pirates" 8000
-		fleet "Small Republic" 1100
-		fleet "Large Republic" 800
-		fleet "Navy Surveillance" 1200
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Southern Pirates" 16000
+		fleet "Small Republic" 2200
+		fleet "Large Republic" 1600
+		fleet "Navy Surveillance" 2400
 
 
 
@@ -859,110 +859,110 @@ event "initial deployment 4"
 	planet "Geminus"
 		"required reputation" 10
 	system "Sargas"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2500
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 5000
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1500
-		fleet "Navy Surveillance" 800
-	system "Dschubba"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 2600
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 6000
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 10000
 		fleet "Small Free Worlds" 2000
 		fleet "Large Free Worlds" 3000
-		fleet "Navy Surveillance" 800
-	system "Lesath"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1600
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1100
-		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 800
-	system "Atria"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 2600
-		fleet "Small Southern Pirates" 5000
-		fleet "Large Southern Pirates" 8000
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 2100
-	system "Alniyat"
-		fleet "Small Southern Merchants" 500
-		fleet "Large Southern Merchants" 600
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 4000
-		fleet "Small Free Worlds" 1500
-		fleet "Large Free Worlds" 4000
-	system "Han"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 9000
-		fleet "Small Free Worlds" 3000
-		fleet "Large Free Worlds" 8000
-	system "Pherkad"
-		fleet "Small Southern Merchants" 500
-		fleet "Large Southern Merchants" 700
-		fleet "Small Free Worlds" 900
-		fleet "Large Free Worlds" 1700
-		fleet "Small Southern Pirates" 1000
-		fleet "Large Southern Pirates" 1900
-	system "Beta Lupi"
-		fleet "Small Southern Merchants" 800
-		fleet "Small Southern Pirates" 1100
-		fleet "Large Southern Pirates" 1600
+		fleet "Navy Surveillance" 1600
+	system "Dschubba"
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 5200
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 12000
 		fleet "Small Free Worlds" 4000
-		fleet "Large Free Worlds" 8000
+		fleet "Large Free Worlds" 6000
+		fleet "Navy Surveillance" 1600
+	system "Lesath"
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 3200
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 2200
 		fleet "Derelict Southern" 30000
-	system "Yed Prior"
-		fleet "Small Northern Merchants" 800
-		fleet "Large Northern Merchants" 1100
-		fleet "Small Southern Pirates" 1000
-		fleet "Large Southern Pirates" 2000
-		fleet "Small Free Worlds" 5000
-		fleet "Large Free Worlds" 8000
-	system "Kappa Centauri"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 2700
-		fleet "Small Southern Pirates" 1600
-		fleet "Large Southern Pirates" 2000
-		fleet "Small Free Worlds" 3000
-		fleet "Large Free Worlds" 5000
-	
-	system "Rastaban"
+		fleet "Navy Surveillance" 1600
+	system "Atria"
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 5200
+		fleet "Small Southern Pirates" 10000
+		fleet "Large Southern Pirates" 16000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 4200
+	system "Alniyat"
 		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 1900
+		fleet "Large Southern Merchants" 1200
 		fleet "Small Southern Pirates" 4000
 		fleet "Large Southern Pirates" 8000
-		fleet "Small Republic" 900
-		fleet "Large Republic" 700
-		fleet "Navy Surveillance" 1200
+		fleet "Small Free Worlds" 3000
+		fleet "Large Free Worlds" 8000
+	system "Han"
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 18000
+		fleet "Small Free Worlds" 6000
+		fleet "Large Free Worlds" 16000
+	system "Pherkad"
+		fleet "Small Southern Merchants" 1000
+		fleet "Large Southern Merchants" 1400
+		fleet "Small Free Worlds" 1800
+		fleet "Large Free Worlds" 3400
+		fleet "Small Southern Pirates" 2000
+		fleet "Large Southern Pirates" 3800
+	system "Beta Lupi"
+		fleet "Small Southern Merchants" 1600
+		fleet "Small Southern Pirates" 2200
+		fleet "Large Southern Pirates" 3200
+		fleet "Small Free Worlds" 8000
+		fleet "Large Free Worlds" 16000
+		fleet "Derelict Southern" 30000
+	system "Yed Prior"
+		fleet "Small Northern Merchants" 1600
+		fleet "Large Northern Merchants" 2200
+		fleet "Small Southern Pirates" 2000
+		fleet "Large Southern Pirates" 4000
+		fleet "Small Free Worlds" 10000
+		fleet "Large Free Worlds" 16000
+	system "Kappa Centauri"
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 5400
+		fleet "Small Southern Pirates" 3200
+		fleet "Large Southern Pirates" 4000
+		fleet "Small Free Worlds" 6000
+		fleet "Large Free Worlds" 10000
+	
+	system "Rastaban"
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 3800
+		fleet "Small Southern Pirates" 8000
+		fleet "Large Southern Pirates" 16000
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 1400
+		fleet "Navy Surveillance" 2400
 	system "Sabik"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 800
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1200
-		fleet "Navy Surveillance" 800
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 1600
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 2400
+		fleet "Navy Surveillance" 1600
 	system "Aldhibain"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 800
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 600
-		fleet "Small Southern Pirates" 1400
-		fleet "Large Southern Pirates" 3000
-		fleet "Navy Surveillance" 800
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 1600
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1200
+		fleet "Small Southern Pirates" 2800
+		fleet "Large Southern Pirates" 6000
+		fleet "Navy Surveillance" 1600
 	system "Kornephoros"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1000
-		fleet "Small Southern Pirates" 5000
-		fleet "Small Free Worlds" 900
-		fleet "Large Free Worlds" 1700
-		fleet "Navy Surveillance" 800
-		fleet "Human Miners" 3000
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 2000
+		fleet "Small Southern Pirates" 10000
+		fleet "Small Free Worlds" 1800
+		fleet "Large Free Worlds" 3400
+		fleet "Navy Surveillance" 1600
+		fleet "Human Miners" 6000
 
 
 
@@ -984,16 +984,16 @@ event "fw zug expansion complete"
 event "capture of Kornephoros"
 	system "Kornephoros"
 		government "Republic"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 1400
-		fleet "Small Republic" 300
-		fleet "Large Republic" 500
-		fleet "Navy Surveillance" 800
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 2800
+		fleet "Small Republic" 600
+		fleet "Large Republic" 1000
+		fleet "Navy Surveillance" 1600
 	system "Sabik"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1000
-		fleet "Small Free Worlds" 400
-		fleet "Large Free Worlds" 600
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 2000
+		fleet "Small Free Worlds" 800
+		fleet "Large Free Worlds" 1200
 	planet "Clink"
 		description `The mining outpost is swarming with Navy guards; they seem to have turned this moon into a temporary base of operations. The mine has been shut down, and no one is being allowed in or out of the mining outpost. It is not clear whether the miners are prisoners, or merely under a very tight watch.`
 		security 1
@@ -1046,17 +1046,17 @@ event "temporary ceasefire"
 
 event "recapture of Kornephoros"
 	system "Aldhibain"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 800
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 600
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 1600
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1200
 	system "Kornephoros"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1000
-		fleet "Small Free Worlds" 900
-		fleet "Large Free Worlds" 1700
-		fleet "Human Miners" 3000
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 2000
+		fleet "Small Free Worlds" 1800
+		fleet "Large Free Worlds" 3400
+		fleet "Human Miners" 6000
 	planet "Clink"
 		description `About a decade ago, a mining corporation from Zug planted a colony on Clink for harvesting some rare earth minerals that are present in this moon's crust due to its unusually high rate of asteroid impacts. The atmosphere here is too thin to breathe without a respirator, and because of the low gravity, the dust raised by the mining operations hangs perpetually in the air.`
 		description `The miners who work here are a tight-knit group, since most of them were part of the original colonization team. They are not particularly open to outsiders, and the facilities here are so rudimentary that they do not even stock fuel for visiting ships.`
@@ -1073,80 +1073,80 @@ event "recapture of Kornephoros"
 
 event "oathkeepers founded"
 	system "Canopus"
-		fleet "Small Northern Merchants" 900
-		fleet "Large Northern Merchants" 700
-		fleet "Small Oathkeeper" 1000
-		fleet "Large Oathkeeper" 2000
+		fleet "Small Northern Merchants" 1800
+		fleet "Large Northern Merchants" 1400
+		fleet "Small Oathkeeper" 2000
+		fleet "Large Oathkeeper" 4000
 	system "Alheka"
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Oathkeeper" 1200
-		fleet "Large Oathkeeper" 4000
-		fleet "Small Northern Pirates" 2000
-		fleet "Large Northern Pirates" 2000
-	system "Mirzam"
 		fleet "Small Northern Merchants" 2000
-		fleet "Large Northern Merchants" 2000
-		fleet "Small Oathkeeper" 3000
-		fleet "Large Oathkeeper" 4000
-		fleet "Small Northern Pirates" 5000
-		fleet "Large Northern Pirates" 8000
-	system "Mebsuta"
-		fleet "Small Northern Merchants" 3000
-		fleet "Large Northern Merchants" 5000
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Oathkeeper" 2400
+		fleet "Large Oathkeeper" 8000
 		fleet "Small Northern Pirates" 4000
-		fleet "Large Northern Pirates" 8000
-		fleet "Small Oathkeeper" 12000
-	system "Betelgeuse"
-		fleet "Small Northern Merchants" 2000
-		fleet "Large Northern Merchants" 800
-		fleet "Small Oathkeeper" 1000
-		fleet "Large Oathkeeper" 2000
-		fleet "Republic Logistics" 4900
 		fleet "Large Northern Pirates" 4000
-	system "Rigel"
-		fleet "Small Northern Merchants" 2000
+	system "Mirzam"
+		fleet "Small Northern Merchants" 4000
 		fleet "Large Northern Merchants" 4000
-		fleet "Small Oathkeeper" 1000
-		fleet "Large Oathkeeper" 2000
-		fleet "Republic Logistics" 5400
-		fleet "Small Northern Pirates" 3000
-		fleet "Large Northern Pirates" 5000
+		fleet "Small Oathkeeper" 6000
+		fleet "Large Oathkeeper" 8000
+		fleet "Small Northern Pirates" 10000
+		fleet "Large Northern Pirates" 16000
+	system "Mebsuta"
+		fleet "Small Northern Merchants" 6000
+		fleet "Large Northern Merchants" 10000
+		fleet "Small Northern Pirates" 8000
+		fleet "Large Northern Pirates" 16000
+		fleet "Small Oathkeeper" 24000
+	system "Betelgeuse"
+		fleet "Small Northern Merchants" 4000
+		fleet "Large Northern Merchants" 1600
+		fleet "Small Oathkeeper" 2000
+		fleet "Large Oathkeeper" 4000
+		fleet "Republic Logistics" 9800
+		fleet "Large Northern Pirates" 8000
+	system "Rigel"
+		fleet "Small Northern Merchants" 4000
+		fleet "Large Northern Merchants" 8000
+		fleet "Small Oathkeeper" 2000
+		fleet "Large Oathkeeper" 4000
+		fleet "Republic Logistics" 10900
+		fleet "Small Northern Pirates" 6000
+		fleet "Large Northern Pirates" 10000
 		fleet "Derelict Northern" 30000
 	system "Alnitak"
-		fleet "Small Northern Pirates" 3000
-		fleet "Large Northern Pirates" 5000
-		fleet "Small Oathkeeper" 500
-		fleet "Large Oathkeeper" 1000
-		fleet "Republic Logistics" 6000
-	system "Saiph"
-		fleet "Small Northern Merchants" 1200
-		fleet "Large Northern Merchants" 2000
-		fleet "Small Northern Pirates" 2000
-		fleet "Large Northern Pirates" 3000
+		fleet "Small Northern Pirates" 6000
+		fleet "Large Northern Pirates" 10000
 		fleet "Small Oathkeeper" 1000
 		fleet "Large Oathkeeper" 2000
-	system "Mintaka"
-		fleet "Small Northern Pirates" 2000
-		fleet "Large Northern Pirates" 2000
-		fleet "Large Oathkeeper" 2000
-		fleet "Small Northern Merchants" 4000
-		fleet "Derelict Pirate" 30000
-	system "Almaaz"
-		fleet "Small Northern Pirates" 500
-		fleet "Large Northern Pirates" 600
+		fleet "Republic Logistics" 12000
+	system "Saiph"
+		fleet "Small Northern Merchants" 2400
+		fleet "Large Northern Merchants" 4000
+		fleet "Small Northern Pirates" 4000
+		fleet "Large Northern Pirates" 6000
+		fleet "Small Oathkeeper" 2000
 		fleet "Large Oathkeeper" 4000
-	system "Gorvi"
-		fleet "Small Northern Pirates" 1000
-		fleet "Large Northern Pirates" 1000
+	system "Mintaka"
+		fleet "Small Northern Pirates" 4000
+		fleet "Large Northern Pirates" 4000
 		fleet "Large Oathkeeper" 4000
 		fleet "Small Northern Merchants" 8000
+		fleet "Derelict Pirate" 30000
+	system "Almaaz"
+		fleet "Small Northern Pirates" 1000
+		fleet "Large Northern Pirates" 1200
+		fleet "Large Oathkeeper" 8000
+	system "Gorvi"
+		fleet "Small Northern Pirates" 2000
+		fleet "Large Northern Pirates" 2000
+		fleet "Large Oathkeeper" 8000
+		fleet "Small Northern Merchants" 16000
 		fleet "Derelict Pirate" 10000
 	system "Tortor"
-		fleet "Small Northern Pirates" 1000
-		fleet "Large Northern Pirates" 1000
-		fleet "Large Oathkeeper" 6000
-		fleet "Small Northern Merchants" 6000
+		fleet "Small Northern Pirates" 2000
+		fleet "Large Northern Pirates" 2000
+		fleet "Large Oathkeeper" 12000
+		fleet "Small Northern Merchants" 12000
 		fleet "Derelict Pirate" 10000
 	planet "Farpoint"
 		description `Farpoint, on the northernmost end of human space, is a rocky desert planet home to a Republic Navy base and not much else. Farming is possible only within greenhouses, and this system is too far from the galactic center to be desirable for trade or industry.`
@@ -1227,13 +1227,13 @@ event "plasma turret available"
 
 event "fw conservatory founded"
 	system "Yed Prior"
-		fleet "Small Northern Merchants" 500
-		fleet "Large Northern Merchants" 800
-		fleet "Small Southern Pirates" 1200
-		fleet "Large Southern Pirates" 2400
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1500
-		fleet "Human Miners" 1600
+		fleet "Small Northern Merchants" 1000
+		fleet "Large Northern Merchants" 1600
+		fleet "Small Southern Pirates" 2400
+		fleet "Large Southern Pirates" 4800
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 3000
+		fleet "Human Miners" 3200
 	planet "Winter"
 		add attributes "education"
 		description `The dense clouds in Winter's atmosphere block out much of the sunlight, creating a frigid landscape below. The planet was not settled until about a century ago, when a group of investors from Pherkad decided to build a manufacturing center here, rather than trying to find more land on the already overcrowded planet of Solace. Claiming that the industrial emissions of carbon dioxide and other greenhouse gases would eventually warm the planet and turn it into a tropical paradise, they were able to draw enough settlers to keep the factories going.`
@@ -1245,13 +1245,13 @@ event "fw conservatory founded"
 event "Thule becomes independent"
 	system "Men"
 		government "Independent"
-		fleet "Small Independent" 400
-		fleet "Large Independent" 600
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Southern Pirates" 2500
-		fleet "Large Southern Pirates" 5000
-		fleet "Large Free Worlds" 1500
+		fleet "Small Independent" 800
+		fleet "Large Independent" 1200
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Southern Pirates" 5000
+		fleet "Large Southern Pirates" 10000
+		fleet "Large Free Worlds" 3000
 	planet "Thule"
 		add attributes "ex-pirate"
 		description `Thule is a mountainous world with a population of nearly a billion, settled in the early days of space exploration. When the colony was first established, the government on Earth did not yet have the strength to control any system but its own. As such, Thule refused to join the Republic when it was formed, and has since repulsed all efforts to force it to do so.`
@@ -1267,18 +1267,18 @@ event "Thule becomes independent"
 event "fw suppressed Bloodsea"
 	system Antares
 		government "Free Worlds"
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1600
-		fleet "Small Southern Pirates" 4000
-		fleet "Large Southern Pirates" 8000
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 3200
+		fleet "Small Southern Pirates" 8000
+		fleet "Large Southern Pirates" 16000
 
 
 
 event "fw abandoned Bloodsea"
 	system Antares
 		government "Pirate"
-		fleet "Small Southern Pirates" 1000
-		fleet "Large Southern Pirates" 2000
+		fleet "Small Southern Pirates" 2000
+		fleet "Large Southern Pirates" 4000
 		fleet "Large Militia" 5000
 
 
@@ -1287,11 +1287,11 @@ event "fw abandoned Bloodsea"
 event "fw suppressed Greenrock"
 	system "Shaula"
 		government "Free Worlds"
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 800
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 5000
-		fleet "Old Southern Pirates" 10000
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 1600
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 10000
+		fleet "Old Southern Pirates" 20000
 	planet "Greenrock"
 		description `Greenrock was the closest thing that the pirates in southern human space had to a center of government, at least until the Free Worlds occupied it. When rival pirate bands sought to negotiate on neutral territory, this is where they met. Nearly everything was for sale here: illegal weapons, ships customized for pirating, and even slaves.`
 		description `	Now that the Free Worlds are occupying the system, Greenrock has become a marginally more respectable world. Pirates still run wild in the wilderness of the planet, but the Free Worlds are actively arresting criminals and freeing slaves in the population centers.`
@@ -1304,14 +1304,14 @@ event "fw suppressed Greenrock"
 event "fw abandoned Greenrock"
 	system "Shaula"
 		government "Pirate"
-		fleet "Small Southern Pirates" 500
-		fleet "Large Southern Pirates" 800
-		fleet "Small Core Pirates" 4000
-		fleet "Large Core Pirates" 7000
-		fleet "Small Northern Pirates" 5000
-		fleet "Large Northern Pirates" 9000
-		fleet "Old Southern Pirates" 7000
-		fleet "Large Free Worlds" 9000
+		fleet "Small Southern Pirates" 1000
+		fleet "Large Southern Pirates" 1600
+		fleet "Small Core Pirates" 8000
+		fleet "Large Core Pirates" 14000
+		fleet "Small Northern Pirates" 10000
+		fleet "Large Northern Pirates" 18000
+		fleet "Old Southern Pirates" 14000
+		fleet "Large Free Worlds" 18000
 	planet "Greenrock"
 		description `Greenrock was the closest thing that the pirates in southern human space had to a center of government, at least until the Free Worlds occupied it. When rival pirate bands sought to negotiate on neutral territory, this is where they met. Nearly everything was for sale here: illegal weapons, ships customized for pirating, and even slaves.`
 		description `	That was until the Free Worlds occupied the system and cleaned up many of the major population centers. With the Free Worlds gone, the planet has begun to return to its natural state of crime and villainy.`
@@ -1344,26 +1344,26 @@ event "flamethrower available"
 
 event "navy occupying the south"
 	system "Rastaban"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2400
-		fleet "Small Republic" 500
-		fleet "Large Republic" 700
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 4800
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1400
 	system "Girtab"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Republic" 500
-		fleet "Large Republic" 700
-	system "Albaldah"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 1200
-		fleet "Small Republic" 500
-		fleet "Large Republic" 700
-	system "Delta Sagittarii"
-		fleet "Small Southern Merchants" 1200
+		fleet "Small Southern Merchants" 1800
 		fleet "Large Southern Merchants" 4000
-		fleet "Small Republic" 500
-		fleet "Large Republic" 700
-		fleet "Human Miners" 3000
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1400
+	system "Albaldah"
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 2400
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1400
+	system "Delta Sagittarii"
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1400
+		fleet "Human Miners" 6000
 
 
 
@@ -1592,97 +1592,97 @@ fleet "gunboat only"
 
 event "gunboats in Alnasl"
 	system "Alnasl"
-		fleet "Small Southern Merchants" 1300
-		fleet "Large Southern Merchants" 2500
-		fleet "gunboat only" 2400
+		fleet "Small Southern Merchants" 2600
+		fleet "Large Southern Merchants" 5000
+		fleet "gunboat only" 4800
 	system "Wei"
 		remove fleet "Large Republic"
 
 event "normal in Alnasl"
 	system "Alnasl"
-		fleet "Small Southern Merchants" 1300
-		fleet "Large Southern Merchants" 2500
-		fleet "Small Southern Pirates" 6000
-		fleet "Small Republic" 900
-		fleet "Large Republic" 1100
+		fleet "Small Southern Merchants" 2600
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Southern Pirates" 12000
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 2200
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 1200
+		fleet "Navy Surveillance" 2400
 	system "Wei"
-		add fleet "Large Republic" 700
+		add fleet "Large Republic" 1400
 
 
 
 event "fw southern expansion"
 	system "Lesath"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1600
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1100
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 5000
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 3200
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 2200
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 10000
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 4000
+		fleet "Navy Surveillance" 8000
 	system "Sargas"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2500
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1500
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 5000
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 3000
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 10000
 	system "Rastaban"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2400
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 700
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 2000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 4800
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 1400
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 4000
 	system "Girtab"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1700
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 5000
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 3400
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 10000
 	system "Albaldah"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 1200
-		fleet "Small Free Worlds" 900
-		fleet "Large Free Worlds" 1900
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 5000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 2400
+		fleet "Small Free Worlds" 1800
+		fleet "Large Free Worlds" 3800
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 10000
 	system "Delta Sagittarii"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 900
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 3000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1800
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 6000
 	system "Eltanin"
 		government "Free Worlds"
 	system "Vega"
 		remove fleet "Republic Logistics"
-		add fleet "Republic Logistics" 2500
+		add fleet "Republic Logistics" 5000
 	system "Menkent"
 		remove fleet "Republic Logistics"
-		add fleet "Republic Logistics" 3000
+		add fleet "Republic Logistics" 6000
 	system "Cebalrai"
 		remove fleet "Republic Logistics"
-		add fleet "Republic Logistics" 3500
+		add fleet "Republic Logistics" 7000
 	system "Kaus Borealis"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Republic" 400
-		fleet "Large Republic" 500
-		fleet "Republic Logistics" 4000
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Republic" 800
+		fleet "Large Republic" 1000
+		fleet "Republic Logistics" 8000
 	planet "New Iceland"
 		description `New Iceland is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
 		description `	Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
@@ -1699,40 +1699,40 @@ event "Deep memorial expansion 1"
 
 event "fw occupying the north"
 	system "Alioth"
-		fleet "Small Southern Merchants" 400
-		fleet "Large Northern Merchants" 600
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 800
-		fleet "Small Republic" 5000
-		fleet "Large Republic" 6000
-		fleet "Navy Surveillance" 4000
+		fleet "Small Southern Merchants" 800
+		fleet "Large Northern Merchants" 1200
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 1600
+		fleet "Small Republic" 10000
+		fleet "Large Republic" 12000
+		fleet "Navy Surveillance" 8000
 	system "Alphecca"
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Northern Merchants" 3500
-		fleet "Small Free Worlds" 1200
-		fleet "Large Free Worlds" 2000
-		fleet "Navy Surveillance" 6000
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Northern Merchants" 7000
+		fleet "Small Free Worlds" 2400
+		fleet "Large Free Worlds" 4000
+		fleet "Navy Surveillance" 12000
 	system "Boral"
-		fleet "Small Southern Merchants" 3000
-		fleet "Large Northern Merchants" 8000
-		fleet "Small Free Worlds" 1500
-		fleet "Large Free Worlds" 3800
+		fleet "Small Southern Merchants" 6000
+		fleet "Large Northern Merchants" 16000
+		fleet "Small Free Worlds" 3000
+		fleet "Large Free Worlds" 7600
 		fleet "Derelict Southern" 10000
 	system "Seginus"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2700
-		fleet "Small Free Worlds" 700
-		fleet "Large Free Worlds" 1100
-		fleet "Small Republic" 5000
-		fleet "Large Republic" 6000
-		fleet "Navy Surveillance" 4000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 5400
+		fleet "Small Free Worlds" 1400
+		fleet "Large Free Worlds" 2200
+		fleet "Small Republic" 10000
+		fleet "Large Republic" 12000
+		fleet "Navy Surveillance" 8000
 	system "Wei"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 2500
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1000
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 2000
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 4000
+		fleet "Navy Surveillance" 8000
 
 
 
@@ -1786,12 +1786,12 @@ event "alphas capture Poisonwood"
 event "liberation of Poisonwood"
 	system "Graffias"
 		government "Neutral"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Southern Pirates" 6000
-		fleet "Small Free Worlds" 700
-		fleet "Small Free Worlds" 1200
-		fleet "Human Miners" 2000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Southern Pirates" 12000
+		fleet "Small Free Worlds" 1400
+		fleet "Small Free Worlds" 2400
+		fleet "Human Miners" 4000
 	planet "Poisonwood"
 		spaceport `The starport is a hodgepodge of small metal structures, built from the remains of Navy and pirate ships that fought for control of this world. The locals here welcome you to their planet heartily.`
 		spaceport `	The tavern in the center of the port is named The Parting Glass. Its walls are covered in photographs from after the war, all taken here on Poisonwood: freed slaves boarding Navy ships to leave the planet that brought them so much pain; Navy officers disembarking to retire on the world that they liberated; friends gone away; friends left behind. There are newer pictures, too: a Cruiser and two Falcons, side by side; armored troops walking away from a factory; a familiar captain talking to a man you know as Commander Nguyen. It is a strange feeling to be shown among heroes of a history that you've had only the smallest effect on.`
@@ -1799,12 +1799,12 @@ event "liberation of Poisonwood"
 event "Poisonwood reverts to Republic"
 	system "Graffias"
 		government "Republic"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Southern Pirates" 4000
-		fleet "Small Free Worlds" 1500
-		fleet "Small Free Worlds" 2600
-		fleet "Human Miners" 2000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Southern Pirates" 8000
+		fleet "Small Free Worlds" 3000
+		fleet "Small Free Worlds" 5200
+		fleet "Human Miners" 4000
 	planet "Poisonwood"
 		spaceport `The starport is a hodgepodge of small metal structures, built from the remains of Navy and pirate ships that fought for control of this world. The locals are unusually courteous and friendly to most of the captains landing here, but not to you.`
 		spaceport `	The tavern in the center of the port is named The Parting Glass. As you enter the building, you notice the tavern gradually become quieter and quieter, until all that you can hear is the rattling of the air conditioner and the clinking of glasses. At the same time, you feel the heat of several dozen eyes looking directly at you. You decide it best to leave before things escalate further.`
@@ -1845,12 +1845,12 @@ event "bloodsea joins free worlds"
 		description `	Until recently, this was a pirate world, but as the Free Worlds continued to expand they saw the writing on the wall and decided to become a civilized world. The Free Worlds are building a new spaceport here, but that will take months, and in the meantime the old spaceport is still in use.`
 	system "Antares"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1400
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 3000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 5000
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 2800
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 6000
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 10000
 
 
 
@@ -1865,21 +1865,21 @@ event "bloodsea spaceport completed"
 
 event "battle for bloodsea"
 	system "Antares"
-		fleet "Small Free Worlds" 4000
+		fleet "Small Free Worlds" 8000
 
 
 
 event "bloodsea independent"
 	system "Antares"
 		government "Independent"
-		fleet "Small Independent" 800
-		fleet "Large Independent" 1500
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Southern Pirates" 1600
-		fleet "Large Southern Pirates" 3000
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1500
+		fleet "Small Independent" 1600
+		fleet "Large Independent" 3000
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Pirates" 3200
+		fleet "Large Southern Pirates" 6000
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 3000
 	planet "Bloodsea"
 		description `Bloodsea is nearly uninhabited, except for a few small outposts. Its name comes from the planet's oceans, which are blood-red due to rhodophyte algae. Although the climate is temperate and there are many white sand beaches, no one comes here hoping to go swimming.`
 		description `	Until recently, this was a pirate world, but they are now officially "independent," forswearing support for piracy and other criminal activity as a result of being dominated by the Free Worlds militia. You get the feeling that most of the locals are not too fond of the Free Worlds, however.`
@@ -1893,13 +1893,13 @@ event "albatross joins free worlds"
 		description `	Recently, the Free Worlds have liberated Albatross from their pirate oppressors, but many of the locals remain skeptical, seeing the Free Worlds as little different from the other protection rackets that have held sway over them.`
 	system "Nunki"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1400
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 3000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 5000
-		fleet "Old Southern Pirates" 11000
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 2800
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 6000
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 10000
+		fleet "Old Southern Pirates" 22000
 
 
 
@@ -1922,38 +1922,38 @@ event "fw expanded and cut"
 		government "Free Worlds"
 	system "Delta Sagittarii"
 		government "Republic"
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Southern Merchants" 6000
-		fleet "Small Republic" 500
-		fleet "Large Republic" 700
-		fleet "Large Free Worlds" 3000
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Southern Merchants" 12000
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1400
+		fleet "Large Free Worlds" 6000
 	system "Rastaban"
 		government "Republic"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Republic" 700
-		fleet "Large Republic" 900
-		fleet "Large Free Worlds" 2000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Republic" 1400
+		fleet "Large Republic" 1800
+		fleet "Large Free Worlds" 4000
 	system "Girtab"
 		government "Republic"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Republic" 900
-		fleet "Large Republic" 1200
-		fleet "Large Free Worlds" 1800
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 2400
+		fleet "Large Free Worlds" 3600
 	system "Lesath"
-		fleet "Small Southern Merchants" 6000
-		fleet "Large Southern Merchants" 9000
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 1000
-		fleet "Large Free Worlds" 800
+		fleet "Small Southern Merchants" 12000
+		fleet "Large Southern Merchants" 18000
+		fleet "Small Republic" 2000
+		fleet "Large Republic" 2000
+		fleet "Large Free Worlds" 1600
 		fleet "Derelict Southern" 30000
 	system "Alpha Arae"
-		fleet "Small Southern Merchants" 5000
-		fleet "Large Southern Merchants" 6000
-		fleet "Small Republic" 800
-		fleet "Large Republic" 1000
-		fleet "Large Free Worlds" 3000
+		fleet "Small Southern Merchants" 10000
+		fleet "Large Southern Merchants" 12000
+		fleet "Small Republic" 1600
+		fleet "Large Republic" 2000
+		fleet "Large Free Worlds" 6000
 		fleet "Derelict Southern" 30000
 
 
@@ -1966,14 +1966,14 @@ event "fw at war with Syndicate"
 			"Korath" -.01
 		bribe 0
 	system "Rutilicus"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2000
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 4000
 	system "Cebalrai"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2000
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 4000
 	system "Holeb"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
 
 
 
@@ -2017,23 +2017,23 @@ event "fw armistice"
 	planet "Mainsail"
 		"required reputation" 40
 	system "Rutilicus"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Southern Pirates" 8000
-		fleet "Small Republic" 1000
-	system "Cebalrai"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Southern Pirates" 4000
-		fleet "Small Republic" 1000
-	system "Holeb"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 5000
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Pirates" 16000
 		fleet "Small Republic" 2000
-		fleet "Large Republic" 3000
+	system "Cebalrai"
+		fleet "Small Southern Merchants" 1200
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Pirates" 8000
+		fleet "Small Republic" 2000
+	system "Holeb"
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Pirates" 10000
+		fleet "Small Republic" 4000
+		fleet "Large Republic" 6000
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 1600
+		fleet "Navy Surveillance" 3200
 	system "Kaus Borealis"
 		remove fleet "Republic Logistics"
 
@@ -2106,49 +2106,49 @@ mission "Navy expands typhoon sales"
 event "navy out of rastaban"
 	system "Rastaban"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2400
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 700
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 2000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 4800
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 1400
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 4000
 	system "Girtab"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1700
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 5000
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 3400
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 10000
 	system "Delta Sagittarii"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 900
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Navy Surveillance" 3000
-	system "Lesath"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1600
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1100
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 5000
-		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 4000
-	system "Alpha Arae"
-		fleet "Small Southern Merchants" 2100
+		fleet "Small Southern Merchants" 2400
 		fleet "Large Southern Merchants" 8000
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1800
 		fleet "Small Southern Pirates" 6000
-		fleet "Large Southern Pirates" 13000
-		fleet "Small Republic" 900
-		fleet "Large Republic" 800
+		fleet "Large Southern Pirates" 14000
+		fleet "Navy Surveillance" 6000
+	system "Lesath"
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 3200
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 2200
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 10000
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 1200
+		fleet "Navy Surveillance" 8000
+	system "Alpha Arae"
+		fleet "Small Southern Merchants" 4200
+		fleet "Large Southern Merchants" 16000
+		fleet "Small Southern Pirates" 12000
+		fleet "Large Southern Pirates" 26000
+		fleet "Small Republic" 1800
+		fleet "Large Republic" 1600
+		fleet "Derelict Southern" 30000
+		fleet "Navy Surveillance" 2400
 
 
 
@@ -2164,14 +2164,14 @@ event "stack core for sale"
 
 event "syndicate occupies sol"
 	system "Sol"
-		fleet "Small Northern Merchants" 500
-		fleet "Large Northern Merchants" 700
-		fleet "Small Republic" 800
-		fleet "Large Republic" 1200
-		fleet "Small Core Merchants" 900
-		fleet "Large Core Merchants" 1400
-		fleet "Small Syndicate" 400
-		fleet "Large Syndicate" 600
+		fleet "Small Northern Merchants" 1000
+		fleet "Large Northern Merchants" 1400
+		fleet "Small Republic" 1600
+		fleet "Large Republic" 2400
+		fleet "Small Core Merchants" 1800
+		fleet "Large Core Merchants" 2800
+		fleet "Small Syndicate" 800
+		fleet "Large Syndicate" 1200
 
 
 
@@ -2192,22 +2192,22 @@ event "pug invasion"
 	"tribute: Oblivion" /= 500
 	system "Zeta Aquilae"
 		government "Pug"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Pug" 1000
-		fleet "Large Pug" 2000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Pug" 2000
+		fleet "Large Pug" 4000
 	system "Rasalhague"
 		government "Pug"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Pug" 800
-		fleet "Large Pug" 2000
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Pug" 1600
+		fleet "Large Pug" 4000
 	system "Orvala"
 		government "Pug"
-		fleet "Small Southern Merchants" 3000
-		fleet "Large Southern Merchants" 6000
-		fleet "Small Pug" 5000
-		fleet "Large Pug" 9000
+		fleet "Small Southern Merchants" 6000
+		fleet "Large Southern Merchants" 12000
+		fleet "Small Pug" 10000
+		fleet "Large Pug" 18000
 	planet "Rand"
 		security 0
 		tribute 1
@@ -2242,31 +2242,31 @@ event "pug invasion 2"
 		remove fleet "Republic Logistics"
 	system "Vega"
 		government "Pug"
-		fleet "Small Northern Merchants" 800
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Pug" 800
-		fleet "Large Pug" 1200
+		fleet "Small Northern Merchants" 1600
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Pug" 1600
+		fleet "Large Pug" 2400
 	system "Altair"
 		government "Pug"
-		fleet "Small Core Merchants" 400
-		fleet "Large Core Merchants" 600
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Pug" 700
-		fleet "Large Pug" 900
+		fleet "Small Core Merchants" 800
+		fleet "Large Core Merchants" 1200
+		fleet "Small Northern Merchants" 2000
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Pug" 1400
+		fleet "Large Pug" 1800
 	system "Fomalhaut"
 		government "Pug"
-		fleet "Small Core Merchants" 1000
-		fleet "Large Core Merchants" 1200
-		fleet "Small Pug" 1400
-		fleet "Large Pug" 2000
+		fleet "Small Core Merchants" 2000
+		fleet "Large Core Merchants" 2400
+		fleet "Small Pug" 2800
+		fleet "Large Pug" 4000
 	system "Nocte"
 		government "Pug"
-		fleet "Small Northern Merchants" 1500
-		fleet "Large Northern Merchants" 5000
-		fleet "Small Pug" 3000
-		fleet "Large Pug" 7000
-		fleet "Human Miners" 1600
+		fleet "Small Northern Merchants" 3000
+		fleet "Large Northern Merchants" 10000
+		fleet "Small Pug" 6000
+		fleet "Large Pug" 14000
+		fleet "Human Miners" 3200
 	planet "Silver"
 		security 0
 		tribute 1
@@ -2302,16 +2302,16 @@ event "pug invasion 3"
 	"tribute: Furnace" /= 1200
 	system "Delta Capricorni"
 		government "Pug"
-		fleet "Small Core Merchants" 700
-		fleet "Large Core Merchants" 800
-		fleet "Small Pug" 800
-		fleet "Large Pug" 1100
+		fleet "Small Core Merchants" 1400
+		fleet "Large Core Merchants" 1600
+		fleet "Small Pug" 1600
+		fleet "Large Pug" 2200
 	system "Alderamin"
 		government "Pug"
-		fleet "Small Core Merchants" 2000
-		fleet "Large Core Merchants" 3200
-		fleet "Small Pug" 1200
-		fleet "Large Pug" 2500
+		fleet "Small Core Merchants" 4000
+		fleet "Large Core Merchants" 6400
+		fleet "Small Pug" 2400
+		fleet "Large Pug" 5000
 	planet "Maker"
 		security 0
 		tribute 1
@@ -2340,26 +2340,26 @@ event "pug invasion 4"
 	"tribute: Kraken Station" /= 500
 	"tribute: Tinker" /= 1100
 	system "Sol"
-		fleet "Small Northern Merchants" 300
-		fleet "Large Northern Merchants" 500
-		fleet "Small Republic" 600
-		fleet "Large Republic" 900
-		fleet "Republic Logistics" 2000
-		fleet "Small Core Merchants" 1000
-		fleet "Large Core Merchants" 2000
+		fleet "Small Northern Merchants" 600
+		fleet "Large Northern Merchants" 1000
+		fleet "Small Republic" 1200
+		fleet "Large Republic" 1800
+		fleet "Republic Logistics" 4000
+		fleet "Small Core Merchants" 2000
+		fleet "Large Core Merchants" 4000
 	system "Diphda"
 		government "Pug"
-		fleet "Small Core Merchants" 2000
-		fleet "Large Core Merchants" 600
-		fleet "Small Pug" 1000
-		fleet "Large Pug" 1500
+		fleet "Small Core Merchants" 4000
+		fleet "Large Core Merchants" 1200
+		fleet "Small Pug" 2000
+		fleet "Large Pug" 3000
 	system "Caph"
 		government "Pug"
-		fleet "Small Core Merchants" 500
-		fleet "Large Core Merchants" 600
-		fleet "Small Pug" 700
-		fleet "Large Pug" 1000
-		fleet "Human Miners" 2000
+		fleet "Small Core Merchants" 1000
+		fleet "Large Core Merchants" 1200
+		fleet "Small Pug" 1400
+		fleet "Large Pug" 2000
+		fleet "Human Miners" 4000
 	planet "Reunion"
 		security 0
 		tribute 1
@@ -2392,9 +2392,9 @@ event "fw syndicate welcoming"
 		bribe .08
 	system "Algenib"
 		government "Syndicate (Extremist)"
-		fleet "Small Core Pirates" 1500
-		fleet "Large Core Pirates" 2000
-		fleet "Syndicate Extremists" 200
+		fleet "Small Core Pirates" 3000
+		fleet "Large Core Pirates" 4000
+		fleet "Syndicate Extremists" 400
 
 
 
@@ -2407,7 +2407,7 @@ event "at war with the pug"
 			"Syndicate" -.01
 			"Syndicate (Extremist)" -.01
 	system "Delta Capricorni"
-		fleet "Small Core Merchants" 1500
+		fleet "Small Core Merchants" 3000
 
 
 
@@ -2426,17 +2426,17 @@ event "battle for delta capricorni"
 event "reconnected delta capricorni"
 	link "Delta Capricorni" "Markab"
 	system "Delta Capricorni"
-		fleet "Small Core Merchants" 1500
-		fleet "Large Core Merchants" 3000
-		fleet "Small Pug" 2000
-		fleet "Large Syndicate" 400
-		fleet "Human Miners" 3000
+		fleet "Small Core Merchants" 3000
+		fleet "Large Core Merchants" 6000
+		fleet "Small Pug" 4000
+		fleet "Large Syndicate" 800
+		fleet "Human Miners" 6000
 
 
 
 event "battle for altair"
 	system "Altair"
-		fleet "Small Core Merchants" 1500
+		fleet "Small Core Merchants" 3000
 
 
 
@@ -2444,10 +2444,10 @@ event "liberation of altair"
 	"tribute: Shiver" *= 300
 	system "Altair"
 		government "Republic"
-		fleet "Small Core Merchants" 1000
-		fleet "Large Core Merchants" 2000
-		fleet "Small Pug" 2000
-		fleet "Large Syndicate" 800
+		fleet "Small Core Merchants" 2000
+		fleet "Large Core Merchants" 4000
+		fleet "Small Pug" 4000
+		fleet "Large Syndicate" 1600
 	planet "Shiver"
 		security 0.1
 		tribute 300
@@ -2461,80 +2461,80 @@ event "reconnected altair"
 	link "Altair" "Sol"
 	system "Altair"
 		government "Republic"
-		fleet "Small Core Merchants" 800
-		fleet "Large Core Merchants" 1200
+		fleet "Small Core Merchants" 1600
+		fleet "Large Core Merchants" 2400
 
 
 
 event "pug flee"
 	unvisit "Deneb"
 	system "Zeta Aquilae"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 5000
-	system "Rasalhague"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
 		fleet "Small Southern Pirates" 4000
-		fleet "Large Southern Pirates" 8000
+		fleet "Large Southern Pirates" 10000
+	system "Rasalhague"
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Pirates" 8000
+		fleet "Large Southern Pirates" 16000
 	system "Vega"
-		fleet "Small Northern Merchants" 800
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Republic" 1600
-		fleet "Large Republic" 5000
-		fleet "Human Miners" 5000
+		fleet "Small Northern Merchants" 1600
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Republic" 3200
+		fleet "Large Republic" 10000
+		fleet "Human Miners" 10000
 	system "Altair"
-		fleet "Small Core Merchants" 400
-		fleet "Large Core Merchants" 600
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Republic" 3000
-		fleet "Large Republic" 6000
-		fleet "Republic Logistics" 6000
-		fleet "Small Syndicate" 9000
+		fleet "Small Core Merchants" 800
+		fleet "Large Core Merchants" 1200
+		fleet "Small Northern Merchants" 2000
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 12000
+		fleet "Republic Logistics" 12000
+		fleet "Small Syndicate" 18000
 	system "Fomalhaut"
+		fleet "Small Core Merchants" 2000
+		fleet "Large Core Merchants" 2400
+		fleet "Small Syndicate" 10000
+		fleet "Large Syndicate" 20000
+		fleet "Republic Logistics" 6600
+	system "Delta Capricorni"
+		fleet "Small Core Merchants" 1400
+		fleet "Large Core Merchants" 1600
+		fleet "Small Syndicate" 4000
+		fleet "Small Core Pirates" 8000
+		fleet "Human Miners" 6000
+	system "Alderamin"
+		fleet "Small Core Merchants" 4000
+		fleet "Large Core Merchants" 6400
+		fleet "Small Syndicate" 1600
+		fleet "Large Syndicate" 1600
+		fleet "Small Core Pirates" 2000
+		fleet "Large Core Pirates" 2400
+	system "Diphda"
+		fleet "Small Core Merchants" 4000
+		fleet "Large Core Merchants" 1200
+		fleet "Small Syndicate" 6000
+	system "Caph"
 		fleet "Small Core Merchants" 1000
 		fleet "Large Core Merchants" 1200
-		fleet "Small Syndicate" 5000
-		fleet "Large Syndicate" 10000
-		fleet "Republic Logistics" 3300
-	system "Delta Capricorni"
-		fleet "Small Core Merchants" 700
-		fleet "Large Core Merchants" 800
-		fleet "Small Syndicate" 2000
-		fleet "Small Core Pirates" 4000
-		fleet "Human Miners" 3000
-	system "Alderamin"
-		fleet "Small Core Merchants" 2000
-		fleet "Large Core Merchants" 3200
-		fleet "Small Syndicate" 800
-		fleet "Large Syndicate" 800
-		fleet "Small Core Pirates" 1000
-		fleet "Large Core Pirates" 1200
-	system "Diphda"
-		fleet "Small Core Merchants" 2000
-		fleet "Large Core Merchants" 600
-		fleet "Small Syndicate" 3000
-	system "Caph"
-		fleet "Small Core Merchants" 500
-		fleet "Large Core Merchants" 600
-		fleet "Small Syndicate" 1600
-		fleet "Human Miners" 2000
+		fleet "Small Syndicate" 3200
+		fleet "Human Miners" 4000
 	system "Nocte"
-		fleet "Small Northern Merchants" 1500
-		fleet "Small Republic" 3000
-		fleet "Large Republic" 7000
-		fleet "Small Northern Pirates" 2500
+		fleet "Small Northern Merchants" 3000
+		fleet "Small Republic" 6000
+		fleet "Large Republic" 14000
+		fleet "Small Northern Pirates" 5000
 		fleet "Derelict Northern" 10000
-		fleet "Human Miners" 1600
+		fleet "Human Miners" 3200
 	system "Orvala"
-		fleet "Small Southern Merchants" 3000
-		fleet "Small Southern Pirates" 1000
-		fleet "Large Southern Pirates" 3000
+		fleet "Small Southern Merchants" 6000
+		fleet "Small Southern Pirates" 2000
+		fleet "Large Southern Pirates" 6000
 		fleet "Derelict Southern" 10000
 	system "Deneb"
-		fleet "Small Core Merchants" 5000
+		fleet "Small Core Merchants" 10000
 		add object "Pug Wormhole"
 			sprite planet/wormhole
 			distance 2320.29
@@ -2579,14 +2579,14 @@ event "pug territory liberated"
 	"tribute: Tinker" *= 1100
 	system "Deneb"
 		government "Neutral"
-		fleet "Small Core Merchants" 400
-		fleet "Large Core Merchants" 600
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Republic" 700
-		fleet "Large Republic" 900
-		fleet "Small Syndicate" 1200
-		fleet "Large Syndicate" 2000
+		fleet "Small Core Merchants" 800
+		fleet "Large Core Merchants" 1200
+		fleet "Small Northern Merchants" 2000
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Republic" 1400
+		fleet "Large Republic" 1800
+		fleet "Small Syndicate" 2400
+		fleet "Large Syndicate" 4000
 	planet "Pugglemug"
 		remove attributes
 		"bribe" 0.01
@@ -2681,14 +2681,14 @@ event "battle of algenib"
 event "navy occupies algenib"
 	system "Algenib"
 		government "Republic"
-		fleet "Small Republic" 500
-		fleet "Large Republic" 800
-		fleet "Large Syndicate" 800
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1600
+		fleet "Large Syndicate" 1600
 	system "Gienah"
 		government "Republic"
-		fleet "Small Republic" 800
-		fleet "Large Republic" 1200
-		fleet "Large Syndicate" 1000
+		fleet "Small Republic" 1600
+		fleet "Large Republic" 2400
+		fleet "Large Syndicate" 2000
 	planet "Covert"
 		description `Covert is home to a powerful mining cartel, only nominally under the control of Republic law. It is rumored to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labor, often by survivors of ships that have been captured by pirates. A pirate fleet lurks on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
 
@@ -2697,15 +2697,15 @@ event "navy occupies algenib"
 event "navy done with algenib"
 	system "Algenib"
 		government "Pirate"
-		fleet "Small Core Pirates" 300
-		fleet "Large Core Pirates" 500
-		fleet "Large Syndicate" 800
-		fleet "Small Core Merchants" 600
+		fleet "Small Core Pirates" 600
+		fleet "Large Core Pirates" 1000
+		fleet "Large Syndicate" 1600
+		fleet "Small Core Merchants" 1200
 	system "Gienah"
 		government "Pirate"
-		fleet "Small Core Pirates" 500
-		fleet "Large Core Pirates" 800
-		fleet "Large Syndicate" 5000
+		fleet "Small Core Pirates" 1000
+		fleet "Large Core Pirates" 1600
+		fleet "Large Syndicate" 10000
 	planet "Covert"
 		description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumored to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labor, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
 
@@ -2715,76 +2715,76 @@ event "fwc southern battle"
 	system "Delta Sagittarii"
 		fleet "Large Free Worlds" 4000
 	system "Rastaban"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 4000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 8000
 	system "Girtab"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
 
 
 
 event "fwc southern liberation"
 	system "Delta Sagittarii"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 900
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Large Republic" 3000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1800
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Large Republic" 6000
 	system "Rastaban"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2400
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 700
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Large Republic" 3000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 4800
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 1400
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Large Republic" 6000
 	system "Girtab"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 900
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1700
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
+		fleet "Small Southern Merchants" 1800
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 3400
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
 	system "Lesath"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 1600
-		fleet "Small Free Worlds" 800
-		fleet "Large Free Worlds" 1100
-		fleet "Small Southern Pirates" 2000
-		fleet "Large Southern Pirates" 5000
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 3200
+		fleet "Small Free Worlds" 1600
+		fleet "Large Free Worlds" 2200
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 10000
 		fleet "Derelict Southern" 30000
-		fleet "Navy Surveillance" 4000
+		fleet "Navy Surveillance" 8000
 
 
 
 event "fwc attack kaus borealis"
 	system "Alpha Arae"
-		fleet "Small Southern Merchants" 5000
-		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Merchants" 10000
+		fleet "Large Southern Merchants" 12000
 	system "Kaus Borealis"
-		fleet "Large Southern Merchants" 4000
-		fleet "Large Free Worlds" 3000
+		fleet "Large Southern Merchants" 8000
+		fleet "Large Free Worlds" 6000
 
 
 
 event "fwc capture kaus borealis"
 	system "Alpha Arae"
-		fleet "Small Southern Merchants" 5000
-		fleet "Large Southern Merchants" 6000
-		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1000
+		fleet "Small Southern Merchants" 10000
+		fleet "Large Southern Merchants" 12000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 2000
 	system "Kaus Borealis"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Free Worlds" 400
-		fleet "Large Free Worlds" 400
-		fleet "Large Republic" 2000
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Free Worlds" 800
+		fleet "Large Free Worlds" 800
+		fleet "Large Republic" 4000
 	planet "New Iceland"
 		description `New Iceland is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
 		description `	Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
@@ -2794,25 +2794,25 @@ event "fwc capture kaus borealis"
 
 event "fwc attack cebalrai"
 	system "Cebalrai"
-		fleet "Small Southern Merchants" 5000
-		fleet "Large Southern Merchants" 6000
+		fleet "Small Southern Merchants" 10000
+		fleet "Large Southern Merchants" 12000
 
 
 
 event "fwc capture cebalrai"
 	system "Cebalrai"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 1500
-		fleet "Small Free Worlds" 400
-		fleet "Large Free Worlds" 400
-		fleet "Large Republic" 2000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 3000
+		fleet "Small Free Worlds" 800
+		fleet "Large Free Worlds" 800
+		fleet "Large Republic" 4000
 	system "Kaus Borealis"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 2000
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 700
+		fleet "Small Southern Merchants" 4000
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1400
 
 
 
@@ -2824,95 +2824,95 @@ event "fwc solace has nukes"
 
 event "fwc defend cebalrai"
 	system "Cebalrai"
-		fleet "Large Free Worlds" 6000
+		fleet "Large Free Worlds" 12000
 
 
 
 event "fwc defended cebalrai"
 	system "Cebalrai"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 1500
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 600
-		fleet "Large Republic" 5000
-	system "Sargas"
-		fleet "Small Southern Merchants" 600
-		fleet "Large Southern Merchants" 2500
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 3000
 		fleet "Small Free Worlds" 1000
-		fleet "Large Free Worlds" 1500
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-	system "Lesath"
-		fleet "Small Southern Merchants" 6000
-		fleet "Large Southern Merchants" 9000
-		fleet "Large Free Worlds" 800
-	system "Dschubba"
-		fleet "Small Southern Merchants" 800
-		fleet "Large Southern Merchants" 2600
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 6000
-		fleet "Small Free Worlds" 2000
-		fleet "Large Free Worlds" 3000
-	system "Seginus"
+		fleet "Large Free Worlds" 1200
+		fleet "Large Republic" 10000
+	system "Sargas"
 		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2700
-		fleet "Small Free Worlds" 700
-		fleet "Large Free Worlds" 1100
-	system "Alnasl"
-		fleet "Small Southern Merchants" 1300
-		fleet "Large Southern Merchants" 2500
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Free Worlds" 2000
+		fleet "Large Free Worlds" 3000
 		fleet "Small Southern Pirates" 6000
-		fleet "Small Free Worlds" 2000
-		fleet "Large Free Worlds" 3000
+		fleet "Large Southern Pirates" 14000
+	system "Lesath"
+		fleet "Small Southern Merchants" 12000
+		fleet "Large Southern Merchants" 18000
+		fleet "Large Free Worlds" 1600
+	system "Dschubba"
+		fleet "Small Southern Merchants" 1600
+		fleet "Large Southern Merchants" 5200
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 12000
+		fleet "Small Free Worlds" 4000
+		fleet "Large Free Worlds" 6000
+	system "Seginus"
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 5200
+		fleet "Small Free Worlds" 1400
+		fleet "Large Free Worlds" 2200
+	system "Alnasl"
+		fleet "Small Southern Merchants" 2600
+		fleet "Large Southern Merchants" 5000
+		fleet "Small Southern Pirates" 12000
+		fleet "Small Free Worlds" 4000
+		fleet "Large Free Worlds" 6000
 	system "Eber"
-		fleet "Small Southern Merchants" 1900
-		fleet "Large Southern Merchants" 2900
-		fleet "Small Southern Pirates" 3000
-		fleet "Small Free Worlds" 2000
-		fleet "Large Free Worlds" 3000
+		fleet "Small Southern Merchants" 3800
+		fleet "Large Southern Merchants" 5800
+		fleet "Small Southern Pirates" 6000
+		fleet "Small Free Worlds" 4000
+		fleet "Large Free Worlds" 6000
 	system "Delta Sagittarii"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 4000
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 900
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 8000
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1800
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
 	system "Rastaban"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1200
-		fleet "Large Southern Merchants" 2400
-		fleet "Small Free Worlds" 500
-		fleet "Large Free Worlds" 700
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
+		fleet "Small Southern Merchants" 2400
+		fleet "Large Southern Merchants" 4800
+		fleet "Small Free Worlds" 1000
+		fleet "Large Free Worlds" 1400
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
 	system "Albaldah"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 1200
-		fleet "Small Free Worlds" 900
-		fleet "Large Free Worlds" 1900
-		fleet "Small Southern Pirates" 3000
-		fleet "Large Southern Pirates" 7000
-		fleet "Human Miners" 3000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 2400
+		fleet "Small Free Worlds" 1800
+		fleet "Large Free Worlds" 3800
+		fleet "Small Southern Pirates" 6000
+		fleet "Large Southern Pirates" 14000
+		fleet "Human Miners" 6000
 
 
 
 event "fwc attack menkent"
 	system "Menkent"
-		fleet "Small Southern Merchants" 5000
+		fleet "Small Southern Merchants" 10000
 
 
 
 event "fwc capture menkent"
 	system "Menkent"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1900
-		fleet "Small Free Worlds" 300
-		fleet "Large Free Worlds" 400
-		fleet "Large Republic" 2000
-		fleet "Human Miners" 2000
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 3800
+		fleet "Small Free Worlds" 600
+		fleet "Large Free Worlds" 800
+		fleet "Large Republic" 4000
+		fleet "Human Miners" 4000
 	planet "New Austria"
 		description `New Austria is a rugged mountain world, full of snow-capped peaks and valleys so deep and so steep that they rarely see sunlight.`
 		description `	The few settlements that have been built here were developed for mining sapphires and rubies. The sapphires found in New Austria range from blue to yellow to black to clear in color, and are used both for industrial abrasives and for jewelry.`
@@ -2955,51 +2955,51 @@ event "fwc pug invasion"
 			"Free Worlds" -.01
 	system "Zeta Aquilae"
 		government "Pug"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
-		fleet "Small Pug" 1000
-		fleet "Large Pug" 2000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
+		fleet "Small Pug" 2000
+		fleet "Large Pug" 4000
 	system "Rasalhague"
 		government "Pug"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Pug" 800
-		fleet "Large Pug" 2000
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Pug" 1600
+		fleet "Large Pug" 4000
 	system "Orvala"
 		government "Pug"
-		fleet "Small Southern Merchants" 3000
-		fleet "Large Southern Merchants" 6000
-		fleet "Small Pug" 5000
-		fleet "Large Pug" 9000
+		fleet "Small Southern Merchants" 6000
+		fleet "Large Southern Merchants" 12000
+		fleet "Small Pug" 10000
+		fleet "Large Pug" 18000
 	system "Altair"
 		government "Pug"
-		fleet "Small Core Merchants" 400
-		fleet "Large Core Merchants" 600
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Pug" 700
-		fleet "Large Pug" 900
+		fleet "Small Core Merchants" 800
+		fleet "Large Core Merchants" 1200
+		fleet "Small Northern Merchants" 2000
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Pug" 1400
+		fleet "Large Pug" 1800
 	system "Vega"
 		government "Free Worlds"
 	system "Delta Capricorni"
 		government "Pug"
-		fleet "Small Core Merchants" 700
-		fleet "Large Core Merchants" 800
-		fleet "Small Pug" 800
-		fleet "Large Pug" 1100
+		fleet "Small Core Merchants" 1400
+		fleet "Large Core Merchants" 1600
+		fleet "Small Pug" 1600
+		fleet "Large Pug" 2200
 	system "Alderamin"
 		government "Pug"
-		fleet "Small Core Merchants" 2000
-		fleet "Large Core Merchants" 3200
-		fleet "Small Pug" 1200
-		fleet "Large Pug" 2500
+		fleet "Small Core Merchants" 4000
+		fleet "Large Core Merchants" 6400
+		fleet "Small Pug" 2400
+		fleet "Large Pug" 5000
 	system "Nocte"
 		government "Pug"
-		fleet "Small Northern Merchants" 1500
-		fleet "Large Northern Merchants" 5000
-		fleet "Small Pug" 3000
-		fleet "Large Pug" 7000
-		fleet "Human Miners" 1600
+		fleet "Small Northern Merchants" 3000
+		fleet "Large Northern Merchants" 10000
+		fleet "Small Pug" 6000
+		fleet "Large Pug" 14000
+		fleet "Human Miners" 3200
 	planet "Rand"
 		security 0
 		tribute 1
@@ -3046,19 +3046,19 @@ event "fwc navy retakes cebalrai"
 	unvisit "Menkent"
 	system "Cebalrai"
 		government "Republic"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 1500
-		fleet "Small Republic" 500
-		fleet "Large Republic" 600
-		fleet "Large Free Worlds" 5000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 3000
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1200
+		fleet "Large Free Worlds" 10000
 	system "Menkent"
 		government "Republic"
-		fleet "Small Southern Merchants" 700
-		fleet "Large Southern Merchants" 1900
-		fleet "Small Republic" 300
-		fleet "Large Republic" 400
-		fleet "Large Free Worlds" 2000
-		fleet "Human Miners" 2000
+		fleet "Small Southern Merchants" 1400
+		fleet "Large Southern Merchants" 3800
+		fleet "Small Republic" 600
+		fleet "Large Republic" 800
+		fleet "Large Free Worlds" 4000
+		fleet "Human Miners" 4000
 
 
 
@@ -3109,11 +3109,11 @@ event "fwc peace with the navy"
 		"required reputation" 40
 	system "Vega"
 		government "Pug"
-		fleet "Small Northern Merchants" 800
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Pug" 800
-		fleet "Large Pug" 1200
-		fleet "Human Miners" 5000
+		fleet "Small Northern Merchants" 1600
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Pug" 1600
+		fleet "Large Pug" 2400
+		fleet "Human Miners" 10000
 
 
 
@@ -3128,7 +3128,7 @@ event "fwc defend oblivion"
 event "fwc battle for rasalhague"
 	link "Rasalhague" "Cebalrai"
 	system "Rasalhague"
-		fleet "Small Southern Merchants" 10000
+		fleet "Small Southern Merchants" 20000
 	government "Pug"
 		"attitude toward"
 			"Republic" -.01
@@ -3140,31 +3140,31 @@ event "fwc liberation of rasalhague"
 	"tribute: Oblivion" *= 500
 	system "Rasalhague"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Republic" 400
-		fleet "Large Republic" 600
-		fleet "Small Free Worlds" 400
-		fleet "Large Free Worlds" 600
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Republic" 800
+		fleet "Large Republic" 1200
+		fleet "Small Free Worlds" 800
+		fleet "Large Free Worlds" 1200
 	system "Zeta Aquilae"
-		fleet "Small Southern Merchants" 1000
-		fleet "Large Southern Merchants" 3000
+		fleet "Small Southern Merchants" 2000
+		fleet "Large Southern Merchants" 6000
 	system "Vega"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
 	system "Altair"
-		fleet "Small Core Merchants" 400
-		fleet "Large Core Merchants" 600
+		fleet "Small Core Merchants" 800
+		fleet "Large Core Merchants" 1200
 	system "Delta Capricorni"
-		fleet "Small Core Merchants" 700
-		fleet "Large Core Merchants" 800
+		fleet "Small Core Merchants" 1400
+		fleet "Large Core Merchants" 1600
 	system "Alderamin"
-		fleet "Small Core Merchants" 2000
-		fleet "Large Core Merchants" 3200
+		fleet "Small Core Merchants" 4000
+		fleet "Large Core Merchants" 6400
 	system "Deneb"
-		fleet "Small Core Merchants" 10000
-		fleet "Small Pug" 100
-		fleet "Large Pug" 100
+		fleet "Small Core Merchants" 20000
+		fleet "Small Pug" 200
+		fleet "Large Pug" 200
 	planet "Oblivion"
 		security 0.05
 		tribute 500
@@ -3183,12 +3183,12 @@ event "fwc reconnect zeta aquilae"
 	"tribute: Rand" *= 500
 	system "Zeta Aquilae"
 		government "Free Worlds"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Republic" 400
-		fleet "Large Republic" 600
-		fleet "Small Free Worlds" 600
-		fleet "Large Free Worlds" 800
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Republic" 800
+		fleet "Large Republic" 1200
+		fleet "Small Free Worlds" 1200
+		fleet "Large Free Worlds" 1600
 	system "Orvala"
 		government "Free Worlds"
 	planet "Rand"
@@ -3216,11 +3216,11 @@ event "fwc reconnect vega"
 	link "Sol" "Vega"
 	system "Vega"
 		government "Republic"
-		fleet "Small Southern Merchants" 1500
-		fleet "Large Southern Merchants" 2000
-		fleet "Small Republic" 500
-		fleet "Large Republic" 700
-		fleet "Human Miners" 5000
+		fleet "Small Southern Merchants" 3000
+		fleet "Large Southern Merchants" 4000
+		fleet "Small Republic" 1000
+		fleet "Large Republic" 1400
+		fleet "Human Miners" 10000
 
 
 
@@ -3236,14 +3236,14 @@ event "fwc pug defeated"
 		government "Syndicate"
 	system "Deneb"
 		government "Neutral"
-		fleet "Small Core Merchants" 400
-		fleet "Large Core Merchants" 600
-		fleet "Small Northern Merchants" 1000
-		fleet "Large Northern Merchants" 3000
-		fleet "Small Republic" 700
-		fleet "Large Republic" 900
-		fleet "Small Syndicate" 1200
-		fleet "Large Syndicate" 2000
+		fleet "Small Core Merchants" 800
+		fleet "Large Core Merchants" 1200
+		fleet "Small Northern Merchants" 2000
+		fleet "Large Northern Merchants" 6000
+		fleet "Small Republic" 1400
+		fleet "Large Republic" 1800
+		fleet "Small Syndicate" 2400
+		fleet "Large Syndicate" 4000
 	system "Nocte"
 		government "Republic"
 	planet "Pugglemug"
