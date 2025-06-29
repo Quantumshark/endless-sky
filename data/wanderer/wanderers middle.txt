@@ -3881,11 +3881,24 @@ mission "Wanderers: Station Repairs 4"
 	name "Supplies from <planet>"
 	source "Esperaktu Station"
 	destination "Var' Kayi"
+	passengers 1
 	to offer
 		has "Wanderers: Station Repairs 3: done"
 	on offer
 		conversation
-			``
+			`The four Efreti ships dock with the station, the huge crew unloading an impressive quantity of goods into the hangar. Rek watches beside you as the workers begin climbing into the same maintenance shaft you used, bringing back buckets and buckets of the bacterial slime, then taking up some equipment once the slime has been cleared sufficiently. After a few hours, the upper elevator begins to move, which gets a cheer from the crew watching from the hangar deck.`
+			`	A while later, you are startled by a knock on the door. Opening the airlock, you see one of the Korath step inside. Rek goes to greet them as they remove their helmet and begin quickly speaking. After listening for a while, she translates.`
+			`	"He says that the bacteria that have been growing there are no longer a viable food source - with the station unmanaged for so long, they have undergone some evolution, rendering them inedible and too fast-growing to work with. They have viable stocks of the original culture over on Laki Nemparu, but they won't be able to use the station's facilities to cultivate them until the current population has been completely removed."`
+			`	Rek turns back to the Korath, speaking in the Korath language, before turning back to you. "The Wanderers have the technology to accomplish this - If we collect a small sample of the bacteria, our scientists back home can engineer a virus with which to wipe it out."`
+			choice
+				`	"Sounds like a plan!"`
+					goto collecting
+				`	"Is that safe?"`
+			`	"Yes, it's entirely safe." Rek explains. "The engineered virus will be targeted specifically to this bacterial strain, so there's no risk of cross-infection."`
+			label collecting
+			`	You put your space suit on once again and step outside, accompanied by the Korath. He accosts one of the workers carrying away the slime from upstairs, taking the bucket from him, and brings it to you. You bring it back to your ship, and get ready to set off for <planet>.`
+	on complete
+		dialog `Rek exits your ship first after you land, carefully carrying the bucket. "I will bring this to our microbiologists, and explain the situation. Meet me in the spaceport in a few hours' time."`
 	npc
 		government Korath
 		system Farbutero
@@ -3900,8 +3913,15 @@ mission "Wanderers: Station Repairs 5"
 	name "Supplies to <planet>"
 	source "Var' Kayi"
 	destination "Esperaktu Station"
+	passengers 1
+	cargo "bacteriophages" 1
 	to offer
 		has "Wanderers: Station Repairs 4: done"
+	on offer
+		conversation
+			`Rek is waiting for you in the spaceport, accompanied by a Wanderer wearing a simple white outfit - presumably their equivalent of a lab coat. They rush over to you excitedly, and begin speaking quickly.`
+			`	"Hello, human! This [task, project] you have given me has been a most [exciting, challenging] one. I am grateful for the opportunity to [study, investigate] these artificial lifeforms [designed, created] by the Korath. This has been a great [victory, success] - the viruses you asked for are all [ready, prepared], and will be loaded onto your ship [imminently, momentarily]". Your translation device continues for a while after they finish speaking, though this doesn't seem to faze them at all.`
+			`	`
 	on complete
 		event "esperaktu station reactivated" 50
 	npc accompany save
@@ -3939,7 +3959,7 @@ event "wanderers: esperaktu station reactivated"
 		music ambient/machinery
 		description `This small space station has plenty of blast marks on its outer hull, but they have all been patched and the interior still holds atmosphere. The Efreti have now reclaimed the station and restored operations.`
 		description `	For food, the Korath set up vats of photosynthetic yeast and bacteria in some rooms on the outer shell of the station. In their absence, the bacterial soup worked its way through the ventilation system into the rest of the station and formed a thin layer of slime on almost every sun-facing wall, which the Efreti are having some difficulty fully cleaning up. Nonetheless, despite the difficulties, the station is now providing significant supplies of food to the Efreti.`
-		spaceport `The hangar had been left exposed to the vacuum of space while the station was abandoned, so it has thankfully avoided being taken over by the bacterial slime that covered the rest of the station. The new residents move around busily, loading up ship after ship with the nutritious soupy substance.`
+		spaceport `The hangar had been left exposed to the vacuum of space while the station was abandoned, so it has thankfully avoided being taken over by the bacterial slime that infested the rest of the station. The new residents move around busily, loading up ship after ship with the nutritious soupy substance.`
 
 mission "Wanderers: Exile Scout Patrol"
 	name "Korath patrol"
