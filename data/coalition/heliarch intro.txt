@@ -1601,7 +1601,7 @@ event "lunarium fleeing rb"
 
 event "lunarium detained rb"
 	system "12 Autumn Above"
-		add fleet "Heliarch" 800
+		add fleet "Heliarch" 1600
 
 
 
