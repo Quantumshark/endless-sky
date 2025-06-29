@@ -3658,7 +3658,15 @@ mission "Wanderers: Tele'ek Molt 1"
 		has "Wanderers: Outfitter Expansion 3: done"
 	on offer
 		conversation
-			``
+			`Tele'ek is talking to another Wanderer when you arrive. They spot you as you approach, and Tele'ek looks up. "Ah, <first>. I am [glad, relieved] you were able to arrive in such a timely [manner, fashion]."`
+			choice
+				`"What do you need?"`
+					goto thepoint
+				`"I'm not interrupting anything, am I?"`
+			`	"Not at all. I was merely [informing, advising] my [successor, lieutenant] on how best to handle any [threats, dangers] that may emerge during my absence."`
+			label thepoint
+			`	"I believe the time has come, <first>. I cannot [delay, avoid] this any longer. It is time for me to complete my Molt, as Rek did."`
+			
 	on complete
 		conversation
 			`As you come in to land, you see that a large crowd has gathered around in the spaceport. They move aside as your ship lands, and then, as you step out, the crowd parts, leaving a corridoor open from your ship to the facility's entrance.`
@@ -3690,6 +3698,11 @@ mission "Wanderers: Tele'ek Molt 1"
 			`	Tele'ek seems surprised by this revelation. For a brief moment, his expression changes, and he thinks silently to himself for a moment. Then, he looks back up at you. "I... I hope that your [theory, observation] is correct, <first>. I will [seek, attempt] to hold onto that hope as I approach my [fate?]."`
 			label "inside facility"
 			`	Inside the facility is a much smaller gathering, as two Wanderers are discussing something with the staff. All of them turn to you as you and Tele'ek approach.`
+			`	One of them speaks up. "Commander Tele'ek! And, the human who has [helped, assisted] us in battle. Everything is [ready, prepared] for you. We were just awaiting your [choice, decision]."`
+			`	Tele'ek responds. "Thank you, sisters. The time has come; I have made my [choice, decision], said my farewells. Now, I must meet my [fate?]."`
+			`	Two of the staff step forward and take Tele'ek's chair from you, wheeling it over to the elevator. Tele'ek lifts one featherless wing, waving you goodbye, before the doors close, leaving you and the others in silence. `
+			`	After a little while, the Wanderer who spoke to you before places one wing over your shoulder. "You should go. I am sure your other [friends, colleagues] among the Wanderers will have need of your skills, and of your [ship, vessel], during Tele'ek's absence."`
+			`	The facility door opens again. You see that much of the crowd has dissipated, though there are still quite a few Wanderers scattered around the spaceport, standing around mournfully. `
 
 mission "Wanderers: Tele'ek Molt 2"
 	landing
@@ -3737,7 +3750,7 @@ mission "Wanderers: Station Repairs 2"
 				has "esperaktu station: visited lower corridor"
 			action
 				set "esperaktu station: visited lower corridor"
-			`	As you descend down the ladder, you come to an airlock. As soon as the inner door opens, a wave of bacterial slime half a meter high washes forth from the corridor beyond, knocking you flat. It takes you some time to extricate yourself from the sticky substance, but once you do you find yourself looking across a sea of slime that rises up past your knees. The walls and ceiling are coated in a thinner layer of the substance, obscuring most of the finer details and the signs.`
+			`	As you descend down the ladder, you come to an airlock. As soon as the inner door opens, a wave of bacterial slime half a meter high washes forth from the corridor beyond, knocking you flat. It takes you some time to extricate yourself from the sticky substance, but once you do you find yourself looking across a sea of slime that rises up past your knees. The walls and ceiling are coated in a thinner layer of the substance, obscuring most of the finer details and all of the signs.`
 			label lowercorridorreturn
 			`	The corridor cuts asymmetrically across this level of the station, with two small rooms to your left, and one large one to your right.`
 			choice
@@ -3756,7 +3769,7 @@ mission "Wanderers: Station Repairs 2"
 				set "esperaktu station: visited kitchen"
 			`	`
 			label kitchenreturn
-			`	The kitchen is connected to the corridor, or to the adjacent room.`
+			`	The kitchen is connected to the corridor, and to the adjacent room.`
 			choice
 				`	(Return to the corridor.)`
 					goto lowercorridorreturn
@@ -3768,7 +3781,12 @@ mission "Wanderers: Station Repairs 2"
 				set "esperaktu station: visited dining area"
 			`	`
 			label diningreturn
-			`	`
+			`	The dining room is connected to the corridor, and to the adjacent room.`
+			choice
+				`	(Return to the corridor.)`
+					goto lowercorridorreturn
+				`	(Check the adjacent room.)`
+					goto kitchencheck
 			label vatscheck
 			branch vatsreturn
 				has "esperaktu station: visited vats"
