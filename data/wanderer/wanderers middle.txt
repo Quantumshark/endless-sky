@@ -3702,14 +3702,21 @@ mission "Wanderers: Tele'ek Molt 1"
 			`	Tele'ek responds. "Thank you, sisters. The time has come; I have made my [choice, decision], said my farewells. Now, I must meet my [fate?]."`
 			`	Two of the staff step forward and take Tele'ek's chair from you, wheeling it over to the elevator. Tele'ek lifts one featherless wing, waving you goodbye, before the doors close, leaving you and the others in silence. `
 			`	After a little while, the Wanderer who spoke to you before places one wing over your shoulder. "You should go. I am sure your other [friends, colleagues] among the Wanderers will have need of your skills, and of your [ship, vessel], during Tele'ek's absence."`
-			`	The facility door opens again. You see that much of the crowd has dissipated, though there are still quite a few Wanderers scattered around the spaceport, standing around mournfully. `
+			`	The facility door opens again. You see that much of the crowd has dissipated, though there are still quite a few Wanderers scattered around the spaceport, standing around mournfully.`
+			choice
+				`	(Return to my ship.)`
+					goto end
+				`	(Try talking to someone.)`
+			`	You `
+			label end
+			`	As you are returning to your ship, you notice that Rek has sent you a message. "When you are ready, come and meet me on Sabira Eseskrai. The Efreti have asked for our assistance with an exciting new project."`
 
 mission "Wanderers: Tele'ek Molt 2"
 	landing
 	name "Return to <planet>"
 	description `Return to <destination> to meet up with Rek.`
 	source "Tik Klai"
-	destination "Sabira Esekrai"
+	destination "Sabira Eseskrai"
 	to offer
 		has "Wanderers: Tele'ek Molt 1: done"
 
@@ -3723,7 +3730,17 @@ mission "Wanderers: Station Repairs 1"
 		has "Wanderers: Tele'ek Molt 2: done"
 	on offer
 		conversation
-			``
+			`You can see Rek and a group of Efreti rushing towards your landing site even as your ship is descending. Almost the moment you open the airlock, Rek rushes into the ship excitedly.`
+			`	"I've been talking with the leaders of the Efreti, and they've proposed a new project for us." she brings you to the bridge and pulls up your map, pointing to a system in the southeast of Korath space. "There's an old Korath farming station here. It was abandoned after the Exile, for obvious reasons, but now that the threat from the Automata has been resolved, the Efreti have expressed interest in getting it up and running again."`
+			`	"But, before we can do that, we first need to know what state it's in. A lot of other stations were destroyed or heavily damaged during their civil war, and if that station is the same, repairing it might not be feasible, at least not in the short term. In particular, if the station's main generator needs replacing, that might be an obstacle we can't currently overcome - the technology for building fusion cores on that scale seems to have been lost to the Efreti during the exile, and designing and fitting a Wanderer model could take months."`
+			choice
+				`	"So, you want to send me over there to see what the situation is?"`
+					goto confirmation
+				`	"Is there any chance it's still working after so long?"`
+			`	"Our Korath friends are confident that it should still be operational, as long as it didn't take any direct weapon fire. Station reactors of the time were built to last, even after a century or so."`
+			label confirmation
+			`	"They've told me that, at the very least, there shouldn't be any hazards present there, so it'll be safe. You'll need to dock with the station, then head out on foot and try to find the power core."`
+				accept
 
 mission "Wanderers: Station Repairs 2"
 	landing
