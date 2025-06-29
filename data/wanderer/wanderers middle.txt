@@ -3774,42 +3774,42 @@ mission "Wanderers: Station Repairs 2"
 				`	(Take the ladder back to the hangar.)`
 					goto hangarreturn
 				`	(Check the first room on the left.)`
-					goto kitchencheck
+					goto galleycheck
 				`	(Check the second room on the left.)`
-					goto diningcheck
+					goto messhallcheck
 				`	(Check the room on the right.)`
 					goto vatscheck
-			label kitchencheck
-			branch kitchenreturn
-				has "esperaktu station: visited kitchen"
+			label galleycheck
+			branch galleyreturn
+				has "esperaktu station: visited galley"
 			action
-				set "esperaktu station: visited kitchen"
-			`	`
-			label kitchenreturn
-			`	The kitchen is connected to the corridor, and to the adjacent room.`
+				set "esperaktu station: visited galley"
+			`	In an ironic twist, the galley is now totally overrun by the same food that was presumably prepared here in the past. The slime-coated shapes of a large oven and some other machines are the only sign of this room's original purpose, any stocks of other items that may have been present have long been consumed by the ooze.`
+			label galleyreturn
+			`	The galley is connected to the corridor, and to the adjacent room.`
 			choice
 				`	(Return to the corridor.)`
 					goto lowercorridorreturn
 				`	(Check the adjacent room.)`
-			label diningcheck
-			branch diningreturn
-				has "esperaktu station: visited dining area"
+			label messhallcheck
+			branch messhallreturn
+				has "esperaktu station: visited mess hall"
 			action
-				set "esperaktu station: visited dining area"
-			`	`
-			label diningreturn
-			`	The dining room is connected to the corridor, and to the adjacent room.`
+				set "esperaktu station: visited mess hall"
+			`	This large room is home to a few tables, just tall enough to be visible above the slime, but noticeably shorter than you're used to. You almost trip over one of the chairs as you look around, the slime high enough to completely cover it.`
+			label messhallreturn
+			`	The mess hall is connected to the corridor, and to the adjacent room.`
 			choice
 				`	(Return to the corridor.)`
 					goto lowercorridorreturn
 				`	(Check the adjacent room.)`
-					goto kitchencheck
+					goto galleycheck
 			label vatscheck
 			branch vatsreturn
 				has "esperaktu station: visited vats"
 			action
 				set "esperaktu station: visited vats"
-			`	This room is even more densely filled with the slime than the rest of the station, and it rises almost to your chest as you wade through. You can see the outlines of the overflowing vats responsible for the station's condition, and in the middle of the room what looks like a heavy goods lift rising up to the hangar. Anything else that might be present is completely submerged under the ooze.`
+			`	This room is even more densely filled with the slime than the rest of the station, and it rises almost to your chest as you wade through. Around the edges of the room, you can see the outlines of the overflowing vats responsible for the station's condition, and in the middle of the room what looks like a heavy goods lift rising up to the hangar. Anything else that might be present is completely submerged under the ooze.`
 			label vatsreturn
 			`	Unless you want to crawl through the slime-filled ventilation system and elevator shafts that allowed the bacteria here to proliferate throughout the station, the only way to leave the vats is through the door back into the corridor.`
 			choice
@@ -3833,7 +3833,7 @@ mission "Wanderers: Station Repairs 2"
 				has "esperaktu station: visited bunk rooms"
 			action
 				set "esperaktu station: visited bunk rooms"
-			`	The rooms around the edge seem to be simple crew quarters - you can see the upper sections of lockers and bunkbeds projecting out of the slime. `
+			`	The rooms around the edge seem to be simple crew quarters - you can see the shapes of lockers and bunkbeds covered in the slime. `
 			`	You find in a sealed locker a small, well-used box. Opening it, you find an elaborately decorated tablet, tiny statues of Korath in various types of clothing along with some other creatures you can't identify, and several small, colourful polyhedrons.`
 			label bunksreturn
 			`	From the crew quarters, the only place you can go is back to the corridor that wraps around this level.`
@@ -3843,8 +3843,8 @@ mission "Wanderers: Station Repairs 2"
 			label powercore
 			action
 				clear "esperaktu station: visited lower corridor"
-				clear "esperaktu station: visited kitchen"
-				clear "esperaktu station: visited dining area"
+				clear "esperaktu station: visited galley"
+				clear "esperaktu station: visited mess hall"
 				clear "esperaktu station: visited vats"
 				clear "esperaktu station: visited upper corridor"
 				clear "esperaktu station: visited bunk rooms"
