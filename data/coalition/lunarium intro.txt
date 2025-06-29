@@ -1754,13 +1754,13 @@ event "lunarium training: shaula empty"
 
 event "lunarium training: shaula back to normal"
 	system "Shaula"
-		add fleet "Small Southern Pirates" 500
-		add fleet "Large Southern Pirates" 800
-		add fleet "Small Core Pirates" 4000
-		add fleet "Large Core Pirates" 7000
-		add fleet "Small Northern Pirates" 5000
-		add fleet "Large Northern Pirates" 9000
-		add fleet "Large Free Worlds" 9000
+		add fleet "Small Southern Pirates" 1000
+		add fleet "Large Southern Pirates" 1600
+		add fleet "Small Core Pirates" 8000
+		add fleet "Large Core Pirates" 14000
+		add fleet "Small Northern Pirates" 10000
+		add fleet "Large Northern Pirates" 18000
+		add fleet "Large Free Worlds" 18000
 
 event "lunarium training done"
 
