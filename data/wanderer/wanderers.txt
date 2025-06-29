@@ -698,19 +698,19 @@ phrase "hostile disabled wanderer"
 
 event "wanderers: first tech increase"
 	system "Ik'kara'ka"
-		add fleet "Wanderer Flycatchers" 400
+		add fleet "Wanderer Flycatchers" 800
 	system "Chy'chra"
-		add fleet "Wanderer Flycatchers" 300
+		add fleet "Wanderer Flycatchers" 600
 	system "Prakacha'a"
 		remove fleet "Unfettered Tribute"
 	system "Sich'ka'ara"
-		add fleet "Wanderer Flycatchers" 600
-	system "Chirr'ay'akai"
-		add fleet "Wanderer Flycatchers" 800
-	system "Kiro'ku"
-		add fleet "Wanderer Flycatchers" 1000
-	system "Ap'arak"
 		add fleet "Wanderer Flycatchers" 1200
+	system "Chirr'ay'akai"
+		add fleet "Wanderer Flycatchers" 1600
+	system "Kiro'ku"
+		add fleet "Wanderer Flycatchers" 2000
+	system "Ap'arak"
+		add fleet "Wanderer Flycatchers" 2400
 	fleet "Wanderer Defense"
 		add variant 2
 			"Autumn Leaf" 2
@@ -741,34 +741,34 @@ event "wanderers: first tech increase"
 
 event "wanderers: unfettered invasion starts"
 	system "Ik'kara'ka"
-		fleet "Wanderer Freight" 1200
-		fleet "Wanderer Drones" 900
-		fleet "Wanderer Defense" 200
-		fleet "Wanderer Flycatchers" 200
-		fleet "Small Unfettered" 1200
-		fleet "Large Unfettered" 500
+		fleet "Wanderer Freight" 2400
+		fleet "Wanderer Drones" 1800
+		fleet "Wanderer Defense" 400
+		fleet "Wanderer Flycatchers" 400
+		fleet "Small Unfettered" 2400
+		fleet "Large Unfettered" 1000
 	system "Chy'chra"
 		government "Hai (Unfettered)"
-		fleet "Wanderer Defense" 3000
-		fleet "Unfettered Raid" 1000
-		fleet "Small Unfettered" 400
-		fleet "Large Unfettered" 400
-	system "Prakacha'a"
-		fleet "Wanderer Freight" 900
-		fleet "Wanderer Drones" 800
-		fleet "Wanderer Defense" 200
-		fleet "Small Unfettered" 1800
+		fleet "Wanderer Defense" 6000
+		fleet "Unfettered Raid" 2000
+		fleet "Small Unfettered" 800
 		fleet "Large Unfettered" 800
+	system "Prakacha'a"
+		fleet "Wanderer Freight" 1800
+		fleet "Wanderer Drones" 1600
+		fleet "Wanderer Defense" 400
+		fleet "Small Unfettered" 3600
+		fleet "Large Unfettered" 1600
 	system "Ehma Ti"
 		remove fleet "Unfettered Tribute"
 	system "Sich'ka'ara"
-		add fleet "Wanderer Defense" 500
-		add fleet "Wanderer Flycatchers" 600
-		add fleet "Large Unfettered" 1200
+		add fleet "Wanderer Defense" 1000
+		add fleet "Wanderer Flycatchers" 1200
+		add fleet "Large Unfettered" 2400
 	system "Chirr'ay'akai"
-		add fleet "Wanderer Defense" 500
-		add fleet "Wanderer Flycatchers" 480
-		add fleet "Large Unfettered" 1200
+		add fleet "Wanderer Defense" 1000
+		add fleet "Wanderer Flycatchers" 960
+		add fleet "Large Unfettered" 2400
 	"reputation: Hai (Unfettered)" <?= -100
 	government "Hai (Unfettered)"
 		"attitude toward"
@@ -849,17 +849,17 @@ event "wanderers: tempest mass production"
 event "wanderers: more systems lost"
 	system "Ka'pru"
 		government "Hai (Unfettered)"
-		fleet "Large Unfettered" 2000
-		fleet "Small Unfettered" 1000
+		fleet "Large Unfettered" 4000
+		fleet "Small Unfettered" 2000
 	system "Kiro'ku"
 		government "Hai (Unfettered)"
-		fleet "Large Unfettered" 1200
-		fleet "Small Unfettered" 800
+		fleet "Large Unfettered" 2400
+		fleet "Small Unfettered" 1600
 	system "Sich'ka'ara"
 		government "Hai (Unfettered)"
-		fleet "Large Unfettered" 400
-		fleet "Small Unfettered" 400
-		fleet "Wanderer Defense" 600
+		fleet "Large Unfettered" 800
+		fleet "Small Unfettered" 800
+		fleet "Wanderer Defense" 1200
 	planet "Vara Ke'stai"
 		attributes "unfettered" "farming"
 		description `The Wanderers worked for years to make this desert world bloom: planting hardy shrubs and cacti that eventually transform the sand into a soil that can hold moisture. In some regions, especially closer to the poles, the deserts have given way to dense forests, but near the equator there are still large stretches of dry and barren sand, broken by the occasional belt of green where a narrow river winds between the dunes.`
@@ -891,7 +891,7 @@ wormhole "The Eye"
 
 event "wanderers: the eye begins to open"
 	system Sko'karak
-		fleet "Wanderer Defense" 500
+		fleet "Wanderer Defense" 1000
 		add object
 			sprite planet/wisp
 			distance 2331.95
@@ -900,40 +900,40 @@ event "wanderers: the eye begins to open"
 event "wanderers: the eye opens"
 	unvisit Sabriset
 	system Sabriset
-		add fleet "Wanderer Defense" 1200
-		add fleet "Wanderer Drones" 600
-		add fleet "Wanderer Freight" 4000
+		add fleet "Wanderer Defense" 2400
+		add fleet "Wanderer Drones" 1200
+		add fleet "Wanderer Freight" 8000
 		add object "The Eye"
 			sprite planet/wormhole
 			distance 2022.87
 			period 918.463
 	system Sepriaptu
-		add fleet "Wanderer Defense" 1600
-		add fleet "Wanderer Drones" 800
+		add fleet "Wanderer Defense" 3200
+		add fleet "Wanderer Drones" 1600
 	system Kaliptari
-		fleet "Large Quarg (Kor Efret)" 2000
-		fleet "Small Kor Mereti" 8000
-		fleet "Large Kor Mereti" 3600
-		fleet "Wanderer Defense" 1000
-		fleet "Wanderer Drones" 500
+		fleet "Large Quarg (Kor Efret)" 4000
+		fleet "Small Kor Mereti" 16000
+		fleet "Large Kor Mereti" 7200
+		fleet "Wanderer Defense" 2000
+		fleet "Wanderer Drones" 1000
 	system Solifar
-		fleet "Large Quarg (Kor Efret)" 3000
-		fleet "Wanderer Defense" 1800
-		fleet "Wanderer Drones" 700
+		fleet "Large Quarg (Kor Efret)" 6000
+		fleet "Wanderer Defense" 3600
+		fleet "Wanderer Drones" 1400
 	system Fornarep
-		fleet "Large Quarg (Kor Efret)" 1000
-		fleet "Small Kor Mereti" 7000
-		fleet "Large Kor Mereti" 4000
+		fleet "Large Quarg (Kor Efret)" 2000
+		fleet "Small Kor Mereti" 14000
+		fleet "Large Kor Mereti" 8000
 	system Skeruto
-		fleet "Large Quarg (Kor Efret)" 1000
+		fleet "Large Quarg (Kor Efret)" 2000
 	system Mekislepti
-		add fleet "Small Kor Mereti" 4000
-		add fleet "Large Kor Mereti" 12000
-		add fleet "Wanderer Drones" 2000
+		add fleet "Small Kor Mereti" 8000
+		add fleet "Large Kor Mereti" 24000
+		add fleet "Wanderer Drones" 4000
 	unvisit Sko'karak
 	system Sko'karak
-		add fleet "Wanderer Drones" 400
-		add fleet "Wanderer Freight" 2000
+		add fleet "Wanderer Drones" 800
+		add fleet "Wanderer Freight" 4000
 		remove object
 			sprite planet/wisp
 			distance 2331.95
@@ -976,7 +976,7 @@ event "wanderers: derecho mass production"
 event "wanderers: spera anatrusk colony"
 	system Ap'arak
 		remove fleet "Large Unfettered"
-		add fleet "Large Unfettered" 8000
+		add fleet "Large Unfettered" 16000
 	system Kaliptari
 		government "Wanderer"
 	planet "Spera Anatrusk"
