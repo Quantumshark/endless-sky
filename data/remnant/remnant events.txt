@@ -44,7 +44,7 @@ event "remnant: surveillance begin"
 
 event "remnant: surveillance end"
 	system "Parca"
-		add fleet "Korath Ember Waste Raid" 10000
+		add fleet "Korath Ember Waste Raid" 20000
 
 
 
@@ -144,7 +144,7 @@ event "korath hunting"
 
 event "korath rescue: nenia small"
 	system Nenia
-		add fleet "Korath Rescue" 2000
+		add fleet "Korath Rescue" 4000
 
 event "korath rescue: nenia small end"
 	system Nenia
@@ -153,7 +153,7 @@ event "korath rescue: nenia small end"
 
 event "korath rescue: aescolanus medium"
 	system Aescolanus
-		add fleet "Korath Rescue" 1000
+		add fleet "Korath Rescue" 2000
 
 event "korath rescue: aescolanus medium end"
 	system Aescolanus
@@ -162,7 +162,7 @@ event "korath rescue: aescolanus medium end"
 
 event "korath rescue: nenia medium"
 	system Nenia
-		add fleet "Korath Rescue" 1000
+		add fleet "Korath Rescue" 2000
 
 event "korath rescue: nenia medium end"
 	system Nenia
@@ -300,7 +300,7 @@ event "remnant: ssil vida inhabited"
 
 event "korath rescue: egeria tiny"
 	system Egeria
-		add fleet "Korath Rescue" 4000
+		add fleet "Korath Rescue" 8000
 
 event "korath rescue: egeria tiny end"
 	system Egeria
