@@ -144,7 +144,7 @@ set<string> ConditionAssignments::RelevantConditions() const
 
 
 
-void ConditionAssignments::AddSetCondition(const std::string &name, const ConditionsStore *conditions)
+void ConditionAssignments::AddSetCondition(const string &name, const ConditionsStore *conditions)
 {
 	this->conditions = conditions;
 	assignments.emplace_back(name, AssignOp::ASSIGN, ConditionSet(1, conditions));
@@ -155,24 +155,25 @@ void ConditionAssignments::AddSetCondition(const std::string &name, const Condit
 void ConditionAssignments::Add(const DataNode &node, const ConditionsStore *conditions)
 {
 	this->conditions = conditions;
-	if(node.Token(0) == "set" || node.Token(0) == "clear")
+	const string &key = node.Token(0);
+	if(key == "set" || key == "clear")
 	{
 		if(node.Size() != 2 || !DataNode::IsConditionName(node.Token(1)))
 		{
-			node.PrintTrace("Parse error; " + node.Token(0) + " keyword requires a single valid condition:");
+			node.PrintTrace("Parse error; " + key + " keyword requires a single valid condition:");
 			return;
 		}
 		assignments.emplace_back(node.Token(1), AssignOp::ASSIGN,
-			ConditionSet(node.Token(0) == "set" ? 1 : 0, conditions));
+			ConditionSet(key == "set" ? 1 : 0, conditions));
 	}
 	else if(node.Size() == 2 && (node.Token(1) == "++" || node.Token(1) == "--"))
 	{
-		if(!DataNode::IsConditionName(node.Token(0)))
+		if(!DataNode::IsConditionName(key))
 		{
 			node.PrintTrace("Parse error; " + node.Token(1) + " operator requires a single valid condition:");
 			return;
 		}
-		assignments.emplace_back(node.Token(0), node.Token(1) == "++" ? AssignOp::ADD : AssignOp::SUB,
+		assignments.emplace_back(key, node.Token(1) == "++" ? AssignOp::ADD : AssignOp::SUB,
 			ConditionSet(1, conditions));
 	}
 	else if(node.Size() >= 3)
@@ -181,7 +182,7 @@ void ConditionAssignments::Add(const DataNode &node, const ConditionsStore *cond
 		AssignOp ao = AssignOp::ASSIGN;
 		const string assignOpString = node.Token(1);
 		auto it = find_if(ASSIGN_OP_TO_TEXT.begin(), ASSIGN_OP_TO_TEXT.end(),
-			[&assignOpString](const std::pair<AssignOp, const string> &e) {
+			[&assignOpString](const pair<AssignOp, const string> &e) {
 				return e.second == assignOpString;
 			});
 		if(it != ASSIGN_OP_TO_TEXT.end())
@@ -202,7 +203,7 @@ void ConditionAssignments::Add(const DataNode &node, const ConditionsStore *cond
 		expr.Optimize(node);
 
 		// Add the assignment when all parsing succeeded.
-		assignments.emplace_back(node.Token(0), ao, expr);
+		assignments.emplace_back(key, ao, expr);
 	}
 	else
 	{

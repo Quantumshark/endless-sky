@@ -24,6 +24,7 @@ this program. If not, see <https://www.gnu.org/licenses/>.
 #include "EsUuid.h"
 #include "FireCommand.h"
 #include "Outfit.h"
+#include "Paragraphs.h"
 #include "Personality.h"
 #include "Point.h"
 #include "Port.h"
@@ -38,6 +39,7 @@ this program. If not, see <https://www.gnu.org/licenses/>.
 #include <string>
 #include <vector>
 
+class ConditionsStore;
 class DamageDealt;
 class DataNode;
 class DataWriter;
@@ -118,7 +120,6 @@ public:
 	};
 
 	enum class CanFireResult {
-		INVALID,
 		NO_AMMO,
 		NO_ENERGY,
 		NO_FUEL,
@@ -149,10 +150,10 @@ public:
 
 	Ship() = default;
 	// Construct and Load() at the same time.
-	Ship(const DataNode &node);
+	Ship(const DataNode &node, const ConditionsStore *playerConditions);
 
 	// Load data for a type of ship:
-	void Load(const DataNode &node);
+	void Load(const DataNode &node, const ConditionsStore *playerConditions);
 	// When loading a ship, some of the outfits it lists may not have been
 	// loaded yet. So, wait until everything has been loaded, then call this.
 	void FinishLoading(bool isNewInstance);
@@ -166,7 +167,8 @@ public:
 	void SetUUID(const EsUuid &id);
 
 	// Get the name of this particular ship.
-	const std::string &Name() const;
+	const std::string &GivenName() const;
+	void SetGivenName(const std::string &name);
 
 	// Set / Get the name of this model of ship.
 	void SetTrueModelName(const std::string &model);
@@ -180,7 +182,7 @@ public:
 	// Get the generic noun (e.g. "ship") to be used when describing this ship.
 	const std::string &Noun() const;
 	// Get this ship's description.
-	const std::string &Description() const;
+	std::string Description() const;
 	// Get the shipyard thumbnail for this ship.
 	const Sprite *Thumbnail() const;
 	// Get this ship's cost.
@@ -200,7 +202,6 @@ public:
 	void SetVelocity(Point velocity);
 	// When creating a new ship, you must set the following:
 	void Place(Point position = Point(), Point velocity = Point(), Angle angle = Angle(), bool isDeparting = true);
-	void SetName(const std::string &name);
 	void SetSystem(const System *system);
 	void SetPlanet(const Planet *planet);
 	void SetGovernment(const Government *government);
@@ -279,6 +280,7 @@ public:
 	bool IsCapturable() const;
 	bool IsTargetable() const;
 	bool IsOverheated() const;
+	bool IsIonized() const;
 	bool IsDisabled() const;
 	bool IsBoarding() const;
 	bool IsLanding() const;
@@ -426,6 +428,10 @@ public:
 	// These two values are the ship's current maximum acceleration and turn rate, accounting for the effects of slow.
 	double TrueAcceleration() const;
 	double TrueTurnRate() const;
+	// These two values are the ship's effective maximum acceleration and turn rate,
+	// accounting for the effects of insufficient crew.
+	double CrewAcceleration() const;
+	double CrewTurnRate() const;
 	// The ship's current speed right now
 	double CurrentSpeed() const;
 
@@ -488,6 +494,7 @@ public:
 	const std::vector<Hardpoint> &Weapons() const;
 	// Check if we are able to fire the given weapon (i.e. there is enough
 	// energy, ammo, and fuel to fire it).
+	// Assume the weapon is valid.
 	CanFireResult CanFire(const Weapon *weapon) const;
 	// Fire the given weapon (i.e. deduct whatever energy, ammo, or fuel it uses
 	// and add whatever heat it generates). Assume that CanFire() is true.
@@ -537,7 +544,7 @@ public:
 	void Linger();
 
 	// Check if this ship looks the same as another, based on model display names and outfits.
-	bool Immitates(const Ship &other) const;
+	bool Imitates(const Ship &other) const;
 
 
 private:
@@ -608,11 +615,11 @@ private:
 	std::string variantName;
 	std::string variantMapShopName;
 	std::string noun;
-	std::string description;
+	Paragraphs description;
 	const Sprite *thumbnail = nullptr;
 	// Characteristics of this particular ship:
 	EsUuid uuid;
-	std::string name;
+	std::string givenName;
 	bool canBeCarried = false;
 
 	int forget = 0;
@@ -664,7 +671,7 @@ private:
 	Outfit attributes;
 	Outfit baseAttributes;
 	bool addAttributes = false;
-	const Outfit *explosionWeapon = nullptr;
+	const Weapon *explosionWeapon = nullptr;
 	std::map<const Outfit *, int> outfits;
 	CargoHold cargo;
 	std::list<std::shared_ptr<Flotsam>> jettisoned;

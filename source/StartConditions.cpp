@@ -80,7 +80,7 @@ void StartConditions::Load(const DataNode &node, const ConditionsStore *globalCo
 		if(remove)
 		{
 			if(key == "name")
-				unlocked.name.clear();
+				unlocked.displayName.clear();
 			else if(key == "description")
 				unlocked.description.clear();
 			else if(key == "thumbnail")
@@ -117,7 +117,7 @@ void StartConditions::Load(const DataNode &node, const ConditionsStore *globalCo
 			// a 3rd token (i.e. this will be treated as though it were a ship variant definition,
 			// without making the variant available to the rest of GameData).
 			if(child.HasChildren() || child.Size() >= add + 3)
-				ships.emplace_back(child);
+				ships.emplace_back(child, playerConditions);
 			// If there's only 2 tokens & there's no child nodes, the created instance would be ill-formed.
 			else
 				child.PrintTrace("Skipping unsupported use of a \"stock\" ship (a full definition is required):");
@@ -157,8 +157,8 @@ void StartConditions::Load(const DataNode &node, const ConditionsStore *globalCo
 	// The unlocked state must have at least some information.
 	if(unlocked.description.empty())
 		unlocked.description = "(No description provided.)";
-	if(unlocked.name.empty())
-		unlocked.name = "(Unnamed start)";
+	if(unlocked.displayName.empty())
+		unlocked.displayName = "(Unnamed start)";
 
 	// If the REVEALED or DISPLAYED states are missing information, fill them in with "???".
 	// Also use the UNLOCKED state thumbnail if the other states are missing one.
@@ -172,7 +172,7 @@ void StartConditions::Load(const DataNode &node, const ConditionsStore *globalCo
 	else if(identifier.empty())
 	{
 		stringstream addr;
-		addr << unlocked.name << " " << this;
+		addr << unlocked.displayName << " " << this;
 		identifier = addr.str();
 	}
 }
@@ -199,7 +199,7 @@ void StartConditions::FinishLoading()
 	string reason = GetConversation().Validate();
 	if(!GetConversation().IsValidIntro() || !reason.empty())
 		Logger::LogError("Warning: The start scenario \"" + Identifier() + "\" (named \""
-			+ unlocked.name + "\") has an invalid starting conversation."
+			+ unlocked.displayName + "\") has an invalid starting conversation."
 			+ (reason.empty() ? "" : "\n\t" + std::move(reason)));
 }
 
@@ -262,7 +262,7 @@ const Sprite *StartConditions::GetThumbnail() const noexcept
 const string &StartConditions::GetDisplayName() const noexcept
 {
 	auto it = infoByState.find(state);
-	return it == infoByState.end() ? ILLEGAL : it->second.name;
+	return it == infoByState.end() ? ILLEGAL : it->second.displayName;
 }
 
 
@@ -371,7 +371,7 @@ bool StartConditions::LoadStateChild(const DataNode &child, StartInfo &info, boo
 	const string &value = child.Token(hasValue ? valueIndex : 0);
 
 	if(key == "name" && hasValue)
-		info.name = value;
+		info.displayName = value;
 	else if(key == "description" && hasValue)
 	{
 		if(clearDescription)
@@ -415,8 +415,8 @@ void StartConditions::FillState(StartState fillState, const Sprite *thumbnail)
 	StartInfo &fill = infoByState[fillState];
 	if(!fill.thumbnail)
 		fill.thumbnail = thumbnail;
-	if(fill.name.empty())
-		fill.name = "???";
+	if(fill.displayName.empty())
+		fill.displayName = "???";
 	if(fill.description.empty())
 		fill.description = "???";
 	if(fill.system.empty())

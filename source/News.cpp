@@ -25,7 +25,8 @@ using namespace std;
 
 
 
-void News::Load(const DataNode &node, const ConditionsStore *playerConditions)
+void News::Load(const DataNode &node, const ConditionsStore *playerConditions,
+	const set<const System *> *visitedSystems, const set<const Planet *> *visitedPlanets)
 {
 	for(const DataNode &child : node)
 	{
@@ -53,18 +54,18 @@ void News::Load(const DataNode &node, const ConditionsStore *playerConditions)
 					child.PrintTrace("Warning: Removing full location filter; partial removal is not supported:");
 			}
 			else
-				location.Load(child);
+				location.Load(child, visitedSystems, visitedPlanets);
 		}
 		else if(tag == "name")
 		{
 			if(remove)
 			{
-				names = Phrase{};
+				speakerNames = Phrase{};
 				if(child.HasChildren())
 					child.PrintTrace("Warning: Removing all names; removal of individual names is not supported:");
 			}
 			else
-				names.Load(child);
+				speakerNames.Load(child);
 		}
 		else if(tag == "portrait")
 		{
@@ -124,7 +125,7 @@ void News::Load(const DataNode &node, const ConditionsStore *playerConditions)
 
 bool News::IsEmpty() const
 {
-	return messages.IsEmpty() || names.IsEmpty();
+	return messages.IsEmpty() || speakerNames.IsEmpty();
 }
 
 
@@ -142,9 +143,9 @@ bool News::Matches(const Planet *planet) const
 
 
 // Get the speaker's name.
-string News::Name() const
+string News::SpeakerName() const
 {
-	return names.Get();
+	return speakerNames.Get();
 }
 
 

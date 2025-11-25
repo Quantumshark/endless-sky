@@ -19,7 +19,8 @@ precision mediump int;
 uniform highp vec2 start;
 uniform highp vec2 end;
 uniform float width;
-uniform int cap;
+// Explicitly using mediump here to account for buggy gles implementations.
+uniform mediump int cap;
 
 in vec2 pos;
 in vec4 color;
@@ -47,7 +48,7 @@ void main() {
 	float dist;
 	if (cap == 1) {
 		// Rounded caps can shortcut to a segment sdf.
-		// Segment sdf only provides a distance fromt the line itself so we manually subtract it from the width.
+		// Segment sdf only provides a distance from the line itself so we manually subtract it from the width.
 		dist = width - sdSegment(pos, start, end);
 	} else {
 		// Subtract from 1 here to add some AA.

@@ -136,8 +136,12 @@ void UniverseObjects::FinishLoading()
 
 
 // Apply the given change to the universe.
-void UniverseObjects::Change(const DataNode &node, const ConditionsStore *playerConditions)
+void UniverseObjects::Change(const DataNode &node, const PlayerInfo &player)
 {
+	const ConditionsStore *playerConditions = &player.Conditions();
+	const set<const System *> *visitedSystems = &player.VisitedSystems();
+	const set<const Planet *> *visitedPlanets = &player.VisitedPlanets();
+
 	const string &key = node.Token(0);
 	bool hasValue = node.Size() >= 2;
 	if(key == "fleet" && hasValue)
@@ -145,17 +149,17 @@ void UniverseObjects::Change(const DataNode &node, const ConditionsStore *player
 	else if(key == "galaxy" && hasValue)
 		galaxies.Get(node.Token(1))->Load(node);
 	else if(key == "government" && hasValue)
-		governments.Get(node.Token(1))->Load(node);
+		governments.Get(node.Token(1))->Load(node, visitedSystems, visitedPlanets);
 	else if(key == "outfitter" && hasValue)
-		outfitSales.Get(node.Token(1))->Load(node, outfits, playerConditions);
+		outfitSales.Get(node.Token(1))->Load(node, outfits, playerConditions, visitedSystems, visitedPlanets);
 	else if(key == "planet" && hasValue)
 		planets.Get(node.Token(1))->Load(node, wormholes, playerConditions);
 	else if(key == "shipyard" && hasValue)
-		shipSales.Get(node.Token(1))->Load(node, ships, playerConditions);
+		shipSales.Get(node.Token(1))->Load(node, ships, playerConditions, visitedSystems, visitedPlanets);
 	else if(key == "system" && hasValue)
 		systems.Get(node.Token(1))->Load(node, planets, playerConditions);
 	else if(key == "news" && hasValue)
-		news.Get(node.Token(1))->Load(node, playerConditions);
+		news.Get(node.Token(1))->Load(node, playerConditions, visitedSystems, visitedPlanets);
 	else if(key == "link" && node.Size() >= 3)
 		systems.Get(node.Token(1))->Link(systems.Get(node.Token(2)));
 	else if(key == "unlink" && node.Size() >= 3)
@@ -205,7 +209,7 @@ void UniverseObjects::CheckReferences()
 	auto NameIfDeferred = [](const set<string> &deferred, auto &it)
 	{
 		if(deferred.contains(it.first))
-			it.second.SetName(it.first);
+			it.second.SetTrueName(it.first);
 		else
 			return false;
 
@@ -214,7 +218,7 @@ void UniverseObjects::CheckReferences()
 	// Set the name of an "undefined" class object, so that it can be written to the player's save.
 	auto NameAndWarn = [=](const string &noun, auto &it)
 	{
-		it.second.SetName(it.first);
+		it.second.SetTrueName(it.first);
 		Warn(noun, it.first);
 	};
 	// Parse all GameEvents for object definitions.
@@ -222,7 +226,7 @@ void UniverseObjects::CheckReferences()
 	for(auto &&it : events)
 	{
 		// Stock GameEvents are serialized in MissionActions by name.
-		if(it.second.Name().empty())
+		if(it.second.TrueName().empty())
 			NameAndWarn("event", it);
 		else
 		{
@@ -242,7 +246,7 @@ void UniverseObjects::CheckReferences()
 		Logger::LogError("Error: the \"default intro\" conversation must contain a \"name\" node.");
 	// Effects are serialized as a part of ships.
 	for(auto &&it : effects)
-		if(it.second.Name().empty())
+		if(it.second.TrueName().empty())
 			NameAndWarn("effect", it);
 	// Fleets are not serialized. Any changes via events are written as DataNodes and thus self-define.
 	for(auto &&it : fleets)
@@ -255,7 +259,7 @@ void UniverseObjects::CheckReferences()
 	}
 	// Government names are used in mission NPC blocks and LocationFilters.
 	for(auto &&it : governments)
-		if(it.second.GetTrueName().empty() && !NameIfDeferred(deferred["government"], it))
+		if(it.second.TrueName().empty() && !NameIfDeferred(deferred["government"], it))
 			NameAndWarn("government", it);
 	// Minables are not serialized.
 	for(const auto &it : minables)
@@ -264,7 +268,7 @@ void UniverseObjects::CheckReferences()
 	// Stock missions are never serialized, and an accepted mission is
 	// always fully defined (though possibly not "valid").
 	for(const auto &it : missions)
-		if(it.second.Name().empty())
+		if(it.second.DisplayName().empty())
 			Warn("mission", it.first);
 
 	// News are never serialized or named, except by events (which would then define them).
@@ -302,7 +306,7 @@ void UniverseObjects::CheckReferences()
 			Warn("wormhole", it.first);
 	// Formation patterns are not serialized, but their usage is.
 	for(auto &&it : formations)
-		if(it.second.Name().empty())
+		if(it.second.TrueName().empty())
 			NameAndWarn("formation", it);
 	// Any stock colors should have been loaded from game data files.
 	for(const auto &it : colors)
@@ -311,6 +315,16 @@ void UniverseObjects::CheckReferences()
 	for(const auto &it : swizzles)
 		if(!it.second.IsLoaded())
 			Warn("swizzle", it.first);
+	for(const auto &it : messageCategories)
+		if(!it.second.IsLoaded())
+			Warn("message category", it.first);
+	for(const auto &it : messages)
+		if(!it.second.IsLoaded())
+			Warn("message", it.first);
+	// Persons can be referred to when marking them as destroyed.
+	for(const auto &it : persons)
+		if(!it.second.IsLoaded())
+			Warn("person", it.first);
 }
 
 
@@ -327,13 +341,18 @@ void UniverseObjects::LoadFile(const filesystem::path &path, const PlayerInfo &p
 		Logger::LogError("Parsing: " + path.string());
 
 	const ConditionsStore *playerConditions = &player.Conditions();
+	const set<const System *> *visitedSystems = &player.VisitedSystems();
+	const set<const Planet *> *visitedPlanets = &player.VisitedPlanets();
 	for(const DataNode &node : data)
 	{
 		const string &key = node.Token(0);
 		bool hasValue = node.Size() >= 2;
 		if(key == "color" && node.Size() >= 5)
-			colors.Get(node.Token(1))->Load(
-				node.Value(2), node.Value(3), node.Value(4), node.Size() >= 6 ? node.Value(5) : 1.);
+		{
+			Color *color = colors.Get(node.Token(1));
+			color->Load(node.Value(2), node.Value(3), node.Value(4), node.Size() >= 6 ? node.Value(5) : 1.);
+			color->SetTrueName(node.Token(1));
+		}
 		else if(key == "swizzle" && hasValue)
 			swizzles.Get(node.Token(1))->Load(node);
 		else if(key == "conversation" && hasValue)
@@ -349,7 +368,7 @@ void UniverseObjects::LoadFile(const filesystem::path &path, const PlayerInfo &p
 		else if(key == "galaxy" && hasValue)
 			galaxies.Get(node.Token(1))->Load(node);
 		else if(key == "government" && hasValue)
-			governments.Get(node.Token(1))->Load(node);
+			governments.Get(node.Token(1))->Load(node, visitedSystems, visitedPlanets);
 		else if(key == "hazard" && hasValue)
 			hazards.Get(node.Token(1))->Load(node);
 		else if(key == "interface" && hasValue)
@@ -367,13 +386,13 @@ void UniverseObjects::LoadFile(const filesystem::path &path, const PlayerInfo &p
 		else if(key == "minable" && hasValue)
 			minables.Get(node.Token(1))->Load(node);
 		else if(key == "mission" && hasValue)
-			missions.Get(node.Token(1))->Load(node, playerConditions);
+			missions.Get(node.Token(1))->Load(node, playerConditions, visitedSystems, visitedPlanets);
 		else if(key == "outfit" && hasValue)
-			outfits.Get(node.Token(1))->Load(node);
+			outfits.Get(node.Token(1))->Load(node, playerConditions);
 		else if(key == "outfitter" && hasValue)
-			outfitSales.Get(node.Token(1))->Load(node, outfits, playerConditions);
+			outfitSales.Get(node.Token(1))->Load(node, outfits, playerConditions, visitedSystems, visitedPlanets);
 		else if(key == "person" && hasValue)
-			persons.Get(node.Token(1))->Load(node);
+			persons.Get(node.Token(1))->Load(node, playerConditions, visitedSystems, visitedPlanets);
 		else if(key == "phrase" && hasValue)
 			phrases.Get(node.Token(1))->Load(node);
 		else if(key == "planet" && hasValue)
@@ -382,10 +401,10 @@ void UniverseObjects::LoadFile(const filesystem::path &path, const PlayerInfo &p
 		{
 			// Allow multiple named variants of the same ship model.
 			const string &name = node.Token((node.Size() > 2) ? 2 : 1);
-			ships.Get(name)->Load(node);
+			ships.Get(name)->Load(node, playerConditions);
 		}
 		else if(key == "shipyard" && hasValue)
-			shipSales.Get(node.Token(1))->Load(node, ships, playerConditions);
+			shipSales.Get(node.Token(1))->Load(node, ships, playerConditions, visitedSystems, visitedPlanets);
 		else if(key == "start" && node.HasChildren())
 		{
 			// This node may either declare an immutable starting scenario, or one that is open to extension
@@ -421,18 +440,20 @@ void UniverseObjects::LoadFile(const filesystem::path &path, const PlayerInfo &p
 			const Sprite *sprite = SpriteSet::Get(node.Token(1));
 			for(const DataNode &child : node)
 			{
-				if(child.Token(0) == "power" && child.Size() >= 2)
+				const string &childKey = child.Token(0);
+				bool childHasValue = child.Size() >= 2;
+				if(childKey == "power" && childHasValue)
 					solarPower[sprite] = child.Value(1);
-				else if(child.Token(0) == "wind" && child.Size() >= 2)
+				else if(childKey == "wind" && childHasValue)
 					solarWind[sprite] = child.Value(1);
-				else if(child.Token(0) == "icon" && child.Size() >= 2)
+				else if(childKey == "icon" && childHasValue)
 					starIcons[sprite] = SpriteSet::Get(child.Token(1));
 				else
 					child.PrintTrace("Skipping unrecognized attribute:");
 			}
 		}
 		else if(key == "news" && hasValue)
-			news.Get(node.Token(1))->Load(node, playerConditions);
+			news.Get(node.Token(1))->Load(node, playerConditions, visitedSystems, visitedPlanets);
 		else if(key == "rating" && hasValue)
 		{
 			vector<string> &list = ratings[node.Token(1)];
@@ -477,6 +498,10 @@ void UniverseObjects::LoadFile(const filesystem::path &path, const PlayerInfo &p
 			wormholes.Get(node.Token(1))->Load(node);
 		else if(key == "gamerules" && node.HasChildren())
 			gamerules.Load(node);
+		else if(key == "message category")
+			messageCategories.Get(node.Token(1))->Load(node);
+		else if(key == "message")
+			messages.Get(node.Token(1))->Load(node);
 		else if(key == "disable" && hasValue)
 		{
 			static const set<string> canDisable = {"mission", "event", "person"};

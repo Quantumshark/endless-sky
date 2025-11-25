@@ -57,71 +57,17 @@ namespace {
 
 
 
-MissionAction::MissionDialog::MissionDialog(const ExclusiveItem<Phrase> &phrase):
-	dialogPhrase(phrase)
-{
-}
-
-
-
-MissionAction::MissionDialog::MissionDialog(const string &text):
-	dialogText(text)
-{
-}
-
-
-
-MissionAction::MissionDialog::MissionDialog(const DataNode &node, const ConditionsStore *playerConditions)
-{
-	// Handle anonymous phrases
-	//    phrase
-	//       ...
-	if(node.Size() == 1 && node.Token(0) == "phrase")
-	{
-		dialogPhrase = ExclusiveItem<Phrase>(Phrase(node));
-		// Anonymous phrases do not support "to display"
-		return;
-	}
-
-	// Handle named phrases
-	//    phrase "A Phrase Name"
-	if(node.Size() == 2 && node.Token(0) == "phrase")
-		dialogPhrase = ExclusiveItem<Phrase>(GameData::Phrases().Get(node.Token(1)));
-
-	// Handle regular dialog text
-	//    "Some thrilling dialog that truly moves the player."
-	else
-	{
-		if(node.Size() > 1)
-			node.PrintTrace("Ignoring extra tokens.");
-		dialogText = node.Token(0);
-
-		// Prevent a corner case that breaks assumptions. Dialog text cannot be empty (that indicates a phrase).
-		if(dialogText.empty())
-			dialogText = '\t';
-	}
-
-	// Search for "to display" lines.
-	for(auto &child : node)
-	{
-		if(child.Size() != 2 || child.Token(0) != "to" || child.Token(1) != "display" || !child.HasChildren())
-			node.PrintTrace("Ignoring unrecognized dialog token");
-		else
-			condition.Load(child, playerConditions);
-	}
-}
-
-
-
 // Construct and Load() at the same time.
-MissionAction::MissionAction(const DataNode &node, const ConditionsStore *playerConditions)
+MissionAction::MissionAction(const DataNode &node, const ConditionsStore *playerConditions,
+	const set<const System *> *visitedSystems, const set<const Planet *> *visitedPlanets)
 {
-	Load(node, playerConditions);
+	Load(node, playerConditions, visitedSystems, visitedPlanets);
 }
 
 
 
-void MissionAction::Load(const DataNode &node, const ConditionsStore *playerConditions)
+void MissionAction::Load(const DataNode &node, const ConditionsStore *playerConditions,
+	const set<const System *> *visitedSystems, const set<const Planet *> *visitedPlanets)
 {
 	if(node.Size() >= 2)
 		trigger = node.Token(1);
@@ -129,7 +75,7 @@ void MissionAction::Load(const DataNode &node, const ConditionsStore *playerCond
 		system = node.Token(2);
 
 	for(const DataNode &child : node)
-		LoadSingle(child, playerConditions);
+		LoadSingle(child, playerConditions, visitedSystems, visitedPlanets);
 
 	// Collapse pure-text dialog (no phrases). This is necessary to handle saved missions.
 	// It is also an optimization for the most common case in game data files.
@@ -140,10 +86,11 @@ void MissionAction::Load(const DataNode &node, const ConditionsStore *playerCond
 
 
 
-void MissionAction::LoadSingle(const DataNode &child, const ConditionsStore *playerConditions)
+void MissionAction::LoadSingle(const DataNode &child, const ConditionsStore *playerConditions,
+	const set<const System *> *visitedSystems, const set<const Planet *> *visitedPlanets)
 {
 	const string &key = child.Token(0);
-	bool hasValue = (child.Size() >= 2);
+	bool hasValue = child.Size() >= 2;
 
 	if(key == "dialog")
 	{
@@ -177,7 +124,7 @@ void MissionAction::LoadSingle(const DataNode &child, const ConditionsStore *pla
 	else if(key == "system")
 	{
 		if(system.empty() && child.HasChildren())
-			systemFilter.Load(child);
+			systemFilter.Load(child, visitedSystems, visitedPlanets);
 		else
 			child.PrintTrace("Error: Unsupported use of \"system\" LocationFilter:");
 	}
@@ -445,6 +392,63 @@ int64_t MissionAction::Payment() const noexcept
 
 
 
+MissionAction::MissionDialog::MissionDialog(const ExclusiveItem<Phrase> &phrase):
+	dialogPhrase(phrase)
+{
+}
+
+
+
+MissionAction::MissionDialog::MissionDialog(const string &text):
+	dialogText(text)
+{
+}
+
+
+
+MissionAction::MissionDialog::MissionDialog(const DataNode &node, const ConditionsStore *playerConditions)
+{
+	const string &key = node.Token(0);
+	// Handle anonymous phrases
+	//    phrase
+	//       ...
+	if(node.Size() == 1 && key == "phrase")
+	{
+		dialogPhrase = ExclusiveItem<Phrase>(Phrase(node));
+		// Anonymous phrases do not support "to display"
+		return;
+	}
+
+	// Handle named phrases
+	//    phrase "A Phrase Name"
+	if(node.Size() == 2 && key == "phrase")
+		dialogPhrase = ExclusiveItem<Phrase>(GameData::Phrases().Get(node.Token(1)));
+
+	// Handle regular dialog text
+	//    "Some thrilling dialog that truly moves the player."
+	else
+	{
+		if(node.Size() > 1)
+			node.PrintTrace("Ignoring extra tokens.");
+		dialogText = key;
+
+		// Prevent a corner case that breaks assumptions. Dialog text cannot be empty (that indicates a phrase).
+		if(dialogText.empty())
+			dialogText = '\t';
+	}
+
+	// Search for "to display" lines.
+	for(auto &child : node)
+	{
+		if(child.Size() != 2 || child.Token(0) != "to" || child.Token(1) != "display" || !child.HasChildren())
+			node.PrintTrace("Ignoring unrecognized dialog token");
+		else
+			condition.Load(child, playerConditions);
+	}
+}
+
+
+
 string MissionAction::CollapseDialog(const map<string, string> *subs) const
 {
 	// No subs means we're determining whether the dialog is pure text.
@@ -484,7 +488,7 @@ string MissionAction::CollapseDialog(const map<string, string> *subs) const
 		if(subs)
 			content = Format::Replace(Phrase::ExpandPhrases(content), *subs);
 
-		// Concatenated lines should start with a tab and be preceeded by end-of-line.
+		// Concatenated lines should start with a tab and be preceded by end-of-line.
 		if(!resultText.empty())
 		{
 			resultText += '\n';
