@@ -4004,9 +4004,10 @@ mission "Wanderers: Station Repairs 4"
 				`	"Sounds like a plan!"`
 					goto collecting
 				`	"Is that safe?"`
-			`	"Yes, it's entirely safe." Rek explains. "The engineered virus will be targeted specifically to this bacterial strain, so there's no risk of cross-infection."`
+			`	"Yes, it's entirely safe." Rek explains. "The engineered virus can be targeted specifically to this bacterial strain, so there's no risk of cross-infection."`
 			label collecting
 			`	You put your space suit on once again and step outside, accompanied by the Korath. He accosts one of the workers carrying away the slime from upstairs, taking the bucket from him, and brings it to you. You bring it back to your ship, and get ready to set off for <planet>.`
+				accept
 	on complete
 		dialog `Rek exits your ship first after you land, carefully carrying the bucket. "I will bring this to our microbiologists, and explain the situation. Meet me in the spaceport in a few hours' time."`
 	npc
@@ -4033,17 +4034,15 @@ mission "Wanderers: Station Repairs 5"
 			`	"Hello, human! This [task, project] you have given me has been a most [exciting, challenging] one. I am grateful for the opportunity to [study, investigate] these artificial lifeforms [designed, created] by the Korath. This has been a great [victory, success] - the viruses you asked for are all [ready, prepared], and will be loaded onto your ship [imminently, momentarily]". Your translation device continues for a while after they finish speaking, though this doesn't seem to faze them at all.`
 			`	They abruptly raise one wing, nearly hitting you in the face in the process, and point toward your ship, where a small container is being loaded. "There, it is [ready, prepared] for you. I will also accompany you, and [oversee, direct] the [deployment? activation?]."`
 			choice
-				`	""`
 				`	(Just nod.)`
+					goto done
+				`	"How do you plan on doing that? Can you speak Korath?"`
+			`	""`
+			label done
+			`	`
+				accept
 	on complete
 		event "esperaktu station reactivated" 50
-	npc accompany save
-		government Wanderer
-		personality timid escort
-		fleet
-			names wanderer
-			variant
-				"Deep River" 2
 
 # maybe another mission here sending you to pick up some specific component that they need, probably from either the Hai or the Syndicate?
 
