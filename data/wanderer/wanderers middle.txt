@@ -3704,7 +3704,7 @@ mission "Wanderers: Efreti and Mereti 4"
 	destination "Korati Efreti"
 	passengers 1
 	to offer
-		has "Wanderers: Efreti and Mereti 2: done"
+		has "Wanderers: Efreti and Mereti 3: done"
 	on visit
 		dialog `You have reached <planet>, but the Efreti ship you are escorting still hasn't arrived. You should take off and wait for it.`
 	on complete
