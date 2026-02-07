@@ -3628,7 +3628,7 @@ mission "Wanderers: Efreti and Mereti 1"
 	name "A formal introduction"
 	description `Brink Rek to <planet> and pick up an Efreti delegation heading to Mereti space.`
 	source "Sabira Esekrai"
-	destination "Korati Efreti"
+	destination "Setar Fort"
 	passengers 1
 	to offer
 		has "event: wanderers: sestor eliminated"
@@ -3637,27 +3637,46 @@ mission "Wanderers: Efreti and Mereti 1"
 			`The Wanderers and the Efreti have settled this planet together, and you are greeted by a small crowd of both as you come in to land. The Wanderer influences on the architecture here are obvious - despite the harsh conditions, the buildings are all topped with beds of the local hardy shrubs and grasses - but their overall shape is much more similar to the buildings you have seen on the Efreti worlds. As you step out of your ship, you are greeted by Rek, her short stature having made her difficult to spot amongst the crowd. "Ah, <first>! It feels like such a long time since we last met."`
 			`	Rek seems more cheerful than she has been for a long time, and enthusiastically explains the situation to you. "The Efreti have been more cooperative here than we anticipated. Working side by side with us to restore this planet has done more to convince them of our intentions than our words ever could have, I feel. However, some of them - particularly their leaders - have expressed concerns regarding what happened the Mereti. Specifically, they want to understand what it was that we did that changed them."`
 			choice
-				`	"Are you sure that is a good idea?"`
+				`	"Are you sure that is a good idea? What if the Efreti don't approve of what you did?"`
 				`	"What should we do?"`
 					goto do
-			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later, I feel. They will find out eventually, and it is better that we don't appear to be trying to conceal it. I would have liked to do this much earlier, but the situation with the Sestor was too dangerous for that to be possible."`
+			`	Rek pauses for a moment, deep in thought, before she responds. "As difficult as it may be, it would be better to resolve this sooner rather than later. They will find out eventually, and it is better that we don't appear to be trying to conceal it. I would have liked to do this much earlier, but the situation with the Sestor was too dangerous for that to be possible."`
 			label do
 			`	"Bring me to <destination>, to speak with the leaders of the Efreti. We can organise a direct meeting between them and the Mereti."`
 				accept
-	on complete
-		dialog `Rek exits your ship shortly after you arrive, and asks you to meet her in the spaceport in a few hours' time.`
 
 mission "Wanderers: Efreti and Mereti 2"
+	landing
 	name "A formal introduction"
-	description `Accompany this Efreti ship to <destination>, where they will meet with the Mereti`
-	source "Korati Efreti"
-	destination "Mereti Station"
+	source "Setar Fort"
+	destination "Laki Nemparu"
 	passengers 1
 	to offer
 		has "Wanderers: Efreti and Mereti 1: done"
+	description `Accompany this Efreti ship to <destination>, to pick up a group of engineers who are familiar with the Mereti.`
 	on offer
 		conversation
-			`	`
+			`Once you have docked with the station, Rek leads you out of the ship and through the crowded corridors. You arrive at a door with two uniformed Korath standing guard beside it, but they appear to recognise her and step aside to allow you in. Inside, you meet with a group of the Efreti leaders, who are talking to a pair of Korath engineers. You recognise them as part of the team who had been attempting to find a way to subvert the Mereti drones before the Wanderers arrived.`
+			`	The Korath stop their discussion as you enter, turning to face you. Rek begins speaking with them in the Korath language, a conversation which goes on for a while before she has a chance to bring you up to speed.`
+	on visit
+		dialog `You have reached <planet>, but the Efreti ship you are escorting still hasn't arrived. You should take off and wait for it.`
+	npc accompany save
+		government "Kor Efret"
+		personality timid
+		ship "Charm-Shallop" "Entetwaru"
+				
+mission "Wanderers: Efreti and Mereti 3"
+	landing
+	name "A formal introduction"
+	description `Accompany this Efreti ship to <destination>, where they will meet with the Mereti.`
+	source "Laki Nemparu"
+	destination "Mereti Station"
+	passengers 1
+	to offer
+		has "Wanderers: Efreti and Mereti 2: done"
+	on offer
+		conversation
+			``
 	on visit
 		dialog `You have reached <planet>, but the Efreti ship you are escorting still hasn't arrived. You should take off and wait for it.`
 	on complete
@@ -3671,13 +3690,13 @@ mission "Wanderers: Efreti and Mereti 2"
 			`	"We - the Wanderers - have been sharing one of the former Korath worlds, Sabira Eseskrai, with the Efreti as we work to heal the damage its previous inhabitants did." Rek says. "The Efreti have been happy to work with us, but they want you to help them understand what happened when you made contact with the Mind."`
 			label response
 			`	The drone doesn't respond immediately, its lights blinking slowly in silence for a few seconds. Then, it responds. "Of course. We are [content, prepared] to assist you in this." The drone goes silent for a while, and it takes you a moment to realise that it has hailed the <npc> beside you.`
-			`	For a while, you and Rek sit together in silence, watching the console and waiting for a message. Then, finally, a message comes from the <npc>. "They're ready to go." Rek translates for you.`
+			`	For a while, you and Rek sit together in silence, watching the console and waiting while the Efreti have their conversation. Then, finally, a message comes from the <npc>. "They're ready to go." Rek translates for you.`
 	npc accompany save
 		government "Kor Efret"
 		personality timid
 		ship "Charm-Shallop" "Entetwaru"
 
-mission "Wanderers: Efreti and Mereti 3"
+mission "Wanderers: Efreti and Mereti 4"
 	landing
 	name "A formal introduction"
 	description `Return to <destination> with the <npc>.`
