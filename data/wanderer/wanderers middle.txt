@@ -3710,7 +3710,7 @@ mission "Wanderers: Efreti and Mereti 4"
 	on complete
 		conversation
 			`The Korath on the <npc> have a distinct fervor as they head out into the halls of the station and talk to the locals. Rek listens quietly, then turns to you and explains.`
-			`	"They described it... using a word I am unsure how to translate." Rek says. "The way that we showed the Mereti everything about who we are... it mirrors something deeply significant and established in Korath culture, which neither the Wanderers, nor the Hai, nor the Humans have an equivalent to - at least, that's the impression I get."`
+			`	"They described it using a word I am unsure how to translate. When the Mereti Consciousness made contact with the Mind, it gained access to the sum total of our history and culture as a species in a single instant. To it, that mirrored something deeply significant and established in Korath culture, which neither the Wanderers, nor the Hai, nor the Humans have an equivalent to - at least, that's the impression I get."`
 			`	"I will remain here for a while," Rek says, "but you should head back to our base on Spera Anatrusk. I believe our leaders have a new project for you to help with." Rek waves goodbye, then follows the Korath deeper into the station.`
 	npc accompany save
 		government "Kor Efret"
@@ -3736,16 +3736,16 @@ mission "Wanderers: Outfitter Expansion 2"
 		has "Wanderers: Outfitter Expansion 1: done"
 	on offer
 		conversation
-			`Upon landing on <planet>, you are greeted by Tele'ek. His former brown and white plumage is now almost entirely gone, but while Rek seemed thin and fragile without feathers, Tele'ek's body is large and bulky, with distinctly scaly skin from which a few oily green feathers seem to have grown.`
-			`	"I [think, believe] that the time will soon come for me to undergo the Molt." he says slowly. "If this [peace, safety] holds, I should take the opportunity while we are not in need of [martial expertise?]. But, I am still concerned about the [threat, danger] posed by the Exiles. I shall [wait, remain] here for a little longer, I think, until the time comes." He takes a seat beside you before continuing.`
-			`	"For now, we must take advantage of this [peace, safety] for as long as it lasts, and speed up our movement into this space. We have been far too [lethargic?] in our movement so far, and I worry that the Keepers may grow [concerned, restless] at our lack of progress. Our elders are calling for us to [expand, develop] our base here, so that we can shift more of our [forces, operations] through to this side of the Eye."`
+			`Upon landing on <origin>, you are greeted by Tele'ek. His former brown and white plumage is now almost entirely gone, but while Rek seemed thin and fragile without feathers, Tele'ek's body is large and bulky, with distinctly scaly skin from which a few oily green feathers seem to have grown.`
+			`	"I [think, believe] that the time will soon come for me to undergo the Molt." he says slowly. "If this [peace, safety] holds, I should take the opportunity while we are not in need of [martial expertise?]. But, I am still concerned about the [threat, danger] posed by the Exiles. I shall [wait, remain] here for a little longer, until the time comes." He takes a seat beside you before continuing.`
+			`	"For now, we must take advantage of this [peace, safety] for as long as it lasts, and speed up our migration into this space. We have been far too [lethargic?] in our movement so far, and I worry that the Keepers may grow [concerned, restless] at our lack of progress. Our elders are calling for us to [expand, develop] our base here, so that we can shift more of our [forces, operations] through to this side of the Eye."`
 			choice
 				`	"Alright, what do you need me to do?"`
 					goto need
-				`	"Is that a good idea? What if the wanderers are attacked while they're moving through?"`
-			`	"We are no better [prepared, defended] if we delay. We have limited facilities to refuel and repair our [ships, vessels] here, so the vast majority of our [forces, strength] is still on the other side of the Eye. We need to set up the facilities to [support, operate] a larger fleet here as soon as possible." he explains, pausing for breath a few times as he does so.`
+				`	"Is that a good idea? What if the Wanderers are attacked while they're moving through?"`
+			`	"We are no better [prepared, defended] if we delay. We have limited facilities to refuel and repair our [ships, vessels] here, so the vast majority of our [force, strength] is still on the other side of the Eye," he explains, pausing for breath a few times as he does so. "We need to [grow, expand] these facilities in order to [support, operate] a larger fleet here as soon as possible."`
 			label need
-			`	"You must travel to <destination>. There will be a fleet of freighters there. You will need to bring them back here."`
+			`	"You must travel to <destination>. There will be a fleet of freighters there, loaded with supplies for [growing, expanding] the spaceport. You will need to bring them back here."`
 				accept
 	on complete
 		dialog `You meet up with the captains of the Wanderer fleet, who are ready to head out to Spera Anatrusk immediately.`
@@ -3759,7 +3759,7 @@ mission "Wanderers: Outfitter Expansion 3"
 	to offer
 		has "Wanderers: Outfitter Expansion 2: done"
 	on complete
-		dialog `The ships you were escorting land quickly, and the dock workers immediately start unloading the Deep Rivers' cargo. A crew of workers emerges from the Riptide, eager to start work. As you watch this scene, a message from Tele'ek appears on your computer, asking you to meet him in the spaceport.`
+		dialog `The ships you were escorting land quickly, and the dockhands immediately start unloading the Deep Rivers' cargo. A crew of Wanderers emerge from the Riptide, eager to start work on expanding the spaceport. As you watch, you recieve a message from Tele'ek, asking you to meet him in the spaceport.`
 		event "wanderers: spera anatrusk outfitter expanded" 15
 	npc accompany save
 		fleet
@@ -3793,7 +3793,7 @@ mission "Wanderers: Tele'ek Molt 1"
 			choice
 				`"Very well. I will take you there at once."`
 					goto timetogo
-				`"What do I if the Exiles attack while you are away?"`
+				`"What do I do if the Exiles attack while you are away?"`
 			`	"If the worst happens, my [successor, lieutenant] Eta'ek here will lead the defense. He is no less [trained, experienced] than I was when I took command - if I am to exceed his ability, it is only through the Molt."`
 			label timetogo
 			`	Eta'ek is hesitant, but after a few minutes of silence he leaves. Tele'ek makes no further comment, instead pushing himself to his feet and climbing through the airlock into your ship.`
@@ -3801,9 +3801,9 @@ mission "Wanderers: Tele'ek Molt 1"
 			
 	on complete
 		conversation
-			`As you come in to land, you see that a large crowd has gathered around in the spaceport. They move aside as your ship lands, and then, as you step out, the crowd parts, leaving a corridoor open from your ship to the facility's entrance.`
-			`	The crowd goes silent as the airlock opens and you step outside. Then, after nearly a full minute of this silence, a cry comes up from the crowd: "Tele'ek!"`
-			`	Within a few moments, the whole crowd have joined them, chanting Tele'ek's name.`
+			`As you come in to land, you see that a large crowd has gathered around in the spaceport. They move aside as your ship lands, and then, as you step out, the crowd parts, leaving a corridor open from your ship to the facility's entrance.`
+			`	The crowd goes silent as Tele'ek steps outside. Then, after nearly a full minute of this silence, a cry comes up from the crowd: "Tele'ek!"`
+			`	Within a few moments, the whole crowd joins the cry, chanting Tele'ek's name.`
 			choice
 				`	"Are they all your family?"`
 				`	"Are these all your friends?"`
@@ -3818,23 +3818,23 @@ mission "Wanderers: Tele'ek Molt 1"
 				`	"Rek found that her mind changed before her molt, not just her body. If the same is happening to you, there may be hope."`
 					goto speculation
 				`	(Stay silent.)`
-			`	Tele'ek looks at you for a moment before looking down. "You are worried too, aren't you? Do not worry too much about what [happens, occurs] to me. It is clear that you have the [skill, experience] to lead our forces in my absence, so do not fear for the fate of the Wanderers."`
-			goto "inside facility"
+			`	Tele'ek looks at you for a moment before looking down. "You are worried too, aren't you? Do not worry too much about what [happens, occurs] to me. It is clear that you have the [skill, experience] to inspire our forces in my absence, so do not fear for the fate of the Wanderers."`
+				goto "inside facility"
 			label reassurance
 			`	Tele'ek pauses before responding. "Thank you, <first>. Whatever happens, do not [lose, abandon] your hope. There is hope for the Wanderers, and for the Korath, with or without my [involvement, presence]."`
-			goto "inside facility"
+				goto "inside facility"
 			label anything
 			`	Tele'ek looks down at the ground. "Perhaps. Perhaps not. But, if that [fate?] were to be [altered, prevented], I [suspect, imagine] I would never be able to undergo the true Molt. So, I can only hope that my [fears, suspicions] are wrong."`
-			goto "inside facility"
+				goto "inside facility"
 			label speculation
 			`	Tele'ek seems surprised by this revelation. For a brief moment, his expression changes, and he thinks silently to himself for a moment. Then, he looks back up at you. "I... I hope that your [theory, observation] is correct, <first>. I will [seek, attempt] to hold onto that hope as I approach my [fate?]."`
 			label "inside facility"
-			`	Inside the facility is a much smaller gathering, as two Wanderers are discussing something with the staff. All of them turn to you as you and Tele'ek approach.`
+			`	Inside the facility there are two Wanderers having a discussion with the staff. They all turn to you as you and Tele'ek approach.`
 			`	One of them speaks up. "Commander Tele'ek! And, the human who has [helped, assisted] us in battle. Everything is [ready, prepared] for you. We were just awaiting your [choice, decision]."`
 			`	Tele'ek responds. "Thank you, sisters. The time has come; I have made my [choice, decision] and said my farewells. Now, I must meet my [fate?]."`
-			`	Two of the staff step forward and take Tele'ek's chair from you, wheeling it over to the elevator. Tele'ek lifts one featherless wing, waving you goodbye, before the doors close, leaving you and the others in silence. `
-			`	After a little while, the Wanderer who spoke to you before places one wing over your shoulder. "You should go. I am sure your other [friends, colleagues] among the Wanderers will have need of your skills, and of your [ship, vessel], during Tele'ek's absence."`
-			`	The facility door opens again. You see that much of the crowd has dissipated, though there are still quite a few Wanderers scattered around the spaceport, standing around mournfully.`
+			`	Two of the staff step forward and walk Tele'ek over to the elevator. He lifts one featherless wing, waving you goodbye, before the doors close, leaving you and the others in silence. `
+			`	After a little while, the Wanderer who spoke to you and Tele'ek before places one wing over your shoulder. "You should go. I am sure your other [friends, colleagues] among the Wanderers will have need of your skills, and of your [ship, vessel], during Tele'ek's absence."`
+			`	As you leave the facility, you see that much of the crowd has dissipated, though there are still a few Wanderers scattered around the spaceport, standing around mournfully.`
 			choice
 				`	(Return to my ship.)`
 					goto end
@@ -3845,10 +3845,10 @@ mission "Wanderers: Tele'ek Molt 1"
 				`	"You're welcome."`
 				`	"It was nothing, really."`
 				`	"I'm glad you're still alive."`
-			`	"You are kind, <first>. These [wars, battles] that have all come at once, the Unfettered, the Automata, and now the Exiles, that threaten our very [civilisation? existence?]... at least in part, it is your kindness rather than our [strength?] that has allowed us to [survive, triumph]."`
+			`	"You are kind, <first>. These [wars, battles] that have all come at once - the Unfettered, the Automata, and now the Exiles, that threaten our very [civilization? existence?]... it is at least in part your kindness rather than our [strength?] that has allowed us to [survive, triumph]."`
 			`	"Do not feel you are [obliged, required] to remain here. Tele'ek's [will, desire] would surely be for us to continue onward, with or without him."`
 			label end
-			`	As you are returning to your ship, you notice that Rek has sent you a message. "When you are ready, come and meet me on Sabira Eseskrai. The Efreti have asked for our assistance with an exciting new project."`
+			`	As you are returning to your ship, you notice that Rek has sent you a message. "When you are ready, come and meet me on Sabira Eseskrai. The Efreti are planning to undertake an exciting new project, and have asked for our assistance."`
 
 mission "Wanderers: Tele'ek Molt 2"
 	landing
@@ -3862,7 +3862,7 @@ mission "Wanderers: Tele'ek Molt 2"
 mission "Wanderers: Station Repairs 1"
 	name "Assess <planet>"
 	description "Bring Rek and four Efreti engineers to <destination> to assess the work required to make it operational once more."
-	source "Sabira Esekrai"
+	source "Sabira Eseskrai"
 	destination "Esperaktu Station"
 	passengers 5
 	to offer
@@ -3870,15 +3870,15 @@ mission "Wanderers: Station Repairs 1"
 	on offer
 		conversation
 			`You can see Rek and a group of Efreti rushing towards your landing site even as your ship is descending. Almost the moment you open the airlock, Rek rushes into the ship excitedly.`
-			`	"I've been talking with the leaders of the Efreti, and they've proposed a new project for us." she brings you to the bridge and pulls up your map, pointing to a system in the southeast of Korath space. "There's an old Korath farming station here. It was abandoned after the Exile, for obvious reasons, but now that the threat from the Automata has been resolved, the Efreti have expressed interest in getting it up and running again."`
-			`	"But, before we can do that, we first need to know what state it's in. A lot of other stations were destroyed or heavily damaged during their civil war, and if that station is the same, repairing it might not be feasible, at least not in the short term. In particular, if the station's main generator needs replacing, that might be an obstacle we can't currently overcome - the technology for building fusion cores on that scale seems to have been lost to the Efreti during the exile, and designing and fitting a Wanderer model could take months."`
+			`	"I've been talking with the leaders of the Efreti, and they've proposed a new project for us." She brings you to the bridge and pulls up your map, pointing to a system in the southeast of Korath space. "There's an old Korath farming station here. It was abandoned after the Exile, for obvious reasons, but now that the threat from the Automata has been resolved, the Efreti have expressed interest in getting it up and running again."`
+			`	"But, before we can do that, we first need to know what state it's in. A lot of other stations were destroyed or heavily damaged during their civil war, and if that station is the same, repairing it might not be feasible, at least not in the short term. In particular, if the station's main generator needs replacing, that might be an obstacle we can't currently overcome - the technology for building fusion cores on that scale seems to have been lost to the Efreti during the Exile, and designing and fitting a Wanderer model could take months."`
 			choice
 				`	"So, you want to send me over there to see what the situation is?"`
 					goto confirmation
 				`	"Is there any chance it's still working after so long?"`
 			`	"Our Korath friends are confident that it should still be operational, as long as it didn't take any direct weapon fire. Station reactors of the time were built to last, even after a century or so."`
 			label confirmation
-			`	"They've told me that, at the very least, there shouldn't be any hazards present there that pose a threat to someone in a proper spacesuit. So, you will be safe - you have their word and mine. You'll need to dock with the station, then head out on foot and try to find the power core."`
+			`	"They've told me that, at the very least, there shouldn't be any hazards present there that pose a threat to someone in a proper spacesuit. You will be safe - you have their word and mine. You'll need to dock with the station, then head out on foot and try to find the power core."`
 				accept
 
 mission "Wanderers: Station Repairs 2"
@@ -3892,11 +3892,11 @@ mission "Wanderers: Station Repairs 2"
 		has "Wanderers: Station Repairs 1: done"
 	on offer
 		conversation
-			`The hangar has been left open to space, so you are able to enter it and land without too much trouble. `
-			`	As you don't have any space suits fitted for Rek or for the Korath, they agree to wait for you inside your ship. "Remember, you're looking for the station's power core." Rek reminds you. "Get some photographs of it if you can."`
-			`	Stepping outside, you find yourself in the hangar bay. While some of the markings that are in direct sunlight have faded, the area seems mostly to be in fairly good condition, and the station's artificial gravity is still active, albeit in a reduced capacity.`
+			`A large hangar has been left open to space, so you are able to enter the station and land without too much trouble.`
+			`	As you don't have any space suits fitted for Rek or for the Korath, they agree to wait for you inside your ship. "Remember, you're looking for the station's power core," Rek reminds you. "Get some photographs of it if you can."`
+			`	Stepping out of your ship, you . The area seems mostly to be in fairly good condition, though some of the markings that are in direct sunlight have faded. The station's artificial gravity is still active, albeit in a reduced capacity.`
 			label hangarreturn
-			`	The hangar covers the whole of this level, as far as you can tell. The elevators seem not to be operable, but you can ascend and descend via a set of maintenance ladders at one side.`
+			`	The hangar takes up the whole of this level, as far as you can tell. The elevators are inoperable, but you can ascend and descend via a set of maintenance ladders at one side.`
 			choice
 				`	(Take the ladder up.)`
 					goto uppercorridorcheck
@@ -3906,9 +3906,9 @@ mission "Wanderers: Station Repairs 2"
 				has "esperaktu station: visited lower corridor"
 			action
 				set "esperaktu station: visited lower corridor"
-			`	As you descend down the ladder, you come to an airlock. As soon as the inner door opens, a wave of bacterial slime half a meter high washes forth from the corridor beyond, knocking you flat. It takes you some time to extricate yourself from the sticky substance, but once you do you find yourself looking across a sea of slime that rises up past your knees. The walls and ceiling are coated in a thinner layer of the substance, obscuring most of the finer details and all of the signs.`
+			`	As you descend down the ladder, you come to an airlock. As soon as the inner door opens, a wave of bacterial slime half a meter high washes forth from the corridor beyond, knocking you flat. It takes you some time to extricate yourself from the sticky substance, but once you do you find yourself looking across a sea of slime that rises up past your knees. The walls and ceiling are coated in a thinner layer of the substance, obscuring most of the finer details and any signs or markings that might have been there.`
 			label lowercorridorreturn
-			`	The corridor cuts asymmetrically across this level of the station, with two small rooms to your left, and one large one to your right.`
+			`	The corridor cuts asymmetrically across this level of the station, with two small rooms to your left, and a large one to your right.`
 			choice
 				`	(Take the ladder back to the hangar.)`
 					goto hangarreturn
@@ -3923,7 +3923,7 @@ mission "Wanderers: Station Repairs 2"
 				has "esperaktu station: visited galley"
 			action
 				set "esperaktu station: visited galley"
-			`	In an ironic twist, the galley is now totally overrun by the same food that was presumably prepared here in the past, while those who would have eaten it are long gone. The slime-coated shapes of a large oven and some other machines are the only sign of this room's original purpose, any stocks of other items that may have been present have long been consumed by the ooze.`
+			`	In an ironic twist, the galley is now totally overrun by the same food that was presumably prepared here in the past, while those who would have eaten it are long gone. The slime-coated shapes of a large oven and some other machines are the only signs of this room's original purpose. Any stocks of other items that may have been present have long been consumed by the ooze.`
 			label galleyreturn
 			`	The galley is connected to the corridor, and to the adjacent room.`
 			choice
@@ -3935,9 +3935,9 @@ mission "Wanderers: Station Repairs 2"
 				has "esperaktu station: visited mess hall"
 			action
 				set "esperaktu station: visited mess hall"
-			`	This large room is home to a few tables, just tall enough to be visible above the slime, but noticeably shorter than you're used to. You almost trip over one of the chairs as you look around, the slime high enough to completely cover it.`
+			`	This large room is home to a few tables, just tall enough to be visible above the slime, but noticeably shorter than you're used to in human space. You almost trip over one of the chairs as you look around, the slime high enough to completely cover it.`
 			label messhallreturn
-			`	The mess hall is connected to the corridor, and to the adjacent room.`
+			`	This room is connected to the corridor, and to the adjacent room.`
 			choice
 				`	(Return to the corridor.)`
 					goto lowercorridorreturn
@@ -3950,16 +3950,16 @@ mission "Wanderers: Station Repairs 2"
 				set "esperaktu station: visited vats"
 			`	This room is even more densely filled with the slime than the rest of the station, and it rises almost to your chest as you wade through. Around the edges of the room, you can see the outlines of the overflowing vats responsible for the station's condition, and in the middle of the room what looks like a heavy goods lift rising up to the hangar. Anything else that might be present is completely submerged under the ooze.`
 			label vatsreturn
-			`	Unless you want to crawl through the slime-filled ventilation system and elevator shafts that allowed the bacteria here to proliferate throughout the station, the only way to leave the vats is through the door back into the corridor.`
+			`	Unless you want to crawl through the slime-filled ventilation system and elevator shafts that allowed the bacteria to proliferate throughout the station, the only way to leave the vats is through the door back into the corridor.`
 			choice
 				` (Go back to the corridor.)`
 			label uppercorridorcheck
 			branch uppercorridorreturn
 				has "esperaktu station: visited upper corridor"
 			`	The ladder to the hangar is open to vacuum, which has prevented the growth of the bacterial slime that covers the rest of the station.`
-			`	The hallway at the other side of the airlock at the top, however, is another story. The slime rises almost to the ankles of your suit, and wading through the viscous and sticky substance takes a considerable amount of effort. The walls are covered by a layer of slime too, sticking to your suit's gloves every time you reach out to steady yourself.`
+			`	The hallway at the other side of the airlock at the top, however, is another story. The slime rises almost to the ankles of your suit, and wading through the viscous and sticky substance takes a considerable amount of effort. The walls are covered too, sticking to your suit's gloves every time you reach out to steady yourself.`
 			label uppercorridorreturn
-			`	The corridor runs in a circle around this level of the station. There is a single large room in the centre, and several smaller rooms around the outside edge.`
+			`	The corridor runs in a circle around this level of the station. There is a single large room in the center, and several smaller rooms around the outside edge.`
 			choice
 				`	(Take the ladder back to the hangar.)`
 					goto hangarreturn
@@ -3972,8 +3972,8 @@ mission "Wanderers: Station Repairs 2"
 				has "esperaktu station: visited bunk rooms"
 			action
 				set "esperaktu station: visited bunk rooms"
-			`	The rooms around the edge seem to be simple crew quarters - you can see the shapes of lockers and bunkbeds covered in the slime. `
-			`	You find in a sealed locker a small, well-used box. Opening it, you find an elaborately decorated tablet, tiny statues of Korath in various types of clothing along with some other creatures you can't identify, and several small, colourful polyhedrons.`
+			`	The rooms around the edge seem to be simple crew quarters. You can see the shapes of lockers and bunkbeds covered in the slime. `
+			`	Inside one of the lockers is a small, well-used box. Opening it, you find an elaborately decorated tablet, tiny statues of Korath in various types of clothing along with some other creatures you can't identify, and several small, colourful polyhedrons.`
 			label bunksreturn
 			`	From the crew quarters, the only place you can go is back to the corridor that wraps around this level.`
 			choice
@@ -3987,7 +3987,7 @@ mission "Wanderers: Station Repairs 2"
 				clear "esperaktu station: visited vats"
 				clear "esperaktu station: visited upper corridor"
 				clear "esperaktu station: visited bunk rooms"
-			`	As soon as you enter the room, you notice the difference in temperature from the rest of the station. It isn't difficult to imagine that without your suit, the smell of the dried slime piled up against the large object in the centre of the room would be horrendous. As the Korath suspected, somehow after all these years the station's power core is still operating.`
+			`	As soon as you enter the room, you notice the difference in temperature from the rest of the station. It isn't difficult to imagine that without your suit, the smell of the dried slime piled up against the large object in the centre of the room would be horrendous. As the Korath suspected, somehow, after all these years, the station's power core is still operating.`
 			`	You move around the room carefully, taking photos of each of the consoles, clearing away some of the slime so that the labels and status lights are visible.`
 			`	Finding your way back to the hangar deck is reasonably straightforward, and the slime clinging to your suit begins to harden and crumble away as soon as it is exposed to vacuum, leaving you mostly clean by the time you return to your ship.`
 				accept
@@ -4004,7 +4004,7 @@ mission "Wanderers: Station Repairs 3"
 		has "Wanderers: Station Repairs 2: done"
 	on offer
 		conversation
-			`Rek meets you in the spaceport, accompanied by four Korath. "They say the station should be recoverable" she explains "It'll need some new hardware and a lot of workers to clear out the bacteria, but it is achievable. These four have volunteered their ships to help us." She gestures to the Korath beside her.`
+			`Rek meets you in the spaceport, accompanied by the four Korath from before. "They say the station should be recoverable" she explains "It'll need some new hardware and a lot of workers to clear out the bacteria, but it is achievable. These four have volunteered their ships to help us." She gestures to the Korath beside her.`
 			`	"Korath space is far safer now than it has been in centuries, but I think you ought to escort them nonetheless, just to be on the safe side."`
 				accept
 	npc accompany save
