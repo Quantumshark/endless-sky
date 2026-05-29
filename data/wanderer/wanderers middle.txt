@@ -3627,7 +3627,7 @@ mission "Wanderers: Efreti and Mereti 1"
 	landing
 	name "A formal introduction"
 	description `Brink Rek to <planet> and pick up an Efreti delegation heading to Mereti space.`
-	source "Sabira Esekrai"
+	source "Sabira Eseskrai"
 	destination "Setar Fort"
 	passengers 1
 	to offer
@@ -3758,6 +3758,38 @@ mission "Wanderers: Outfitter Expansion 3"
 	destination "Spera Anatrusk"
 	to offer
 		has "Wanderers: Outfitter Expansion 2: done"
+	on complete
+		dialog `The ships you were escorting land quickly, and the dockhands immediately start unloading the Deep Rivers' cargo. A crew of Wanderers emerge from the Riptide, eager to start work on expanding the spaceport. As you watch, you recieve a message from Tele'ek, asking you to meet him in the spaceport.`
+	npc accompany save
+		fleet
+			names wanderer
+			variant
+				"Riptide"
+				"Deep River" 4
+
+mission "Wanderers: Outfitter Expansion 4"
+	landing
+	name "Freighters to <planet>"
+	description `Bring the empty Wanderer freighters back to <destination>, to load up another cargo of materials.`
+	source "Spera Anatrusk"
+	to offer
+		has "Wanderers: Outfitter Expansion 3: done"
+	destination "Var' Kayi"
+	npc accompany save
+		fleet
+			names wanderer
+			variant
+				"Riptide"
+				"Deep River 0" 4
+		
+mission "Wanderers: Outfitter Expansion 5"
+	landing
+	name "Materials to <planet>"
+	description `Escort this Wanderer fleet carrying workers and materials to expand the base on <destination>.`
+	source "Var' Kayi"
+	destination "Spera Anatrusk"
+	to offer
+		has "Wanderers: Outfitter Expansion 4: done"
 	on complete
 		dialog `The ships you were escorting land quickly, and the dockhands immediately start unloading the Deep Rivers' cargo. A crew of Wanderers emerge from the Riptide, eager to start work on expanding the spaceport. As you watch, you recieve a message from Tele'ek, asking you to meet him in the spaceport.`
 		event "wanderers: spera anatrusk outfitter expanded" 15
@@ -3992,7 +4024,7 @@ mission "Wanderers: Station Repairs 2"
 			`	Finding your way back to the hangar deck is reasonably straightforward, and the slime clinging to your suit begins to harden and crumble away as soon as it is exposed to vacuum, leaving you mostly clean by the time you return to your ship.`
 				accept
 	on complete
-		dialog `Your passengers have been talking almost non-stop throughout your journey back, and quickly exit your ship. Rek quickly asks you to meet her in the spaceport later, then follows after them.`
+		dialog `Your passengers have been talking almost non-stop throughout your journey back, and quickly exit your ship. Rek asks you to meet her in the spaceport later, then follows after them.`
 
 mission "Wanderers: Station Repairs 3"
 	name "Supplies to <planet>"
@@ -4004,7 +4036,7 @@ mission "Wanderers: Station Repairs 3"
 		has "Wanderers: Station Repairs 2: done"
 	on offer
 		conversation
-			`Rek meets you in the spaceport, accompanied by the four Korath from before. "They say the station should be recoverable" she explains "It'll need some new hardware and a lot of workers to clear out the bacteria, but it is achievable. These four have volunteered their ships to help us." She gestures to the Korath beside her.`
+			`Rek meets you in the spaceport, accompanied by the four Korath from before. "They say the station should be recoverable," she explains. "It'll need some new hardware and a lot of workers to clear out the bacteria, but it is achievable. These four have volunteered their ships to help us." She gestures to the Korath beside her.`
 			`	"Korath space is far safer now than it has been in centuries, but I think you ought to escort them nonetheless, just to be on the safe side."`
 				accept
 	npc accompany save
@@ -4017,6 +4049,7 @@ mission "Wanderers: Station Repairs 3"
 				"Charm-Shallop" 2
 
 mission "Wanderers: Station Repairs 4"
+	landing
 	name "Supplies from <planet>"
 	source "Esperaktu Station"
 	destination "Var' Kayi"
@@ -4026,9 +4059,9 @@ mission "Wanderers: Station Repairs 4"
 	on offer
 		conversation
 			`The four Efreti ships dock with the station, the huge crew unloading an impressive quantity of goods into the hangar. Rek watches beside you as the workers begin climbing into the same maintenance shaft you used, bringing back buckets and buckets of the bacterial slime, then taking up some equipment once the slime has been cleared sufficiently. After a few hours, the upper elevator begins to move, which gets a cheer from the crew watching from the hangar deck.`
-			`	A while later, you are startled by a knock on the door. Opening the airlock, you see one of the Korath step inside. Rek goes to greet them as they remove their helmet and begin quickly speaking. After listening for a while, she translates.`
-			`	"He says that the bacteria that have been growing there are no longer a viable food source - with the station unmanaged for so long, they have undergone some evolution, rendering them inedible and too fast-growing to work with. They have viable stocks of the original culture over on Laki Nemparu, but they won't be able to use the station's facilities to cultivate them until the current population has been completely removed."`
-			`	Rek turns back to the Korath, speaking in the Korath language, before turning back to you. "The Wanderers have the technology to accomplish this - If we collect a small sample of the bacteria, our scientists back home can engineer a virus with which to wipe it out."`
+			`	A while later, one of the Korath arrives at your ship's airlock. When you open the airlock, they step inside and Rek goes to greet them. They remove their helmet and begin quickly speaking, and after listening for a while, Rek translates.`
+			`	"He says that the bacteria that have been growing there are no longer a viable food source - with the station unmanaged for so long, they have undergone some evolution, rendering them inedible and too fast-growing to work with. The Efreti have viable stocks of the original strain over on Laki Nemparu, but they won't be able to use the station's facilities to cultivate them until the current infestation has been completely removed, otherwise the evolved strains may outcompete the original or exchange genetic material with it, rendering the whole culture unusable."`
+			`	Rek turns back to the Korath, speaking in the Korath language, before turning back to you. "The Wanderers have the technology to selectively eliminate this evolved strain - If we collect a small sample of the bacteria, our scientists back home can engineer a virus with which to wipe it out."`
 			choice
 				`	"Sounds like a plan!"`
 					goto collecting
@@ -4059,28 +4092,19 @@ mission "Wanderers: Station Repairs 5"
 		has "Wanderers: Station Repairs 4: done"
 	on offer
 		conversation
-			`Rek is waiting for you in the spaceport, accompanied by a Wanderer wearing a simple white outfit - presumably the Wanderers' equivalent of a lab coat. They rush over to you excitedly, and begin speaking quickly.`
-			`	"Hello, human! This [task, project] you have given me has been a most [exciting, challenging] one. I am grateful for the opportunity to [study, investigate] these artificial lifeforms [designed, created] by the Korath. This has been a great [victory, success] - the viruses you asked for are all [ready, prepared], and will be loaded onto your ship [imminently, momentarily]". Your translation device continues for a while after they finish speaking, though this doesn't seem to faze them at all.`
-			`	They abruptly raise one wing, nearly hitting you in the face in the process, and point toward your ship, where a small container is being loaded. "There, it is [ready, prepared] for you. I will also accompany you, and [oversee, direct] the [deployment? activation?]."`
-			choice
-				`	(Just nod.)`
-					goto done
-				`	"How do you plan on doing that? Can you speak Korath?"`
-			`	""`
-			label done
-			`	`
+			`Rek is waiting for you in the spaceport, accompanied by a Wanderer wearing a simple white outfit - presumably the Wanderers' equivalent of a lab coat. They rush over to you, and begin speaking rapidly.`
+			`	"Hello, human! This [task, project] you have given me has been a most [exciting, challenging] one. I am grateful for the opportunity to [study, investigate] these artificial lifeforms [designed, created] by the Korath. This has been a great [victory, success] - the viruses you asked for are all [ready, prepared], and will be loaded onto your ship [imminently, momentarily]." Your translation device continues for a while after they finish speaking, though this doesn't seem to faze them at all.`
+			`	They abruptly raise one wing, nearly hitting you in the face in the process, and point toward your ship where a small container is being loaded. "There, it is [ready, prepared] for you. I will also accompany you, and [oversee, direct] the [deployment? activation?]."`
 				accept
 	on complete
 		event "esperaktu station reactivated" 50
-
-# maybe another mission here sending you to pick up some specific component that they need, probably from either the Hai or the Syndicate?
 
 mission "Wanderers: Station Repairs 6"
 	landing
 	name "Return to <planet>"
 	description "Return to <destination> with Rek."
 	source "Esperaktu Station"
-	destination "Sabira Esekrai"
+	destination "Sabira Eseskrai"
 	passengers 1
 	to offer
 		has "Wanderers: Station Repairs 5: done"
@@ -4105,11 +4129,14 @@ event "wanderers: esperaktu station reactivated"
 mission "Wanderers: Exile Scout Patrol"
 	name "Korath patrol"
 	description `Patrol <waypoints> for any Korath activity.`
-	source "Sabira Esekrai"
-	destination "Sabira Esekrai"
+	source "Sabira Eseskrai"
+	destination "Sabira Eseskrai"
 	waypoints Feroteri Hesselpost Chornifath Korsmanath Farbutero Meftarkata
 	to offer
 		has "Wanderers: Station Repairs 6: done"
+	on offer
+		conversation
+			`Eta'ek is waiting for you when you arrive. "I bring most [troubling, alarming] news."`
 	npc
 		government Korath
 		system Farbutero
@@ -4117,7 +4144,7 @@ mission "Wanderers: Exile Scout Patrol"
 		fleet
 			names korath
 			variant
-				Palavret
+				"Palavret (Blaze)"
 				'olofez 2
 	npc
 		government Korath
@@ -4126,13 +4153,13 @@ mission "Wanderers: Exile Scout Patrol"
 		fleet
 			names korath
 			variant
-				Palavret
+				"Palavret (Blaze)"
 				'olofez 2
 
 mission "Wanderers: Experts to Efreti 1"
 	name ""
 	description `Travel to <destination> to meet up with a team of Wanderer planetary scientists, who will travel to Efreti space to monitor their planets.`
-	source "Sabira Esekrai"
+	source "Sabira Eseskrai"
 	destination "Vara K'chrai"
 	to offer
 		has "Wanderers: Exile Scout Patrol: done"
@@ -4151,7 +4178,7 @@ mission "Wanderers: Experts to Efreti 2"
 		conversation
 			``
 	on complete
-		dialog ``
+		dialog `The <npc> lands next to the <ship>, and a couple dozen Wanderers carrying various pieces of scientific equipment quickly depart.`
 	npc accompany save
 		government Wanderer
 		personality timid escort
@@ -4166,7 +4193,7 @@ mission "Wanderers: Experts to Efreti 3"
 	to offer
 		has "Wanderers: Experts to Efreti 2: done"
 	on complete
-		dialog ``
+		dialog `The <npc> lands next to the <ship>, and a couple dozen Wanderers carrying various pieces of scientific equipment quickly depart.`
 	npc accompany save
 		government Wanderer
 		personality timid escort
@@ -4181,7 +4208,7 @@ mission "Wanderers: Experts to Efreti 4"
 	to offer
 		has "Wanderers: Experts to Efreti 3: done"
 	on complete
-		dialog ``
+		dialog `The <npc> lands next to the <ship>, and a couple dozen Wanderers carrying various pieces of scientific equipment quickly depart.`
 	npc accompany save
 		government Wanderer
 		personality timid escort
@@ -4192,7 +4219,7 @@ mission "Wanderers: Experts to Efreti 5"
 	name ""
 	description `Escort the <npc> back to the Wanderers on <destination>.`
 	source "Setar Fort"
-	destination "Sabira Esekrai"
+	destination "Sabira Eseskrai"
 	to offer
 		has "Wanderers: Experts to Efreti 4: done"
 	on complete
@@ -4206,7 +4233,7 @@ mission "Wanderers: Experts to Efreti 5"
 mission "Wanderers: Relocation 1"
 	name ""
 	description ``
-	source "Sabira Esekrai"
+	source "Sabira Eseskrai"
 	destination "Vara K'chrai"
 	to offer
 		has "Wanderers: Efreti and Mereti 2: done"
@@ -4298,7 +4325,7 @@ mission "Wanderers: Exiles Attack Spera Anatrusk 1"
 	name ""
 	description ``
 	source "Setar Fort"
-	destination "Sabira Esekrai"
+	destination "Sabira Eseskrai"
 	to offer
 		has "Wanderers: Climate Report: done"
 	on offer
@@ -4312,7 +4339,7 @@ mission "Wanderers: Exiles Attack Spera Anatrusk 2"
 	landing
 	name ""
 	description ``
-	source "Sabira Esekrai"
+	source "Sabira Eseskrai"
 	destination "Spera Anatrusk"
 	to offer
 		has "Wanderers: Exiles Attack Spera Anatrusk 1: done"
